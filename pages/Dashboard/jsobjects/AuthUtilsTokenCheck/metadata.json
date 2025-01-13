@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6781ef152454ff00972b7257_62ea2783-40e8-4b59-bc48-23c46e27396a",
+  "id": "Dashboard_AuthUtilsTokenCheck",
+  "unpublishedCollection": {
+    "name": "AuthUtilsTokenCheck",
+    "pageId": "Dashboard",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}
