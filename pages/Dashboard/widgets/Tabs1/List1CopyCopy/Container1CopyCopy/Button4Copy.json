@@ -32,7 +32,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(Modal2.name);}}",
+  "onClick": "{{showModal(modal_to_input_followup_detail.name);}}",
   "parentColumnSpace": 5.0703125,
   "parentId": "pssgo8r5rq",
   "parentRowSpace": 10,

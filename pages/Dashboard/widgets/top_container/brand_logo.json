@@ -3,7 +3,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 4,
   "boxShadow": "none",
-  "defaultImage": "https://assets.appsmith.com/widgets/default.png",
+  "defaultImage": "https://pathao.com/wp-content/uploads/2023/10/Pathao-Logo_Horizontal_with_TagLine.png",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
@@ -13,7 +13,7 @@
   "enableDownload": false,
   "enableRotation": false,
   "flexVerticalAlignment": "start",
-  "image": "https://pathao.com/wp-content/uploads/2023/10/Pathao-Logo_Horizontal_with_TagLine.png",
+  "image": "",
   "imageShape": "RECTANGLE",
   "isLoading": false,
   "isVisible": true,
