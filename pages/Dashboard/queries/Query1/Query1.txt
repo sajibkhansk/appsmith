@@ -1,0 +1,1 @@
+SELECT * FROM public.merchants order by updated_at desc LIMIT 30;

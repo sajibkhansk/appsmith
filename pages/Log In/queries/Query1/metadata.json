@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "6781ef152454ff00972b7257_ea91c80c-9eb0-4512-9b59-39486a303449",
-  "id": "Dashboard_Total_record_public_merchants1",
+  "gitSyncId": "67854afe8f01ef5977743d0e_3ca2e042-48ba-40e0-9426-7c79cddf3afd",
+  "id": "Log In_Query1",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(*) from public.merchants;",
+      "body": "select * from auth",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000
@@ -22,14 +22,10 @@
       "name": "Pathao_CRUD",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "executeOnLoad": false,
-    "name": "Total_record_public_merchants1",
-    "pageId": "Dashboard",
+    "name": "Query1",
+    "pageId": "Log In",
     "userSetOnLoad": false
   }
 }
