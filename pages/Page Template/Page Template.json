@@ -1,12 +1,12 @@
 {
-  "gitSyncId": "6781ef152454ff00972b7257_04f53fe6-31dd-42fb-aff4-ff2fe7f72d3f",
+  "gitSyncId": "6781ef152454ff00972b7257_08541fe6-802f-47e8-8193-bb9b1b0ba21c",
   "unpublishedPage": {
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 380,
+          "bottomRow": 750,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
@@ -26,7 +26,7 @@
         }
       }
     ],
-    "name": "User Settings",
-    "slug": "user-settings"
+    "name": "Page Template",
+    "slug": "page-template"
   }
 }

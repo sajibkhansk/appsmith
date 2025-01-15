@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6781ef152454ff00972b7257_a0ad3526-cfe0-4e83-9cab-b0427dda87ad",
+  "id": "New Merchants_AuthUtilsTokenCheck",
+  "unpublishedCollection": {
+    "name": "AuthUtilsTokenCheck",
+    "pageId": "New Merchants",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

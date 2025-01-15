@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 87,
+  "bottomRow": 86,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 97,
-  "originalTopRow": 93,
+  "originalBottomRow": 86,
+  "originalTopRow": 82,
   "overflow": "NONE",
   "parentColumnSpace": 17.625,
   "parentId": "khfzmpypx5",
@@ -40,10 +40,10 @@
   "responsiveBehavior": "fill",
   "rightColumn": 16,
   "shouldTruncate": false,
-  "text": "Order Creation Pending",
+  "text": "Order Created",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 83,
+  "topRow": 82,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

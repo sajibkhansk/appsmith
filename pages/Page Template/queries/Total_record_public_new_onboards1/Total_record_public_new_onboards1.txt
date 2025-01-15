@@ -1,0 +1,1 @@
+SELECT COUNT(*) from public.new_onboards where phone ilike '%{{fetch_new_merchants.searchText}}%';

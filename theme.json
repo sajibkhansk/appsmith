@@ -33,7 +33,7 @@
         "Ubuntu"
       ]
     },
-    "order": 1.0
+    "order": 1
   },
   "displayName": "Modern",
   "isSystemTheme": false,
@@ -50,7 +50,7 @@
       "primaryColor": "#1e3a8a"
     },
     "fontFamily": {
-      "appFont": "System Default"
+      "appFont": "Noto Sans"
     }
   },
   "stylesheet": {

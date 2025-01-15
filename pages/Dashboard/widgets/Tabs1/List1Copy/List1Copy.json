@@ -103,6 +103,8 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
+  "originalBottomRow": 79,
+  "originalTopRow": 8,
   "pageSize": 5,
   "parentColumnSpace": 17.625,
   "parentId": "khfzmpypx5",
