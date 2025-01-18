@@ -1,0 +1,18 @@
+INSERT INTO newonboards (
+  business_name, 
+  business_owner_name, 
+  phone, 
+  website, 
+  estimated_volume, 
+  category,
+	business_team_user_id
+)
+VALUES (
+  '{{ inputBusinessName.text }}', 
+  '{{ inputBusinessOwnerName.text }}', 
+  '{{ inputBusinessPhone.text }}', 
+  '{{ inputBusinessWebsite.text }}', 
+  '{{ inputEstimatedValue.text }}', 
+  '{{ selectProductCategory.value }}',
+  '{{ getUserDetailsByEmail.data[0].id }}'
+);

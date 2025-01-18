@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67854afe8f01ef5977743d0e_6e47e512-80b4-4c59-a894-e690d7f2ad18",
+  "id": "New Leads_refreshFetchNewOnboardsData",
+  "unpublishedCollection": {
+    "name": "refreshFetchNewOnboardsData",
+    "pageId": "New Leads",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67854afe8f01ef5977743d0e_701db144-17e0-4955-9ab6-2490316c87b4",
+  "id": "New Leads_fetchAuthToken",
+  "unpublishedCollection": {
+    "name": "fetchAuthToken",
+    "pageId": "New Leads",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

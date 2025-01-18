@@ -50,7 +50,7 @@
       "primaryColor": "#1e3a8a"
     },
     "fontFamily": {
-      "appFont": "Noto Sans"
+      "appFont": "System Default"
     }
   },
   "stylesheet": {

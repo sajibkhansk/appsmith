@@ -8,8 +8,8 @@
       "colorStyle": "theme",
       "logoAssetId": "",
       "logoConfiguration": "logoAndApplicationTitle",
-      "navStyle": "sidebar",
-      "orientation": "side",
+      "navStyle": "stacked",
+      "orientation": "top",
       "position": "static",
       "showNavbar": false,
       "showSignIn": false
@@ -36,15 +36,23 @@
       "isDefault": false
     },
     {
-      "id": "Dashboard",
+      "id": "New Leads",
       "isDefault": true
     },
     {
-      "id": "New Merchants",
+      "id": "Page Template",
       "isDefault": false
     },
     {
-      "id": "Page Template",
+      "id": "Tracker",
+      "isDefault": false
+    },
+    {
+      "id": "Dashboard",
+      "isDefault": false
+    },
+    {
+      "id": "Test Page",
       "isDefault": false
     }
   ],
@@ -56,8 +64,8 @@
       "colorStyle": "theme",
       "logoAssetId": "",
       "logoConfiguration": "logoAndApplicationTitle",
-      "navStyle": "sidebar",
-      "orientation": "side",
+      "navStyle": "stacked",
+      "orientation": "top",
       "position": "static",
       "showNavbar": false,
       "showSignIn": false
