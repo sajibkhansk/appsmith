@@ -36,23 +36,23 @@
       "isDefault": false
     },
     {
+      "id": "Dashboard",
+      "isDefault": false
+    },
+    {
       "id": "New Leads",
       "isDefault": true
+    },
+    {
+      "id": "Test Page",
+      "isDefault": false
     },
     {
       "id": "Page Template",
       "isDefault": false
     },
     {
-      "id": "Tracker",
-      "isDefault": false
-    },
-    {
-      "id": "Dashboard",
-      "isDefault": false
-    },
-    {
-      "id": "Test Page",
+      "id": "User Setting",
       "isDefault": false
     }
   ],

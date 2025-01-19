@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 5,
   "boxShadow": "none",
   "defaultImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pathao_-_Here_with_You.png/440px-Pathao_-_Here_with_You.png",
   "dynamicBindingPathList": [
@@ -30,8 +30,8 @@
   "parentId": "us7mi726xi",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 6,
-  "topRow": 0,
+  "rightColumn": 8,
+  "topRow": 1,
   "type": "IMAGE_WIDGET",
   "version": 1,
   "widgetId": "epo0353jdo",
