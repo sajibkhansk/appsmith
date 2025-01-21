@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "67854afe8f01ef5977743d0e_99122f7e-c796-4c1a-b6ec-99dbfaffee5f",
+  "gitSyncId": "67854afe8f01ef5977743d0e_bec3e1b0-71d2-49ae-add9-88e1e0b69a5b",
   "id": "Page Template_fetchProductCategory",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "name": "fetchProductCategory",
     "pageId": "Page Template",
     "userSetOnLoad": false

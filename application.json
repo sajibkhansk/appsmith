@@ -36,10 +36,6 @@
       "isDefault": false
     },
     {
-      "id": "Dashboard",
-      "isDefault": false
-    },
-    {
       "id": "New Leads",
       "isDefault": true
     },
@@ -48,11 +44,19 @@
       "isDefault": false
     },
     {
+      "id": "User Setting",
+      "isDefault": false
+    },
+    {
       "id": "Page Template",
       "isDefault": false
     },
     {
-      "id": "User Setting",
+      "id": "Tracker",
+      "isDefault": false
+    },
+    {
+      "id": "Landing Page",
       "isDefault": false
     }
   ],

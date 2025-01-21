@@ -1,0 +1,2 @@
+select * from remote_hermes.merchants
+limit 500

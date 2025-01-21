@@ -24,7 +24,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "0oltt3h6or",
-  "label": "Estimated Volume",
+  "label": "Estimated Volume per Day",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",

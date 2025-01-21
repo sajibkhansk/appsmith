@@ -1,2 +1,1 @@
-select * from remote_hermes.merchants
-limit 500
+SELECT * FROM merchantsCurrentStatus

@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "67854afe8f01ef5977743d0e_bfd7a0d0-61d5-4aa4-b0e9-d9477ef5a954",
+  "gitSyncId": "67854afe8f01ef5977743d0e_d8df61f6-a548-4de0-b351-1cc85c6f6e9c",
   "id": "New Leads_Query2",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "select * from remote_hermes.merchants\nlimit 500",
+      "body": "SELECT * FROM merchantsCurrentStatus",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -13,7 +13,7 @@
           "value": true
         }
       ],
-      "timeoutInMillisecond": 100000
+      "timeoutInMillisecond": 10000
     },
     "confirmBeforeExecute": false,
     "datasource": {

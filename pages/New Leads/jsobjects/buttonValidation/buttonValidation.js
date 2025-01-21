@@ -14,7 +14,9 @@ export default {
       !inputBusinessPhone.text.trim() ||
       !inputBusinessWebsite.text.trim() ||
       !inputEstimatedValue.value || 
-      !selectProductCategory.value 
+      !selectOtherCourier.value ||
+			!selectProductCategory.value
+			
     ) {
       showAlert("Please fill all the fields before submitting.", "error");
       return; 
@@ -37,6 +39,7 @@ export default {
     inputBusinessPhone.setValue('');
     inputBusinessWebsite.setValue('');
     inputEstimatedValue.setValue(0);  
-    selectProductCategory.setOptions([]); 
+    selectOtherCourier.setOptions([])
+		selectProductCategory.setOptions([]); 
   }
 };

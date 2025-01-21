@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67854afe8f01ef5977743d0e_80ef1efa-b89d-4da7-bcf2-4d99b6d460f2",
+  "id": "Landing Page_refreshFetchNewOnboardsData",
+  "unpublishedCollection": {
+    "name": "refreshFetchNewOnboardsData",
+    "pageId": "Landing Page",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

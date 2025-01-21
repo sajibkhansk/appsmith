@@ -1,0 +1,13 @@
+SELECT 
+    newonboards.created_at,
+    business_name as "Business Name",
+    business_owner_name as "Business Owner Name",
+    phone as "Business Phone",
+    estimated_volume as "Estimated Volume",
+    category as "Category",
+    business_team_users.user_name as "Onboarded By"
+FROM newonboards
+INNER JOIN business_team_users 
+    ON business_team_users.id = CAST(newonboards.business_team_user_id AS INT)  -- Cast business_team_user_id to INT
+WHERE business_team_users.id = {{ getUserDetailsByEmail.data[0]?.id }}  -- Compare with the user ID (integer)
+ORDER BY newonboards.id DESC;

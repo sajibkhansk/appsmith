@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    newonboards.created_at,\n    business_name as \"Business Name\",\n    business_owner_name as \"Business Owner Name\",\n    phone as \"Business Phone\",\n    estimated_volume as \"Estimated Volume\",\n    category as \"Category\",\n    business_team_users.user_name as \"Onboarded By\"\nFROM newonboards\nINNER JOIN business_team_users \n    ON business_team_users.id = CAST(newonboards.business_team_user_id AS INT)  -- Cast business_team_user_id to INT\nWHERE business_team_users.id = {{ getUserDetailsByEmail.data[0]?.id }}  -- Compare with the user ID (integer)\nORDER BY newonboards.id DESC;",
+      "body": "SELECT \n    new_onboards.created_at,\n    business_name as \"Business Name\",\n    business_owner_name as \"Business Owner Name\",\n    phone as \"Business Phone\",\n    estimated_volume as \"Estimated Volume\",\n    static_values.name as \"Category\",\n    business_team_users.user_name as \"Onboarded By\"\nFROM new_onboards\nINNER JOIN business_team_users \n    ON business_team_users.id = CAST(new_onboards.business_team_user_id AS INT) \nINNER JOIN static_values on static_values.id = CAST(new_onboards.product_category_id AS INT)\nWHERE business_team_users.id = {{ getUserDetailsByEmail.data[0]?.id }} \nORDER BY new_onboards.id DESC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

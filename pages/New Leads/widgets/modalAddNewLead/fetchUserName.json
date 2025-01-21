@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 62,
+  "bottomRow": 69,
   "boxShadow": "none",
   "defaultText": "{{  getUserDetailsByEmail.data[0]?.id \n  ? `${getUserDetailsByEmail.data[0].id} | ${getUserDetailsByEmail.data[0].user_name} | ${getUserDetailsByEmail.data[0].team_name}` \n  : \"No user found\"\n}}",
   "dynamicBindingPathList": [
@@ -52,7 +52,7 @@
   "rightColumn": 62,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 55,
+  "topRow": 62,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "vp3wb5zpzn",

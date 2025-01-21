@@ -1,0 +1,8 @@
+SELECT 
+		id,
+    name AS "Competitor Name",
+    is_visible,
+    key_type
+FROM static_values
+WHERE key_type = 'competition'
+AND is_visible = 'true'

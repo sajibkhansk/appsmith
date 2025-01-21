@@ -1,11 +1,12 @@
-INSERT INTO newonboards (
+INSERT INTO new_onboards (
   business_name, 
   business_owner_name, 
   phone, 
   website, 
   estimated_volume, 
-  category,
-	business_team_user_id
+  product_category_id,
+  business_team_user_id,
+  competitor_id
 )
 VALUES (
   '{{ inputBusinessName.text }}', 
@@ -13,6 +14,7 @@ VALUES (
   '{{ inputBusinessPhone.text }}', 
   '{{ inputBusinessWebsite.text }}', 
   '{{ inputEstimatedValue.text }}', 
-  '{{ selectProductCategory.value }}',
-  '{{ getUserDetailsByEmail.data[0].id }}'
-);
+  '{{ selectProductCategory.value }}', 
+(SELECT id FROM business_team_users WHERE user_email = '{{ appsmith.store.userEmail }}'), 
+  '{{ selectOtherCourier.value }}'
+)

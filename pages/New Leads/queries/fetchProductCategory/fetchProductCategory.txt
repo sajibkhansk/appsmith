@@ -1,3 +1,8 @@
-select 
-	name as "Product Name"
-from category
+SELECT 
+		id,
+    name AS "Product Name",
+    is_visible,
+    key_type
+FROM static_values
+WHERE key_type = 'merchant_product_category'
+AND is_visible = 'true'

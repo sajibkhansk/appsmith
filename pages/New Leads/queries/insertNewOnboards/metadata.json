@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO newonboards (\n  business_name, \n  business_owner_name, \n  phone, \n  website, \n  estimated_volume, \n  category,\n\tbusiness_team_user_id\n)\nVALUES (\n  '{{ inputBusinessName.text }}', \n  '{{ inputBusinessOwnerName.text }}', \n  '{{ inputBusinessPhone.text }}', \n  '{{ inputBusinessWebsite.text }}', \n  '{{ inputEstimatedValue.text }}', \n  '{{ selectProductCategory.value }}',\n  '{{ getUserDetailsByEmail.data[0].id }}'\n);",
+      "body": "INSERT INTO new_onboards (\n  business_name, \n  business_owner_name, \n  phone, \n  website, \n  estimated_volume, \n  product_category_id,\n  business_team_user_id,\n  competitor_id\n)\nVALUES (\n  '{{ inputBusinessName.text }}', \n  '{{ inputBusinessOwnerName.text }}', \n  '{{ inputBusinessPhone.text }}', \n  '{{ inputBusinessWebsite.text }}', \n  '{{ inputEstimatedValue.text }}', \n  '{{ selectProductCategory.value }}', \n(SELECT id FROM business_team_users WHERE user_email = '{{ appsmith.store.userEmail }}'), \n  '{{ selectOtherCourier.value }}'\n)",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
