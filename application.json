@@ -33,11 +33,11 @@
   "pages": [
     {
       "id": "Log In",
-      "isDefault": false
+      "isDefault": true
     },
     {
       "id": "New Leads",
-      "isDefault": true
+      "isDefault": false
     },
     {
       "id": "Test Page",

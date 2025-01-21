@@ -39,14 +39,14 @@ ON  ro.merchant_id = rm.id )
 
 select *, 
 		CASE
-    WHEN is_registered_merchant = 'true' AND is_store_created = 'true' AND is_payment_method_active = 'true'  THEN 'registered_store_payment_active'
+    WHEN is_registered_merchant = 'true' AND is_store_created = 'true' AND is_payment_method_active = 'true' THEN 'registered_store_payment_active'
     WHEN is_registered_merchant = 'true' AND is_store_created = 'true' AND is_payment_method_active = 'false' THEN 'registered_store_only'
     WHEN is_registered_merchant = 'true' AND is_store_created = 'false' AND is_payment_method_active = 'true' THEN 'registered_payment_only'
     WHEN is_registered_merchant = 'true' AND is_store_created = 'false' AND is_payment_method_active = 'false' THEN 'only_registered'
     WHEN is_registered_merchant = 'false' AND is_store_created = 'true' AND is_payment_method_active = 'true' THEN 'store_payment_only'
     WHEN is_registered_merchant = 'false' AND is_store_created = 'true' AND is_payment_method_active = 'false' THEN 'only_store_created'
     WHEN is_registered_merchant = 'false' AND is_store_created = 'false' AND is_payment_method_active = 'true' THEN 'only_payment_method_active'
-    ELSE 'null'
+    ELSE 'none'
 END as current_status
 
 from defining_status
