@@ -4,9 +4,9 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 27,
+  "bottomRow": 55,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-  "canFreezeColumn": true,
+  "canFreezeColumn": false,
   "childStylesheet": {
     "button": {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -82,9 +82,22 @@
     },
     {
       "key": "primaryColumns.Action.computedValue"
+    },
+    {
+      "key": "primaryColumns.Action.buttonColor"
+    },
+    {
+      "key": "primaryColumns.Action.borderRadius"
+    },
+    {
+      "key": "primaryColumns.Action.boxShadow"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "tableData"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "enableClientSideSearch": true,
   "flexVerticalAlignment": "start",
@@ -93,10 +106,10 @@
   "isLoading": false,
   "isSortable": true,
   "isVisible": true,
-  "isVisibleDownload": true,
+  "isVisibleDownload": false,
   "isVisibleFilters": false,
   "isVisiblePagination": true,
-  "isVisibleSearch": true,
+  "isVisibleSearch": false,
   "key": "chqf59r976",
   "label": "Data",
   "leftColumn": 0,
@@ -114,10 +127,14 @@
       "alias": "Action",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
       "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Action\"]))}}",
+      "columnType": "button",
+      "computedValue": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Action\"]))}}",
       "currencyCode": "USD",
+      "customAlias": "",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
@@ -150,7 +167,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"business_name\"]))}}",
+      "computedValue": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"business_name\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -184,7 +201,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"business_owner_name\"]))}}",
+      "computedValue": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"business_owner_name\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -218,7 +235,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"created_at\"]))}}",
+      "computedValue": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"created_at\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -252,7 +269,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "number",
-      "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+      "computedValue": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -286,7 +303,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"phone\"]))}}",
+      "computedValue": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"phone\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -320,7 +337,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"product_category_name\"]))}}",
+      "computedValue": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"product_category_name\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -353,13 +370,13 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
-  "tableData": "{{dynamicQuery.data}}",
+  "tableData": "{{ appsmith.store.registrationpendingData }}",
   "textSize": "0.875rem",
-  "topRow": 0,
+  "topRow": 4,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
   "widgetId": "8bc8eiygfz",
-  "widgetName": "Table2"
+  "widgetName": "registrationPending"
 }

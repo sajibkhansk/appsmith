@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "67854afe8f01ef5977743d0e_6125c51e-4b82-4a04-95c2-2ab7d1e19053",
-  "id": "Tracker_TabWatcher.fetchFilteredData",
+  "gitSyncId": "67854afe8f01ef5977743d0e_90f065af-6dab-40e3-8639-673f17e27046",
+  "id": "Tracker_TabWatcher.clearTableForTab",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -8,7 +8,7 @@
       "encodeParamsToggle": true,
       "jsArguments": [
         {
-          "name": "selectedTab"
+          "name": "tabName"
         }
       ],
       "paginationType": "NONE",
@@ -27,8 +27,8 @@
       }
     ],
     "executeOnLoad": false,
-    "fullyQualifiedName": "TabWatcher.fetchFilteredData",
-    "name": "fetchFilteredData",
+    "fullyQualifiedName": "TabWatcher.clearTableForTab",
+    "name": "clearTableForTab",
     "pageId": "Tracker",
     "userSetOnLoad": false
   }

@@ -9,7 +9,7 @@
     "variables": [
       {
         "name": "tabStatuses",
-        "value": "{\n  \"Need Followup\": \"need_followup\",\n  \"Registration Pending\": \"registration_pending\",\n  \"Information Pending\": \"information_pending\",\n  \"Orders Pending\": \"orders_pending\",\n  \"Orders Ongoing\": \"ongoing_merchant\"\n}"
+        "value": "{\n  \"Need Followup\": \"need_followup\",\n  \"Registration Pending\": \"registration_pending\",\n  \"Information Pending\": \"info_pending\",\n  \"Orders Pending\": \"info_uploaded_order_pending\",\n  \"Orders Ongoing\": \"ongoing_merchant\"\n}"
       }
     ]
   }

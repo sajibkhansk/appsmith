@@ -102,7 +102,7 @@
     }
   ],
   "dynamicTriggerPathList": [],
-  "enableClientSideSearch": true,
+  "enableClientSideSearch": false,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
   "inlineEditingSaveOption": "ROW_LEVEL",
@@ -377,7 +377,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
-  "tableData": "{{ appsmith.store.tabData }}",
+  "tableData": "{{ appsmith.store.ordersongoingData }}",
   "textSize": "0.875rem",
   "topRow": 4,
   "totalRecordsCount": 0,

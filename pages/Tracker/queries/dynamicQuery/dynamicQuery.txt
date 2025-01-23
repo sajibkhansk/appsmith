@@ -48,9 +48,9 @@ defining_status AS (
     LEFT JOIN merchants rm ON no.phone = rm.phone
     LEFT JOIN stores rs ON rs.merchant_id = rm.id
     LEFT JOIN orders ro ON ro.merchant_id = rm.id 
-    LEFT JOIN static_values st ON st.id = CAST(no.product_category_id AS INT)
-    LEFT JOIN static_values stt ON stt.id = CAST(no.product_category_id AS INT)
-    LEFT JOIN business_team_users btu ON btu.id = CAST(no.business_team_user_id AS INT)
+    LEFT JOIN static_values st ON st.id = CAST(NULLIF(no.product_category_id, '') AS INT)
+    LEFT JOIN static_values stt ON stt.id = CAST(NULLIF(no.product_category_id, '') AS INT)
+    LEFT JOIN business_team_users btu ON btu.id = CAST(NULLIF(no.business_team_user_id, '') AS INT)
     WHERE btu.id = '{{this.params.user_id}}'
 ),
 current_status AS (
@@ -74,4 +74,4 @@ SELECT
     created_at,
     NULL AS "Action"
 FROM current_status
-WHERE current_status = '{{this.params.status}}'
+WHERE current_status = '{{this.params.status}}';
