@@ -40,7 +40,9 @@
     "Action"
   ],
   "columnUpdatedAt": 1737619428900,
-  "columnWidthMap": {},
+  "columnWidthMap": {
+    "created_at": 218
+  },
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
@@ -226,7 +228,7 @@
       "alias": "created_at",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "columnType": "text",
+      "columnType": "date",
       "computedValue": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"created_at\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
@@ -246,6 +248,7 @@
       "label": "created_at",
       "notation": "standard",
       "originalId": "created_at",
+      "outputFormat": "LLL",
       "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,

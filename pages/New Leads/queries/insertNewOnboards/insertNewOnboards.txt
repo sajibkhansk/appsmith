@@ -6,7 +6,8 @@ INSERT INTO new_onboards (
   estimated_volume, 
   product_category_id,
   business_team_user_id,
-  competitor_id
+  competitor_id,
+	status
 )
 VALUES (
   '{{ inputBusinessName.text }}', 
@@ -16,5 +17,6 @@ VALUES (
   '{{ inputEstimatedValue.text }}', 
   '{{ selectProductCategory.value }}', 
 (SELECT id FROM business_team_users WHERE user_email = '{{ appsmith.store.userEmail }}'), 
-  '{{ selectOtherCourier.value }}'
+  '{{ selectOtherCourier.value }}',
+	'active'
 )

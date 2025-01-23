@@ -40,7 +40,9 @@
     "Action"
   ],
   "columnUpdatedAt": 1737540687360,
-  "columnWidthMap": {},
+  "columnWidthMap": {
+    "created_at": 221
+  },
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
@@ -234,7 +236,7 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "text",
+      "columnType": "date",
       "computedValue": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"created_at\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
@@ -255,6 +257,7 @@
       "label": "created_at",
       "notation": "standard",
       "originalId": "created_at",
+      "outputFormat": "LLL",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

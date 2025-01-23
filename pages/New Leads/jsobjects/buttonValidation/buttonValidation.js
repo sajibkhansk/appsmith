@@ -20,6 +20,12 @@ export default {
       return; 
     }
 
+    // Validate that the phone number is exactly 10 digits
+    if (inputBusinessPhone.text.length !== 11) {
+      showAlert("Phone number must be exactly 10 digits.", "error");
+      return;
+    }
+
     // Run the checkDuplicatePhone query to see if the phone number exists
     checkDuplicatePhone.run()
       .then(data => {

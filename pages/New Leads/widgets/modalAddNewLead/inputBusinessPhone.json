@@ -12,10 +12,14 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "validation"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
+  "errorMessage": "Phone number must be 11 digits",
   "iconAlign": "left",
   "inputType": "TEXT",
   "isDisabled": false,
@@ -30,7 +34,7 @@
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 1,
-  "maxChars": "11",
+  "maxChars": "",
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -50,6 +54,7 @@
   "showStepArrows": false,
   "topRow": 24,
   "type": "INPUT_WIDGET_V2",
+  "validation": "{{ inputBusinessPhone.text.length === 11 ? true : false }}",
   "version": 2,
   "widgetId": "m3nui0lgxg",
   "widgetName": "inputBusinessPhone"
