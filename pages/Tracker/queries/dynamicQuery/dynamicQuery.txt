@@ -1,0 +1,77 @@
+WITH orders AS ( 
+    SELECT merchant_id, COUNT(consignment_id) AS order_count
+    FROM remote_hermes.orders
+    WHERE created_at >= '2025-01-20'
+    GROUP BY 1
+),
+merchants AS ( 
+    SELECT *
+    FROM remote_hermes.merchants
+),
+stores AS ( 
+    SELECT merchant_id, COUNT(id) AS store_count
+    FROM remote_hermes.stores
+    GROUP BY 1
+),
+defining_status AS (
+    SELECT 
+        no.id,
+        business_name,
+        business_owner_name,
+        estimated_volume,
+        st.name AS product_category_name,
+        no.phone,
+        website,
+        no.created_at,
+        no.updated_at,
+        stt.name AS competitor_name,
+        btu.user_name AS business_team_user_name,
+        status,
+        CASE 
+            WHEN rm.phone IS NOT NULL THEN TRUE 
+            ELSE FALSE 
+        END AS is_registered_merchant,
+        CASE 
+            WHEN rs.store_count > 0 THEN TRUE 
+            ELSE FALSE 
+        END AS is_store_created,
+        CASE 
+            WHEN rm.active_payment_method IS NOT NULL THEN TRUE 
+            ELSE FALSE 
+        END AS is_payment_method_active,
+        CASE 
+            WHEN ro.order_count > 0 THEN TRUE 
+            ELSE FALSE 
+        END AS is_order_created
+    FROM 
+        new_onboards no
+    LEFT JOIN merchants rm ON no.phone = rm.phone
+    LEFT JOIN stores rs ON rs.merchant_id = rm.id
+    LEFT JOIN orders ro ON ro.merchant_id = rm.id 
+    LEFT JOIN static_values st ON st.id = CAST(no.product_category_id AS INT)
+    LEFT JOIN static_values stt ON stt.id = CAST(no.product_category_id AS INT)
+    LEFT JOIN business_team_users btu ON btu.id = CAST(no.business_team_user_id AS INT)
+    WHERE btu.id = '{{this.params.user_id}}'
+),
+current_status AS (
+    SELECT *, 
+        CASE
+            WHEN is_registered_merchant = TRUE AND is_store_created = TRUE AND is_payment_method_active = TRUE AND is_order_created = TRUE THEN 'ongoing_merchant'
+            WHEN is_registered_merchant = FALSE AND is_store_created = FALSE AND is_payment_method_active = FALSE AND is_order_created = FALSE THEN 'registration_pending'
+            WHEN is_registered_merchant = TRUE AND is_store_created = FALSE AND is_payment_method_active = FALSE AND is_order_created = FALSE THEN 'registered'
+            WHEN is_registered_merchant = TRUE AND is_store_created <> is_payment_method_active AND is_order_created = FALSE THEN 'info_pending'
+            WHEN is_registered_merchant = TRUE AND is_store_created = is_payment_method_active AND is_order_created = FALSE THEN 'info_uploaded_order_pending'
+            ELSE 'none'
+        END AS current_status 
+    FROM defining_status
+)
+SELECT 
+    id,
+    Phone,
+    business_name, 
+    business_owner_name, 
+    product_category_name,
+    created_at,
+    NULL AS "Action"
+FROM current_status
+WHERE current_status = '{{this.params.status}}'

@@ -1,2 +1,0 @@
-select * from remote_hermes.orders 
-where created_at >= '2025-01-01'

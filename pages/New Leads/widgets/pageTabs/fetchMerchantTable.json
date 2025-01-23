@@ -655,7 +655,7 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 63,
   "searchKey": "",
   "serverSidePaginationEnabled": false,
   "tableData": "{{duplicateMerchantCheck.data}}",

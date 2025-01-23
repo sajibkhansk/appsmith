@@ -10,7 +10,7 @@ INSERT INTO new_onboards (
 )
 VALUES (
   '{{ inputBusinessName.text }}', 
-  '{{ inputBusinessOwnerName.text }}', 
+  '{{ inputBusinessOwnerName.text }}',
   '{{ inputBusinessPhone.text }}', 
   '{{ inputBusinessWebsite.text }}', 
   '{{ inputEstimatedValue.text }}', 

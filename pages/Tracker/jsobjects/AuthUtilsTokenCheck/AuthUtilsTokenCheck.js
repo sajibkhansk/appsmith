@@ -8,8 +8,6 @@ export default {
     } else {
       console.error("No token found in store.");
       showAlert("Session expired. Please log in again.", "error");
-
-      
       navigateTo("Log In");
     }
   },
