@@ -24,8 +24,8 @@ defining_status AS (
         business_name,
         business_owner_name,
         estimated_volume,
-		ro.first_order_date,
-		ro.last_day_order,
+				first_order_date,
+				last_day_order,
         st.name AS product_category_name,
         no.phone,
         website,
@@ -58,26 +58,18 @@ defining_status AS (
     LEFT JOIN static_values st ON st.id = CAST(NULLIF(no.product_category_id, '') AS INT)
     LEFT JOIN static_values stt ON stt.id = CAST(NULLIF(no.product_category_id, '') AS INT)
     LEFT JOIN business_team_users btu ON btu.id = CAST(NULLIF(no.business_team_user_id, '') AS INT)
-     WHERE btu.id = '{{this.params.user_id}}'
+    WHERE btu.id = '{{this.params.user_id}}'
 ),
 current_status AS (
     SELECT *, 
         CASE
-            -- Check if the merchant is ongoing
-            WHEN is_registered_merchant = TRUE AND is_store_created = TRUE AND is_payment_method_active = TRUE AND is_order_created = TRUE THEN 
-                CASE 
-                    -- If ongoing and needs followup (estimated_volume > last_day_order)
-                    WHEN estimated_volume > last_day_order THEN 'need_followup'
-                    ELSE 'ongoing_merchant'
-                END
-            
-            -- Other conditions for the status
+            WHEN is_registered_merchant = TRUE AND is_store_created = TRUE AND is_payment_method_active = TRUE AND is_order_created = TRUE THEN 'ongoing_merchant'
             WHEN is_registered_merchant = FALSE AND is_store_created = FALSE AND is_payment_method_active = FALSE AND is_order_created = FALSE THEN 'registration_pending'
             WHEN is_registered_merchant = TRUE AND is_store_created = FALSE AND is_payment_method_active = FALSE AND is_order_created = FALSE THEN 'registered'
             WHEN is_registered_merchant = TRUE AND is_store_created <> is_payment_method_active AND is_order_created = FALSE THEN 'info_pending'
             WHEN is_registered_merchant = TRUE AND is_store_created = is_payment_method_active AND is_order_created = FALSE THEN 'info_uploaded_order_pending'
             ELSE 'none'
-        END AS current_status
+        END AS current_status 
     FROM defining_status
 )
 SELECT 
@@ -86,7 +78,10 @@ SELECT
     business_name, 
     business_owner_name, 
     product_category_name,
-    created_at
+    created_at,
+    NULL AS "Action",
+		case when estimated_volume > last_day_order THEN 'red'
+    ELSE 'green' end as followup
 FROM current_status
 WHERE current_status = '{{this.params.status}}';
 

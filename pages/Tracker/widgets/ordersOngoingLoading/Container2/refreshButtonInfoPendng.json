@@ -14,7 +14,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -25,16 +29,16 @@
   "isLoading": false,
   "isVisible": true,
   "key": "k86hm4rxm8",
-  "leftColumn": 57,
+  "leftColumn": 55,
   "minWidth": 120,
   "mobileBottomRow": 4,
   "mobileLeftColumn": 48,
   "mobileRightColumn": 64,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "{{TabWatcher.fetchDataForTab('Registration Pending');}}",
+  "onClick": "{{ TabWatcher.fetchDataForTab(\"Information Pending\") }}",
   "parentColumnSpace": 17.625,
-  "parentId": "0pqumkxjtm",
+  "parentId": "td6vj9rn4x",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
@@ -46,6 +50,6 @@
   "topRow": 0,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "l6urfo02kh",
-  "widgetName": "refreshButtonRegPending"
+  "widgetId": "c204ajbljh",
+  "widgetName": "refreshButtonInfoPendng"
 }

@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "name": "merchantsCurrentStatus",
     "pageId": "Tracker",
     "userSetOnLoad": false

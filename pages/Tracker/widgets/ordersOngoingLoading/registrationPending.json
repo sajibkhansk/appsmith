@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 55,
+  "bottomRow": 111,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": false,
   "childStylesheet": {
@@ -36,10 +36,9 @@
     "business_name",
     "business_owner_name",
     "product_category_name",
-    "created_at",
-    "Action"
+    "created_at"
   ],
-  "columnUpdatedAt": 1737540687360,
+  "columnUpdatedAt": 1738061145900,
   "columnWidthMap": {
     "created_at": 221
   },
@@ -81,18 +80,6 @@
     },
     {
       "key": "primaryColumns.created_at.computedValue"
-    },
-    {
-      "key": "primaryColumns.Action.computedValue"
-    },
-    {
-      "key": "primaryColumns.Action.buttonColor"
-    },
-    {
-      "key": "primaryColumns.Action.borderRadius"
-    },
-    {
-      "key": "primaryColumns.Action.boxShadow"
     }
   ],
   "dynamicPropertyPathList": [
@@ -121,48 +108,12 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
+  "originalBottomRow": 65,
+  "originalTopRow": 14,
   "parentColumnSpace": 17.625,
   "parentId": "0pqumkxjtm",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "Action": {
-      "alias": "Action",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "borderRadius": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "boxShadow": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
-      "cellBackground": "",
-      "columnType": "button",
-      "computedValue": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Action\"]))}}",
-      "currencyCode": "USD",
-      "customAlias": "",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "Action",
-      "index": 6,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Action",
-      "notation": "standard",
-      "originalId": "Action",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "business_name": {
       "alias": "business_name",
       "allowCellWrapping": false,
@@ -375,7 +326,7 @@
   "searchKey": "",
   "tableData": "{{ appsmith.store.registrationpendingData }}",
   "textSize": "0.875rem",
-  "topRow": 4,
+  "topRow": 6,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 32,
+  "bottomRow": 34,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": false,
   "childStylesheet": {
@@ -36,10 +36,9 @@
     "business_name",
     "business_owner_name",
     "product_category_name",
-    "created_at",
-    "Action"
+    "created_at"
   ],
-  "columnUpdatedAt": 1737540592465,
+  "columnUpdatedAt": 1738062282992,
   "columnWidthMap": {
     "created_at": 244,
     "id": 80
@@ -82,18 +81,6 @@
     },
     {
       "key": "primaryColumns.created_at.computedValue"
-    },
-    {
-      "key": "primaryColumns.Action.computedValue"
-    },
-    {
-      "key": "primaryColumns.Action.menuColor"
-    },
-    {
-      "key": "primaryColumns.Action.borderRadius"
-    },
-    {
-      "key": "primaryColumns.Action.boxShadow"
     }
   ],
   "dynamicPropertyPathList": [
@@ -122,51 +109,12 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 44,
-  "originalTopRow": 16,
+  "originalBottomRow": 38,
+  "originalTopRow": 10,
   "parentColumnSpace": 17.625,
   "parentId": "a4gt1mqrv6",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "Action": {
-      "alias": "Action",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "borderRadius": "{{ordersOngoing.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "boxShadow": "{{ordersOngoing.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "cellBackground": "",
-      "columnType": "menuButton",
-      "computedValue": "{{ordersOngoing.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Action\"]))}}",
-      "currencyCode": "USD",
-      "customAlias": "",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "Action",
-      "index": 6,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Action",
-      "menuColor": "{{ordersOngoing.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
-      "menuItemsSource": "STATIC",
-      "notation": "standard",
-      "originalId": "Action",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "business_name": {
       "alias": "business_name",
       "allowCellWrapping": false,
@@ -379,7 +327,7 @@
   "searchKey": "",
   "tableData": "{{ appsmith.store.ordersongoingData }}",
   "textSize": "0.875rem",
-  "topRow": 4,
+  "topRow": 6,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

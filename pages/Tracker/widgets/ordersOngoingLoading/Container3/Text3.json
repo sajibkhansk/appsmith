@@ -1,6 +1,5 @@
 {
   "animateLoading": true,
-  "backgroundColor": "#7f1d1d",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 4,
   "dynamicBindingPathList": [
@@ -12,12 +11,6 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
-    },
-    {
-      "key": "textColor"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -27,7 +20,7 @@
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "9ho1f1asmc",
+  "key": "w6kux5qrrx",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
@@ -37,23 +30,23 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 4,
+  "originalBottomRow": 5,
   "originalTopRow": 0,
   "overflow": "NONE",
-  "parentColumnSpace": 17.625,
-  "parentId": "pdvtri64na",
+  "parentColumnSpace": 17.3125,
+  "parentId": "sh373oo889",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 56,
+  "rightColumn": 23,
   "shouldTruncate": false,
-  "text": "{{ appsmith.store.orderspendingLoading ? \"Data Loading...\" : \"\" }}",
-  "textAlign": "CENTER",
-  "textColor": "{{appsmith.theme.colors.backgroundColor}}",
+  "text": "List of merchants pending first order creation",
+  "textAlign": "LEFT",
+  "textColor": "#231F20",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "85zgprnjwn",
-  "widgetName": "ordersPendingLoading"
+  "widgetId": "73sb0edd0u",
+  "widgetName": "Text3"
 }
