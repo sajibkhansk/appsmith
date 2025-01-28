@@ -1,0 +1,3 @@
+SELECT id,name
+	FROM static_values 
+	where key_type = 'followup_call_response'

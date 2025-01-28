@@ -29,6 +29,7 @@ defining_status AS (
         st.name AS product_category_name,
         no.phone,
         website,
+				rm.id as merchant_id,
         no.created_at,
         no.updated_at,
         stt.name AS competitor_name,
@@ -74,15 +75,16 @@ current_status AS (
             -- Other conditions for the status
             WHEN is_registered_merchant = FALSE AND is_store_created = FALSE AND is_payment_method_active = FALSE AND is_order_created = FALSE THEN 'registration_pending'
             WHEN is_registered_merchant = TRUE AND is_store_created = FALSE AND is_payment_method_active = FALSE AND is_order_created = FALSE THEN 'registered'
-            WHEN is_registered_merchant = TRUE AND is_store_created <> is_payment_method_active AND is_order_created = FALSE THEN 'info_pending'
+            WHEN is_registered_merchant = TRUE AND (is_store_created = TRUE OR is_payment_method_active=TRUE) AND is_order_created = FALSE THEN 'info_pending'
             WHEN is_registered_merchant = TRUE AND is_store_created = is_payment_method_active AND is_order_created = FALSE THEN 'info_uploaded_order_pending'
             ELSE 'none'
         END AS current_status
     FROM defining_status
 )
 SELECT 
-    id,
+			id,
     Phone,
+			merchant_id,
     business_name, 
     business_owner_name, 
     product_category_name,

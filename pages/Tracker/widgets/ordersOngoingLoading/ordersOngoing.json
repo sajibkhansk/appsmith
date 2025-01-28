@@ -31,17 +31,20 @@
     }
   },
   "columnOrder": [
-    "id",
-    "phone",
+    "merchant_id",
+    "created_at",
     "business_name",
     "business_owner_name",
+    "phone",
     "product_category_name",
-    "created_at"
+    "customColumn1",
+    "id"
   ],
-  "columnUpdatedAt": 1738062282992,
+  "columnUpdatedAt": 1738069295764,
   "columnWidthMap": {
+    "business_owner_name": 229,
     "created_at": 244,
-    "id": 80
+    "id": 135
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -81,6 +84,12 @@
     },
     {
       "key": "primaryColumns.created_at.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuColor"
+    },
+    {
+      "key": "primaryColumns.merchant_id.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -88,7 +97,11 @@
       "key": "tableData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItemhvy42t5k3j.onClick"
+    }
+  ],
   "enableClientSideSearch": false,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
@@ -114,6 +127,7 @@
   "parentColumnSpace": 17.625,
   "parentId": "a4gt1mqrv6",
   "parentRowSpace": 10,
+  "primaryColumnId": "id",
   "primaryColumns": {
     "business_name": {
       "alias": "business_name",
@@ -138,7 +152,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "business_name",
+      "label": "Business Name",
       "notation": "standard",
       "originalId": "business_name",
       "sticky": "",
@@ -172,7 +186,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "business_owner_name",
+      "label": "Business Owner Name",
       "notation": "standard",
       "originalId": "business_owner_name",
       "sticky": "",
@@ -206,12 +220,62 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "created_at",
+      "label": "Created At",
       "notation": "standard",
       "originalId": "created_at",
       "outputFormat": "LLL",
       "sticky": "",
       "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn1": {
+      "alias": "Action",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "menuButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "customColumn1",
+      "index": 6,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Action",
+      "labelColor": "#FFFFFF",
+      "menuButtonLabel": " ",
+      "menuButtoniconName": "menu",
+      "menuColor": "{{ordersOngoing.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "menuItems": {
+        "menuItemhvy42t5k3j": {
+          "id": "menuItemhvy42t5k3j",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "View Orders",
+          "onClick": "{{showModal(viewOrderDetails.name);}}",
+          "widgetId": "ynm2p9fzdu"
+        }
+      },
+      "menuItemsSource": "STATIC",
+      "menuVariant": "TERTIARY",
+      "notation": "standard",
+      "originalId": "customColumn1",
+      "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -240,10 +304,44 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
-      "label": "id",
+      "isVisible": false,
+      "label": "ID",
       "notation": "standard",
       "originalId": "id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "merchant_id": {
+      "alias": "merchant_id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{ordersOngoing.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"merchant_id\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "merchant_id",
+      "index": 2,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Merchant ID",
+      "notation": "standard",
+      "originalId": "merchant_id",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -275,7 +373,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "phone",
+      "label": "Phone",
       "notation": "standard",
       "originalId": "phone",
       "sticky": "",
@@ -309,7 +407,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "product_category_name",
+      "label": "Product Category",
       "notation": "standard",
       "originalId": "product_category_name",
       "sticky": "",
