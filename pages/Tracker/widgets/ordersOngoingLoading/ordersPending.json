@@ -31,17 +31,20 @@
     }
   },
   "columnOrder": [
-    "id",
     "created_at",
+    "merchant_id",
     "business_name",
     "business_owner_name",
     "phone",
-    "product_category_name"
+    "product_category_name",
+    "id",
+    "customColumn1"
   ],
-  "columnUpdatedAt": 1738068941658,
+  "columnUpdatedAt": 1738229191659,
   "columnWidthMap": {
     "business_owner_name": 258,
     "created_at": 218,
+    "merchant_id": 162,
     "product_category_name": 227
   },
   "customIsLoading": false,
@@ -82,6 +85,18 @@
     },
     {
       "key": "primaryColumns.created_at.computedValue"
+    },
+    {
+      "key": "primaryColumns.merchant_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuColor"
+    },
+    {
+      "key": "primaryColumns.customColumn1.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn1.boxShadow"
     }
   ],
   "dynamicPropertyPathList": [
@@ -89,7 +104,11 @@
       "key": "tableData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItemhtzkq2g0pj.onClick"
+    }
+  ],
   "enableClientSideSearch": true,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
@@ -115,6 +134,7 @@
   "parentColumnSpace": 17.625,
   "parentId": "pdvtri64na",
   "parentRowSpace": 10,
+  "primaryColumnId": "id",
   "primaryColumns": {
     "business_name": {
       "alias": "business_name",
@@ -210,6 +230,69 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "customColumn1": {
+      "alias": "Action",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "menuButton",
+      "computedValue": "",
+      "configureMenuItems": {
+        "config": {
+          "id": "config",
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Menu Item"
+        },
+        "id": "config",
+        "label": "Configure menu items"
+      },
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "customColumn1",
+      "index": 6,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Action",
+      "labelColor": "#FFFFFF",
+      "menuButtonLabel": " ",
+      "menuButtoniconName": "menu",
+      "menuColor": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "menuItems": {
+        "menuItemhtzkq2g0pj": {
+          "id": "menuItemhtzkq2g0pj",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Follow Up",
+          "onClick": "{{showModal(ordersPendingModal.name);}}",
+          "widgetId": "mhxbt29avm"
+        }
+      },
+      "menuItemsSource": "STATIC",
+      "menuVariant": "TERTIARY",
+      "notation": "standard",
+      "originalId": "customColumn1",
+      "sourceData": [],
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "id": {
       "alias": "id",
       "allowCellWrapping": false,
@@ -235,6 +318,40 @@
       "notation": "standard",
       "originalId": "id",
       "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "merchant_id": {
+      "alias": "merchant_id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"merchant_id\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "merchant_id",
+      "index": 2,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Merchant_ID",
+      "notation": "standard",
+      "originalId": "merchant_id",
+      "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},

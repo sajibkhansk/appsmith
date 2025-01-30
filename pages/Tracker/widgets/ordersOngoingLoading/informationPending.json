@@ -104,7 +104,11 @@
       "key": "tableData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItemh2sxcxn4bm.onClick"
+    }
+  ],
   "enableClientSideSearch": true,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
@@ -262,6 +266,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "Follow Up",
+          "onClick": "{{showModal(followupInfoPending.name);}}",
           "widgetId": "chavxokpwh"
         }
       },

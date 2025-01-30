@@ -44,6 +44,7 @@
   "columnWidthMap": {
     "business_owner_name": 229,
     "created_at": 244,
+    "customColumn1": 132,
     "id": 135
   },
   "customIsLoading": false,
@@ -95,6 +96,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItemhvy42t5k3j.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -249,6 +253,7 @@
       "index": 6,
       "isCellEditable": false,
       "isCellVisible": true,
+      "isCompact": false,
       "isDerived": true,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -267,7 +272,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "View Orders",
-          "onClick": "{{showModal(viewOrderDetails.name);}}",
+          "onClick": "{{\n    (async () => {\n        const merchantId = currentRow.merchant_id; // Fetch Merchant ID from clicked row\n        \n        if (!merchantId) {\n            showAlert(\"Merchant ID not found. Please try again.\", \"error\");\n            return;\n        }\n\n        await storeValue(\"selectedMerchantID\", merchantId); // Store Merchant ID\n        await getMerchantDetails.run(); // Fetch merchant details\n        showModal(\"viewOrderDetails\"); // Open modal\n    })()\n}}",
           "widgetId": "ynm2p9fzdu"
         }
       },

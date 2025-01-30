@@ -1,0 +1,12 @@
+SELECT 
+    merchant_id AS "Merchant ID", 
+    MIN(sorted_at) AS "First Order Date", 
+    MAX(sorted_at) AS "Last Order Date",
+    COUNT(*) FILTER (WHERE sorted_at >= CURRENT_DATE - INTERVAL '1 day') AS "Last Day Order", 
+    COUNT(consignment_id) AS "Total Distinct Count",
+    COUNT(DISTINCT DATE(sorted_at)) AS "Active Days",
+    COUNT(consignment_id) / NULLIF(COUNT(DISTINCT DATE(sorted_at)), 0) AS "Average Order Count"
+FROM remote_hermes.orders
+WHERE merchant_id = CAST({{ appsmith.store.selectedMerchantID }} AS Int)
+AND transfer_status_id IN (8, 9, 10, 11, 12, 13, 22, 23, 24, 26, 28, 25, 14, 30, 31, 32, 33, 36, 37, 38, 39, 40, 41, 42)
+GROUP BY merchant_id;

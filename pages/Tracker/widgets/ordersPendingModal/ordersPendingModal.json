@@ -1,0 +1,85 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 599,
+  "boxShadow": "none",
+  "canEscapeKeyClose": true,
+  "canOutsideClickClose": true,
+  "children": [
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 600,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": true,
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "flexLayers": [],
+      "isDisabled": false,
+      "isLoading": false,
+      "isVisible": true,
+      "key": "573bmn93js",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 240,
+      "minWidth": 450,
+      "mobileBottomRow": 240,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 415.5,
+      "mobileTopRow": 0,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "8cqp582ahi",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 415.5,
+      "shouldScrollContents": false,
+      "topRow": 0,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "s6twb6q2cu",
+      "widgetName": "Canvas17"
+    }
+  ],
+  "detachFromLayout": true,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "height": 600,
+  "isCanvas": true,
+  "isLoading": false,
+  "key": "g1izqz8cys",
+  "leftColumn": 11,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 24,
+  "minHeight": 600,
+  "mobileBottomRow": 23,
+  "mobileLeftColumn": 11,
+  "mobileRightColumn": 35,
+  "mobileTopRow": -1,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 17.3125,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 35,
+  "shouldScrollContents": true,
+  "topRow": -1,
+  "type": "MODAL_WIDGET",
+  "version": 2,
+  "widgetId": "8cqp582ahi",
+  "widgetName": "ordersPendingModal",
+  "width": 456
+}

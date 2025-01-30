@@ -1,0 +1,65 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 47,
+  "boxShadow": "none",
+  "defaultText": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "MULTI_LINE_TEXT",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": "{{  discountNegoDropdown.selectedOptionValue === \"No\" ? \n    true : \n    false \n}}",
+  "key": "eqn5vewafw",
+  "label": "Reason",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 44,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 21,
+  "mobileTopRow": 37,
+  "needsErrorInfo": false,
+  "originalBottomRow": 47,
+  "originalTopRow": 37,
+  "parentColumnSpace": 6.9375,
+  "parentId": "s6twb6q2cu",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "shouldAllowAutofill": false,
+  "showStepArrows": false,
+  "topRow": 37,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "mjstrn801j",
+  "widgetName": "discountNegoReason"
+}

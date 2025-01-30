@@ -7,6 +7,6 @@ SELECT
     COUNT(Distinct date(sorted_at)) as "active_days",
     COUNT(consignment_id)/COUNT(DISTINCT date(sorted_at)) AS "Average Order Count"
 FROM remote_hermes.orders
-WHERE merchant_id = {{thisParam.merchantID}}
+WHERE merchant_id = {{ordersPending.selectedRow.merchant_id}};
 and transfer_status_id IN (8, 9, 10, 11, 12, 13, 22, 23, 24, 26, 28, 25, 14, 30, 31, 32, 33, 36, 37, 38, 39, 40, 41, 42)
 GROUP BY merchant_id;

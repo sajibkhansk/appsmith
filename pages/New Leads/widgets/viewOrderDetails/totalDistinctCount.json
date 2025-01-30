@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 24,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.875rem",
+  "fontStyle": "",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ul7odj24g7",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 9,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 5,
+  "needsErrorInfo": false,
+  "originalBottomRow": 24,
+  "originalTopRow": 20,
+  "overflow": "NONE",
+  "parentColumnSpace": 6.9375,
+  "parentId": "g6m3iuesxv",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "shouldTruncate": false,
+  "text": "<strong>Total Distinct Orders:</strong> {{ getMerchantDetails.data[0]?.[\"Total Distinct Count\"] || \"N/A\" }}\n",
+  "textAlign": "LEFT",
+  "textColor": "#231F20",
+  "topRow": 20,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "q2kmepma8u",
+  "widgetName": "totalDistinctCount"
+}

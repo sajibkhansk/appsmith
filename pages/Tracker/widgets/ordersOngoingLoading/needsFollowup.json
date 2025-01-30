@@ -45,6 +45,7 @@
     "business_owner_name": 221,
     "business_team_user_id": 246,
     "created_at": 219,
+    "customColumn1": 135,
     "estimated_volume": 190,
     "phone": 174,
     "product_category_id": 194,
@@ -107,7 +108,11 @@
       "key": "tableData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItem27g23vv9vn.onClick"
+    }
+  ],
   "enableClientSideSearch": true,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
@@ -274,6 +279,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "Follow Up",
+          "onClick": "{{showModal(needFollowupModal.name);}}",
           "widgetId": "jp2404hbmx"
         }
       },

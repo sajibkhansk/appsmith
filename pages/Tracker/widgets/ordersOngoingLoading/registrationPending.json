@@ -38,10 +38,10 @@
     "phone",
     "product_category_name",
     "customColumn1",
-    "merchant_id",
-    "id"
+    "id",
+    "merchant_id"
   ],
-  "columnUpdatedAt": 1738069312093,
+  "columnUpdatedAt": 1738214772071,
   "columnWidthMap": {
     "business_name": 186,
     "business_owner_name": 232,
