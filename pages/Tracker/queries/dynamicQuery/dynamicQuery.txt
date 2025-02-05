@@ -60,6 +60,7 @@ defining_status AS (
 	LEFT JOIN static_values stt ON stt.id = CAST(NULLIF(no.product_category_id, '') AS INT)
 	LEFT JOIN business_team_users btu ON btu.id = CAST(NULLIF(no.business_team_user_id, '') AS INT)
 	WHERE btu.id = '{{this.params.user_id}}'
+	and no.status in ('Active')
 ),
 current_status AS (
 	SELECT *, 
@@ -88,7 +89,8 @@ SELECT
     business_name, 
     business_owner_name, 
     product_category_name,
-    created_at
+    created_at,
+		status
 FROM current_status
 WHERE current_status = '{{this.params.status}}';
 

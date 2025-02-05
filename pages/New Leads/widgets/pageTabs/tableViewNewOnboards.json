@@ -38,9 +38,10 @@
     "Business_Phone",
     "Estimated_Volume",
     "Category",
-    "Onboarded_By"
+    "Onboarded_By",
+    "status"
   ],
-  "columnUpdatedAt": 1737466878033,
+  "columnUpdatedAt": 1738752435140,
   "columnWidthMap": {
     "Business_Name": 147,
     "Business_Owner_Name": 196,
@@ -89,6 +90,9 @@
     },
     {
       "key": "primaryColumns.Category.computedValue"
+    },
+    {
+      "key": "primaryColumns.status.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -347,6 +351,40 @@
       "notation": "standard",
       "originalId": "created_at",
       "outputFormat": "LLL",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "status": {
+      "alias": "status",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "#f4f4f5",
+      "columnType": "text",
+      "computedValue": "{{tableViewNewOnboards.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "status",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Status",
+      "notation": "standard",
+      "originalId": "status",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

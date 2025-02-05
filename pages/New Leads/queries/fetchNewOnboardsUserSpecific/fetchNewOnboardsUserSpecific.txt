@@ -5,7 +5,8 @@ SELECT
     phone as "Business Phone",
     estimated_volume as "Estimated Volume",
    	static_values.name as "Category",
-    business_team_users.user_name as "Onboarded By"
+    business_team_users.user_name as "Onboarded By",
+		Status
 		
 FROM new_onboards
 INNER JOIN business_team_users 

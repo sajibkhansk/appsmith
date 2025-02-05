@@ -2,44 +2,58 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 53,
+  "bottomRow": 79,
+  "bottomRowBeforeCollapse": 56,
   "boxShadow": "none",
-  "defaultOptionValue": [
-    "GREEN",
-    "RED"
-  ],
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "isDisabled": false,
-  "isFilterable": false,
+  "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": true,
-  "key": "i26kn7tdwq",
+  "isVisible": "{{ \n  isDissatisfiedDropdown.selectedOptionValue === \"Yes\" ? \n    true : \n    false \n}}",
+  "key": "u28od7zenx",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "Label",
+  "labelText": "Reason for dissatisfaction",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 53,
+  "mobileBottomRow": 72,
   "mobileLeftColumn": 1,
   "mobileRightColumn": 21,
-  "mobileTopRow": 46,
+  "mobileTopRow": 65,
   "needsErrorInfo": false,
   "optionLabel": "name",
-  "optionValue": "code",
+  "optionValue": "id",
+  "originalBottomRow": 49,
+  "originalTopRow": 49,
   "parentColumnSpace": 6.9375,
   "parentId": "fcalgs2jsv",
   "parentRowSpace": 10,
@@ -48,23 +62,11 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "serverSideFiltering": false,
-  "sourceData": [
-    {
-      "code": "BLUE",
-      "name": "Blue"
-    },
-    {
-      "code": "GREEN",
-      "name": "Green"
-    },
-    {
-      "code": "RED",
-      "name": "Red"
-    }
-  ],
-  "topRow": 46,
+  "sourceData": "{{fetchServiceDissatisfaction.data}}",
+  "topRow": 72,
+  "topRowBeforeCollapse": 49,
   "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,
-  "widgetId": "49f57gudnp",
+  "widgetId": "8oxr64xs93",
   "widgetName": "MultiSelect1"
 }

@@ -40,7 +40,7 @@
     "id",
     "customColumn1"
   ],
-  "columnUpdatedAt": 1738069230718,
+  "columnUpdatedAt": 1738753972120,
   "columnWidthMap": {
     "business_owner_name": 221,
     "business_team_user_id": 246,
@@ -121,7 +121,7 @@
   "isSortable": true,
   "isVisible": true,
   "isVisibleDownload": false,
-  "isVisibleFilters": false,
+  "isVisibleFilters": true,
   "isVisiblePagination": true,
   "isVisibleSearch": false,
   "key": "chqf59r976",
@@ -251,6 +251,16 @@
       "buttonStyle": "rgb(3, 179, 101)",
       "columnType": "menuButton",
       "computedValue": "",
+      "configureMenuItems": {
+        "config": {
+          "id": "config",
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Menu Item"
+        },
+        "id": "config",
+        "label": "Configure menu items"
+      },
       "currencyCode": "USD",
       "customAlias": "",
       "decimals": 0,
@@ -287,6 +297,7 @@
       "menuVariant": "TERTIARY",
       "notation": "standard",
       "originalId": "customColumn1",
+      "sourceData": [],
       "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
@@ -419,7 +430,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Product Categor",
+      "label": "Product Category",
       "notation": "standard",
       "originalId": "product_category_name",
       "sticky": "",

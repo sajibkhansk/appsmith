@@ -1,0 +1,4 @@
+select id,name
+from static_values
+where key_type = 'delivery_zones'
+and is_visible = TRUE

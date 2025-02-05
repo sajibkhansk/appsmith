@@ -1,8 +1,4 @@
-SELECT 
-		id,
-    name AS "Competitor Name",
-    is_visible,
-    key_type
-FROM static_values
-WHERE key_type = 'competition'
-AND is_visible = 'true'
+SELECT id,name 
+FROM static_values 
+where key_type = 'competition' 
+and is_visible = TRUE

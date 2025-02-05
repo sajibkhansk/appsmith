@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id,name\n\tFROM static_values \n\twhere key_type = 'followup_call_response'",
+      "body": "SELECT id,name\n\tFROM static_values \n\twhere key_type = 'followup_call_response'\n\tand is_visible = TRUE",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

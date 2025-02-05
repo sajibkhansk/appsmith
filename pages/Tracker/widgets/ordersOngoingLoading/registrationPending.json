@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 111,
+  "bottomRow": 102,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": false,
   "childStylesheet": {
@@ -31,8 +31,8 @@
     }
   },
   "columnOrder": [
-    "customColumn2",
     "created_at",
+    "customColumn2",
     "business_name",
     "business_owner_name",
     "phone",
@@ -41,14 +41,16 @@
     "id",
     "merchant_id"
   ],
-  "columnUpdatedAt": 1738214772071,
+  "columnUpdatedAt": 1738776793488,
   "columnWidthMap": {
     "business_name": 186,
     "business_owner_name": 232,
     "created_at": 232,
-    "customColumn1": 85,
-    "product_category_name": 208
+    "customColumn1": 89,
+    "merchant_id": 159,
+    "product_category_name": 174
   },
+  "compactMode": "SHORT",
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
@@ -101,6 +103,12 @@
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItemn8jwqa3ehs.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItem6kebai5pm0.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -109,17 +117,20 @@
     },
     {
       "key": "primaryColumns.customColumn1.menuItems.menuItem6kebai5pm0.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItemxn2f52xl6g.onClick"
     }
   ],
   "enableClientSideSearch": true,
   "flexVerticalAlignment": "start",
-  "horizontalAlignment": "LEFT",
+  "horizontalAlignment": "CENTER",
   "inlineEditingSaveOption": "ROW_LEVEL",
   "isLoading": false,
   "isSortable": true,
   "isVisible": true,
   "isVisibleDownload": false,
-  "isVisibleFilters": false,
+  "isVisibleFilters": true,
   "isVisiblePagination": true,
   "isVisibleSearch": false,
   "key": "chqf59r976",
@@ -149,7 +160,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "LEFT",
+      "horizontalAlignment": "CENTER",
       "id": "business_name",
       "index": 2,
       "isCellEditable": false,
@@ -183,7 +194,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "LEFT",
+      "horizontalAlignment": "CENTER",
       "id": "business_owner_name",
       "index": 3,
       "isCellEditable": false,
@@ -217,7 +228,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "LEFT",
+      "horizontalAlignment": "CENTER",
       "id": "created_at",
       "index": 5,
       "isCellEditable": false,
@@ -262,7 +273,7 @@
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
-      "horizontalAlignment": "LEFT",
+      "horizontalAlignment": "CENTER",
       "id": "customColumn1",
       "index": 6,
       "isCellEditable": false,
@@ -285,17 +296,27 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "Reject Lead",
-          "onClick": "{{showModal(merchantDropConfirmation.name);}}",
+          "onClick": "{{\n\n    // Show the modal\n    showModal(merchantDropConfirmation.name);\n  \n}}\n",
           "widgetId": "87o0711jtc"
         },
         "menuItemn8jwqa3ehs": {
+          "iconAlign": "left",
           "id": "menuItemn8jwqa3ehs",
           "index": 0,
           "isDisabled": false,
           "isVisible": true,
           "label": "Follow Up",
-          "onClick": "{{showModal(followupModal.name);}}",
+          "onClick": "{{\n  (async () => {\n    const selectedRow = registrationPending.triggeredRow; \n    const newOnboardsId = selectedRow ? selectedRow.id : null; \n    if (!newOnboardsId) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    } newOnboardsTextBox.setValue(newOnboardsId); newOnboardsTextBox.setDisabled(true);   showModal(\"regPendingfollowupModal\"); \n  })()\n}}",
           "widgetId": "1v4zfxaxdk"
+        },
+        "menuItemxn2f52xl6g": {
+          "id": "menuItemxn2f52xl6g",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "View Responses",
+          "onClick": "{{showModal(viewResponse.name);}}",
+          "widgetId": "v973zx2tdy"
         }
       },
       "menuItemsSource": "STATIC",
@@ -321,7 +342,7 @@
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
-      "horizontalAlignment": "LEFT",
+      "horizontalAlignment": "CENTER",
       "id": "customColumn2",
       "index": 7,
       "isCellEditable": false,
@@ -355,7 +376,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "LEFT",
+      "horizontalAlignment": "CENTER",
       "id": "id",
       "index": 0,
       "isCellEditable": false,
@@ -366,7 +387,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": false,
-      "label": "id",
+      "label": "ID",
       "notation": "standard",
       "originalId": "id",
       "sticky": "",
@@ -389,7 +410,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "LEFT",
+      "horizontalAlignment": "CENTER",
       "id": "merchant_id",
       "index": 2,
       "isCellEditable": false,
@@ -399,7 +420,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "merchant_id",
       "notation": "standard",
       "originalId": "merchant_id",
@@ -423,7 +444,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "LEFT",
+      "horizontalAlignment": "CENTER",
       "id": "phone",
       "index": 1,
       "isCellEditable": false,
@@ -457,7 +478,7 @@
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "LEFT",
+      "horizontalAlignment": "CENTER",
       "id": "product_category_name",
       "index": 4,
       "isCellEditable": false,

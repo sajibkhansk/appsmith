@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 70,
+  "bottomRow": 96,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -12,16 +12,24 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
   "inputType": "MULTI_LINE_TEXT",
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": true,
+  "isVisible": "{{ \n  disNegoDropdown.selectedOptionValue === \"Yes\" ? \n    true : \n    false \n}}",
   "key": "lqbal1482u",
   "label": "Reason",
   "labelAlignment": "left",
@@ -29,7 +37,7 @@
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 1,
+  "leftColumn": 2,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -38,18 +46,18 @@
   "mobileRightColumn": 22,
   "mobileTopRow": 44,
   "needsErrorInfo": false,
-  "originalBottomRow": 52,
-  "originalTopRow": 45,
+  "originalBottomRow": 89,
+  "originalTopRow": 79,
   "parentColumnSpace": 6.9375,
   "parentId": "fcalgs2jsv",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 61,
+  "rightColumn": 62,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 60,
+  "topRow": 86,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "v5j7pxg5pb",

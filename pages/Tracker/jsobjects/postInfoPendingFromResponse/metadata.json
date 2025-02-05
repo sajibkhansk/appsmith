@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67854afe8f01ef5977743d0e_114ee605-b4f8-4064-a8c0-8dc62af2ab88",
+  "id": "Tracker_postInfoPendingFromResponse",
+  "unpublishedCollection": {
+    "name": "postInfoPendingFromResponse",
+    "pageId": "Tracker",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

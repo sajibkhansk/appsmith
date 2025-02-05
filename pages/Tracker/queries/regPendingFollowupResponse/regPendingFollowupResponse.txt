@@ -1,0 +1,20 @@
+select 
+	acquisition_followups.id,
+	acquisition_followups.Created_At, 
+	response->>'call_status' AS call_status,
+    response->>'is_business_active' AS is_business_active,
+    response->>'business_active_reason' AS business_active_reason,
+    response->>'account_interest' AS account_interest,
+    response->>'account_reason' AS account_reason,
+    response->>'discount_need' AS discount_need,
+    response->>'discount_reason' AS discount_reason,
+    response->>'courier_loyalty' AS courier_loyalty,
+    response->>'competitor' AS competitor,
+    response->>'delivery_fleet' AS delivery_fleet
+from acquisition_followups
+inner join static_values on static_values.id = cast(acquisition_followups.response->>'competitor' as INTEGER)
+	and KEY_TYPE = 'competition'
+where tracker_scope = 'Registration Pending'
+and business_team_user_id in ('1')
+and new_onboards_id  in ('9')
+and acquisition_followups.id >= 135

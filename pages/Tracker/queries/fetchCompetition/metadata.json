@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n\t\tid,\n    name AS \"Competitor Name\",\n    is_visible,\n    key_type\nFROM static_values\nWHERE key_type = 'competition'\nAND is_visible = 'true'",
+      "body": "SELECT id,name \nFROM static_values \nwhere key_type = 'competition' \nand is_visible = TRUE",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

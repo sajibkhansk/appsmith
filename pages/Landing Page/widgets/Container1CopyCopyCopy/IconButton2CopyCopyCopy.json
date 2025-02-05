@@ -1,0 +1,40 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 13,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "TERTIARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "iconName": "truck",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "2c17deaxj1",
+  "leftColumn": 17,
+  "minWidth": 50,
+  "mobileBottomRow": 17,
+  "mobileLeftColumn": 19,
+  "mobileRightColumn": 23,
+  "mobileTopRow": 13,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 17.9375,
+  "parentId": "2lgr1jovlf",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 47,
+  "topRow": 3,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "5q6u68st4u",
+  "widgetName": "IconButton2CopyCopyCopy"
+}
