@@ -19,4 +19,3 @@ INNER JOIN static_values
 WHERE tracker_scope = CAST ({{ appsmith.store.currentTab }} as TEXT)
 AND business_team_user_id = {{ appsmith.store.businessTeamUserId }}
 AND new_onboards_id = CAST({{ appsmith.store.newOnboardsId }} AS TEXT)
-AND acquisition_followups.id >= 135;

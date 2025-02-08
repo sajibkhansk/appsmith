@@ -37,11 +37,11 @@
     "business_owner_name",
     "phone",
     "product_category_name",
-    "id",
+    "status",
     "customColumn1",
-    "status"
+    "id"
   ],
-  "columnUpdatedAt": 1738830704339,
+  "columnUpdatedAt": 1739033170099,
   "columnWidthMap": {
     "business_owner_name": 258,
     "created_at": 218,
@@ -109,11 +109,17 @@
     },
     {
       "key": "primaryColumns.customColumn1.menuItems.menuItemhtzkq2g0pj.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItemwcybuml0ni.onClick"
     }
   ],
   "dynamicTriggerPathList": [
     {
       "key": "primaryColumns.customColumn1.menuItems.menuItemhtzkq2g0pj.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItemwcybuml0ni.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -286,6 +292,15 @@
           "label": "Follow Up",
           "onClick": "{{\n  (async () => {\n    const selectedRow = ordersPending.triggeredRow; \n    const newOnboardsId = selectedRow ? selectedRow.id : null; \n    if (!newOnboardsId) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    } OrderPendingTextPassingID.setValue(newOnboardsId); OrderPendingTextPassingID.setDisabled(true);   showModal(ordersPendingModal.name);\n  })()\n}}",
           "widgetId": "mhxbt29avm"
+        },
+        "menuItemwcybuml0ni": {
+          "id": "menuItemwcybuml0ni",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "View Response",
+          "onClick": "{{\n  (async () => {\n    const selectedRow = registrationPending.triggeredRow; \n    const newOnboardsID = selectedRow ? selectedRow.id : null; \n    const activeTab = appsmith.store.currentTab || trackerTabs.selectedTab; // Use stored tab or fallback\n\n    if (!newOnboardsID) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    }\n\n    await storeValue(\"newOnboardsId\", newOnboardsID); \n    await storeValue(\"currentTab\", activeTab); // Ensure correct tab name is stored\n\n    await followupResponse.run();  \n    showModal(\"viewResponse\");  \n  })()\n}}",
+          "widgetId": "eshir6i5vc"
         }
       },
       "menuItemsSource": "STATIC",

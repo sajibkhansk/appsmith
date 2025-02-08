@@ -37,11 +37,11 @@
     "business_owner_name",
     "phone",
     "product_category_name",
+    "status",
     "customColumn1",
-    "id",
-    "status"
+    "id"
   ],
-  "columnUpdatedAt": 1738752080770,
+  "columnUpdatedAt": 1739033162219,
   "columnWidthMap": {
     "business_name": 202,
     "business_owner_name": 261,
@@ -109,11 +109,17 @@
     },
     {
       "key": "primaryColumns.customColumn1.menuItems.menuItemh2sxcxn4bm.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItemp0k41a5uy9.onClick"
     }
   ],
   "dynamicTriggerPathList": [
     {
       "key": "primaryColumns.customColumn1.menuItems.menuItemh2sxcxn4bm.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItemp0k41a5uy9.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -275,6 +281,15 @@
           "label": "Follow Up",
           "onClick": "{{(async () => {\n    const selectedRow = informationPending.triggeredRow; \n    const newOnboardsId = selectedRow ? selectedRow.id : null; \n    if (!newOnboardsId) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    } \n\t newOnboardsTextBoxInfoPending.setValue(newOnboardsId); newOnboardsTextBoxInfoPending.setDisabled(true);   \n\t\n\tshowModal(followupInfoPending.name);\n\t\n  })()\n}}",
           "widgetId": "chavxokpwh"
+        },
+        "menuItemp0k41a5uy9": {
+          "id": "menuItemp0k41a5uy9",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "View Response",
+          "onClick": "{{\n  (async () => {\n    const selectedRow = registrationPending.triggeredRow; \n    const newOnboardsID = selectedRow ? selectedRow.id : null; \n    const activeTab = appsmith.store.currentTab || trackerTabs.selectedTab; // Use stored tab or fallback\n\n    if (!newOnboardsID) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    }\n\n    await storeValue(\"newOnboardsId\", newOnboardsID); \n    await storeValue(\"currentTab\", activeTab); // Ensure correct tab name is stored\n\n    await followupResponse.run();  \n    showModal(\"viewResponse\");  \n  })()\n}}",
+          "widgetId": "gjscyyyh0m"
         }
       },
       "menuItemsSource": "STATIC",

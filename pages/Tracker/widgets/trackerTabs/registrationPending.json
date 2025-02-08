@@ -37,12 +37,12 @@
     "business_owner_name",
     "phone",
     "product_category_name",
+    "status",
     "customColumn1",
     "id",
-    "merchant_id",
-    "status"
+    "merchant_id"
   ],
-  "columnUpdatedAt": 1738777352677,
+  "columnUpdatedAt": 1739033236490,
   "columnWidthMap": {
     "business_name": 186,
     "business_owner_name": 232,

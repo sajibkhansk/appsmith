@@ -37,11 +37,11 @@
     "business_owner_name",
     "phone",
     "product_category_name",
-    "id",
+    "status",
     "customColumn1",
-    "status"
+    "id"
   ],
-  "columnUpdatedAt": 1738839665859,
+  "columnUpdatedAt": 1739033328983,
   "columnWidthMap": {
     "business_owner_name": 221,
     "business_team_user_id": 246,
@@ -110,11 +110,17 @@
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItem36lg4fhy9s.onClick"
     }
   ],
   "dynamicTriggerPathList": [
     {
       "key": "primaryColumns.customColumn1.menuItems.menuItem27g23vv9vn.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItem36lg4fhy9s.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -295,6 +301,15 @@
           "label": "Follow Up",
           "onClick": "{{showModal(needFollowupModal.name);}}",
           "widgetId": "jp2404hbmx"
+        },
+        "menuItem36lg4fhy9s": {
+          "id": "menuItem36lg4fhy9s",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "View Response",
+          "onClick": "{{\n  (async () => {\n    const selectedRow = registrationPending.triggeredRow; \n    const newOnboardsID = selectedRow ? selectedRow.id : null; \n    const activeTab = appsmith.store.currentTab || trackerTabs.selectedTab; // Use stored tab or fallback\n\n    if (!newOnboardsID) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    }\n\n    await storeValue(\"newOnboardsId\", newOnboardsID); \n    await storeValue(\"currentTab\", activeTab); // Ensure correct tab name is stored\n\n    await followupResponse.run();  \n    showModal(\"viewResponse\");  \n  })()\n}}",
+          "widgetId": "t13k9j1s3x"
         }
       },
       "menuItemsSource": "STATIC",
