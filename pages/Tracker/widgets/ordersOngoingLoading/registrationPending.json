@@ -39,9 +39,10 @@
     "product_category_name",
     "customColumn1",
     "id",
-    "merchant_id"
+    "merchant_id",
+    "status"
   ],
-  "columnUpdatedAt": 1738776793488,
+  "columnUpdatedAt": 1738777352677,
   "columnWidthMap": {
     "business_name": 186,
     "business_owner_name": 232,
@@ -98,6 +99,9 @@
     },
     {
       "key": "primaryColumns.merchant_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.status.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -109,6 +113,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.menuItems.menuItem6kebai5pm0.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItemxn2f52xl6g.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -315,7 +322,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "View Responses",
-          "onClick": "{{showModal(viewResponse.name);}}",
+          "onClick": "{{\n    (async () => {\n        const newOnboardsID = currentRow.id; // Fetch Merchant ID from clicked row\n        \n        if (!newOnboardsID) {\n            showAlert(\"Merchant ID not found. Please try again.\", \"error\");\n            return;\n        }\n\n        await storeValue(\"selectedMerchantID\", newOnboardsID); // Store Merchant ID\n        await regPendingFollowupResponse.run(); // Fetch merchant details\n        showModal(\"viewResponse\"); // Open modal\n    })()\n}}",
           "widgetId": "v973zx2tdy"
         }
       },
@@ -494,6 +501,40 @@
       "originalId": "product_category_name",
       "sticky": "",
       "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "status": {
+      "alias": "status",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "#22c55e",
+      "columnType": "text",
+      "computedValue": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "status",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Status",
+      "notation": "standard",
+      "originalId": "status",
+      "sticky": "",
+      "textColor": "#f4f4f5",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},

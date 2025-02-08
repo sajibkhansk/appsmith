@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "select \n\tacquisition_followups.id,\n\tacquisition_followups.Created_At, \n\tresponse->>'call_status' AS call_status,\n    response->>'is_business_active' AS is_business_active,\n    response->>'business_active_reason' AS business_active_reason,\n    response->>'account_interest' AS account_interest,\n    response->>'account_reason' AS account_reason,\n    response->>'discount_need' AS discount_need,\n    response->>'discount_reason' AS discount_reason,\n    response->>'courier_loyalty' AS courier_loyalty,\n    response->>'competitor' AS competitor,\n    response->>'delivery_fleet' AS delivery_fleet\nfrom acquisition_followups\ninner join static_values on static_values.id = cast(acquisition_followups.response->>'competitor' as INTEGER)\n\tand KEY_TYPE = 'competition'\nwhere tracker_scope = 'Registration Pending'\nand business_team_user_id in ('1')\nand new_onboards_id  in ('9')\nand acquisition_followups.id >= 135",
+      "body": "select \n\tacquisition_followups.id,\n\tacquisition_followups.Created_At, \n\tresponse->>'call_status' AS call_status,\n    response->>'is_business_active' AS is_business_active,\n    response->>'business_active_reason' AS business_active_reason,\n    response->>'account_interest' AS account_interest,\n    response->>'account_reason' AS account_reason,\n    response->>'discount_need' AS discount_need,\n    response->>'discount_reason' AS discount_reason,\n    response->>'courier_loyalty' AS courier_loyalty,\n    response->>'competitor' AS competitor,\n    response->>'delivery_fleet' AS delivery_fleet\nfrom acquisition_followups\ninner join static_values on static_values.id = cast(acquisition_followups.response->>'competitor' as INTEGER)\n\tand KEY_TYPE = 'competition'\nwhere tracker_scope = 'Registration Pending'\nand business_team_user_id = {{appsmith.store.businessTeamUserId}}\nand new_onboards_id  = CAST ({{ appsmith.store.newOnboardsId }} AS TEXT)\nand acquisition_followups.id >= 135",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,7 +22,11 @@
       "name": "hermes-write-db-prod",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": true,
     "name": "regPendingFollowupResponse",
     "pageId": "Tracker",

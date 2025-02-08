@@ -38,14 +38,15 @@
     "phone",
     "product_category_name",
     "id",
-    "customColumn1"
+    "customColumn1",
+    "status"
   ],
-  "columnUpdatedAt": 1738753972120,
+  "columnUpdatedAt": 1738839665859,
   "columnWidthMap": {
     "business_owner_name": 221,
     "business_team_user_id": 246,
     "created_at": 219,
-    "customColumn1": 135,
+    "customColumn1": 125,
     "estimated_volume": 190,
     "phone": 174,
     "product_category_id": 194,
@@ -101,6 +102,9 @@
     },
     {
       "key": "primaryColumns.merchant_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.status.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -435,6 +439,40 @@
       "originalId": "product_category_name",
       "sticky": "",
       "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "status": {
+      "alias": "status",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "#22c55e",
+      "columnType": "text",
+      "computedValue": "{{needsFollowup.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "status",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Status",
+      "notation": "standard",
+      "originalId": "status",
+      "sticky": "",
+      "textColor": "#FFFFFF",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},

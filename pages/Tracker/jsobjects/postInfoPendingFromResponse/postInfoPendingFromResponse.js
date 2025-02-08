@@ -47,7 +47,7 @@ const business_active_reason_test = isBusinessActiveDropdown.value === "No"
 
       storeValue("businessTeamUserId", userResult[0].id);
       storeValue("newOnboardsId", newOnboardsId);
-      storeValue("trackerScope", "Registration Pending");
+      storeValue("trackerScope", "Information Pending");
       storeValue("formData", formData);
 
       // Run the query to save data

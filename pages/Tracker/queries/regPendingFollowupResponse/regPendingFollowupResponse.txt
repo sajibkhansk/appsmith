@@ -15,6 +15,6 @@ from acquisition_followups
 inner join static_values on static_values.id = cast(acquisition_followups.response->>'competitor' as INTEGER)
 	and KEY_TYPE = 'competition'
 where tracker_scope = 'Registration Pending'
-and business_team_user_id in ('1')
-and new_onboards_id  in ('9')
+and business_team_user_id = {{appsmith.store.businessTeamUserId}}
+and new_onboards_id  = CAST ({{ appsmith.store.newOnboardsId }} AS TEXT)
 and acquisition_followups.id >= 135

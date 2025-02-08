@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 54,
+  "bottomRow": 63,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -45,8 +45,8 @@
   "needsErrorInfo": false,
   "optionLabel": "label",
   "optionValue": "value",
-  "originalBottomRow": 54,
-  "originalTopRow": 47,
+  "originalBottomRow": 63,
+  "originalTopRow": 56,
   "parentColumnSpace": 6.9375,
   "parentId": "s6twb6q2cu",
   "parentRowSpace": 10,
@@ -56,9 +56,9 @@
   "rightColumn": 62,
   "serverSideFiltering": false,
   "sourceData": "{{responseBooleyan.data.map( (obj) =>{ return  {'label': obj.name, 'value': obj.name } })}}",
-  "topRow": 47,
+  "topRow": 56,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "n7v6ujnjqk",
-  "widgetName": "Select2CopyCopyCopy"
+  "widgetName": "apiDropdown"
 }

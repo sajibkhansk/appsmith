@@ -38,9 +38,10 @@
     "phone",
     "product_category_name",
     "id",
-    "customColumn1"
+    "customColumn1",
+    "status"
   ],
-  "columnUpdatedAt": 1738229191659,
+  "columnUpdatedAt": 1738830704339,
   "columnWidthMap": {
     "business_owner_name": 258,
     "created_at": 218,
@@ -97,11 +98,17 @@
     },
     {
       "key": "primaryColumns.customColumn1.boxShadow"
+    },
+    {
+      "key": "primaryColumns.status.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItemhtzkq2g0pj.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -277,7 +284,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "Follow Up",
-          "onClick": "{{showModal(ordersPendingModal.name);}}",
+          "onClick": "{{\n  (async () => {\n    const selectedRow = ordersPending.triggeredRow; \n    const newOnboardsId = selectedRow ? selectedRow.id : null; \n    if (!newOnboardsId) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    } OrderPendingTextPassingID.setValue(newOnboardsId); OrderPendingTextPassingID.setDisabled(true);   showModal(ordersPendingModal.name);\n  })()\n}}",
           "widgetId": "mhxbt29avm"
         }
       },
@@ -414,6 +421,40 @@
       "notation": "standard",
       "originalId": "product_category_name",
       "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "status": {
+      "alias": "status",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "#22c55e",
+      "columnType": "text",
+      "computedValue": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "BOLD",
+      "horizontalAlignment": "CENTER",
+      "id": "status",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Status",
+      "notation": "standard",
+      "originalId": "status",
+      "sticky": "",
+      "textColor": "#FFFFFF",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
