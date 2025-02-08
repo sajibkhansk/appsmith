@@ -6,7 +6,7 @@
   "borderWidth": "1",
   "bottomRow": 34,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-  "canFreezeColumn": false,
+  "canFreezeColumn": true,
   "childStylesheet": {
     "button": {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -42,10 +42,14 @@
   ],
   "columnUpdatedAt": 1738841084870,
   "columnWidthMap": {
-    "business_owner_name": 229,
+    "business_owner_name": 204,
     "created_at": 244,
     "customColumn1": 132,
-    "id": 135
+    "id": 135,
+    "merchant_id": 111,
+    "phone": 124,
+    "product_category_name": 173,
+    "status": 123
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
