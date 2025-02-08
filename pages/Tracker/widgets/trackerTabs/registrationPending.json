@@ -322,7 +322,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "View Responses",
-          "onClick": "{{\n    (async () => {\n        const newOnboardsID = currentRow.id; // Fetch Merchant ID from clicked row\n        \n        if (!newOnboardsID) {\n            showAlert(\"Merchant ID not found. Please try again.\", \"error\");\n            return;\n        }\n\n        await storeValue(\"selectedMerchantID\", newOnboardsID); // Store Merchant ID\n        await regPendingFollowupResponse.run(); // Fetch merchant details\n        showModal(\"viewResponse\"); // Open modal\n    })()\n}}",
+          "onClick": "{{\n  (async () => {\n    const selectedRow = registrationPending.triggeredRow; \n    const newOnboardsID = selectedRow ? selectedRow.id : null; \n    const activeTab = appsmith.store.currentTab || trackerTabs.selectedTab; // Use stored tab or fallback\n\n    if (!newOnboardsID) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    }\n\n    await storeValue(\"newOnboardsId\", newOnboardsID); \n    await storeValue(\"currentTab\", activeTab); // Ensure correct tab name is stored\n\n    await followupResponse.run();  \n    showModal(\"viewResponse\");  \n  })()\n}}",
           "widgetId": "v973zx2tdy"
         }
       },
