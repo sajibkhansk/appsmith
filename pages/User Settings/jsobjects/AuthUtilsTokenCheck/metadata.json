@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_2287fed6-8dff-4688-bad2-f847b6eea34d",
+  "id": "User Settings_AuthUtilsTokenCheck",
+  "unpublishedCollection": {
+    "name": "AuthUtilsTokenCheck",
+    "pageId": "User Settings",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

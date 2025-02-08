@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_0113c908-fba1-416b-873f-fde6cf67c967",
+  "id": "Dashboard_refreshFetchNewOnboardsData",
+  "unpublishedCollection": {
+    "name": "refreshFetchNewOnboardsData",
+    "pageId": "Dashboard",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDropdownClose"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "2kp35qquw4",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Is Business Active",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 2,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 21,
+  "mobileLeftColumn": 3,
+  "mobileRightColumn": 23,
+  "mobileTopRow": 14,
+  "needsErrorInfo": false,
+  "onDropdownClose": "",
+  "onDropdownOpen": "{{}}",
+  "optionLabel": "label",
+  "optionValue": "label",
+  "parentColumnSpace": 6.9375,
+  "parentId": "1arwfywsjt",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "serverSideFiltering": false,
+  "sourceData": "{{responseBooleyan.data.map( (obj) =>{ return  {'label': obj.name, 'value': obj.name } })}}",
+  "topRow": 15,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "7gzecjqg94",
+  "widgetName": "isBusinessActiveDropdown"
+}

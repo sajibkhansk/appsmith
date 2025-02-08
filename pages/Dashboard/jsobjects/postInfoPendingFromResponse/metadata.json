@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_e53e865f-d12c-4578-bc8c-041042b1782e",
+  "id": "Dashboard_postInfoPendingFromResponse",
+  "unpublishedCollection": {
+    "name": "postInfoPendingFromResponse",
+    "pageId": "Dashboard",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

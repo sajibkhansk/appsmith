@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 102,
+  "bottomRow": 72,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": false,
   "childStylesheet": {
@@ -51,7 +51,7 @@
     "merchant_id": 159,
     "product_category_name": 174
   },
-  "compactMode": "SHORT",
+  "compactMode": "DEFAULT",
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,

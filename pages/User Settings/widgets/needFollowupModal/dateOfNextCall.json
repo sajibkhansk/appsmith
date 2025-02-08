@@ -1,0 +1,68 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 20,
+  "bottomRowBeforeCollapse": 20,
+  "boxShadow": "none",
+  "closeOnSelection": true,
+  "dateFormat": "LL",
+  "datePickerType": "DATE_PICKER",
+  "defaultDate": "2025-01-30T10:55:35.354Z",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "firstDayOfWeek": 0,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": "{{ \n  followupCallStatusDropdown.selectedOptionValue === \"Reshceduled\" ? \n    true : \n    false \n}}",
+  "key": "phvtvb6t9t",
+  "label": "Date for Next Call",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDate": "2121-12-31T18:29:00.000Z",
+  "maxDynamicHeight": 9000,
+  "minDate": "1920-12-31T18:30:00.000Z",
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 21,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 22,
+  "mobileTopRow": 14,
+  "needsErrorInfo": false,
+  "originalBottomRow": 13,
+  "originalTopRow": 13,
+  "parentColumnSpace": 6.9375,
+  "parentId": "fcalgs2jsv",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "shortcuts": false,
+  "timePrecision": "None",
+  "topRow": 13,
+  "topRowBeforeCollapse": 13,
+  "type": "DATE_PICKER_WIDGET2",
+  "version": 2,
+  "widgetId": "a28xo4vbv6",
+  "widgetName": "dateOfNextCall"
+}

@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_1ae70ae2-cec8-46a5-bffa-85c9d10d8c4a",
+  "id": "Dashboard_postRegPendingFormResponse",
+  "unpublishedCollection": {
+    "name": "postRegPendingFormResponse",
+    "pageId": "Dashboard",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

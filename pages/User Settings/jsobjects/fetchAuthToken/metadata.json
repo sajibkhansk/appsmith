@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_998411af-a8c9-4acc-b83c-aefbd7dc944a",
+  "id": "User Settings_fetchAuthToken",
+  "unpublishedCollection": {
+    "name": "fetchAuthToken",
+    "pageId": "User Settings",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_20c92752-7d20-4915-99d0-1f7a9bc86dea",
+  "id": "Template Page_postOrderPendingFromResponse",
+  "unpublishedCollection": {
+    "name": "postOrderPendingFromResponse",
+    "pageId": "Template Page",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

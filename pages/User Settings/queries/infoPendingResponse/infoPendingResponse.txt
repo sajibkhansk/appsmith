@@ -1,0 +1,4 @@
+SELECT id,name 
+FROM static_values 
+where key_type = 'info_pending_response'
+and is_visible = TRUE

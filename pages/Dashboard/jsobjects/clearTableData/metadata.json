@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_8fefa946-3330-4ff2-b19c-c940bd15e51e",
+  "id": "Dashboard_clearTableData",
+  "unpublishedCollection": {
+    "name": "clearTableData",
+    "pageId": "Dashboard",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

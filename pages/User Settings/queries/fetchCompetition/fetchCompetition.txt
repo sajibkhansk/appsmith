@@ -1,0 +1,4 @@
+SELECT id,name 
+FROM static_values 
+where key_type = 'competition' 
+and is_visible = TRUE

@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_e152728c-36d9-4233-8e84-9ccd460de570",
+  "id": "Dashboard_fetchAuthToken",
+  "unpublishedCollection": {
+    "name": "fetchAuthToken",
+    "pageId": "Dashboard",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

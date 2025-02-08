@@ -1,0 +1,39 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "boxShadow": "none",
+  "defaultImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pathao_-_Here_with_You.png/440px-Pathao_-_Here_with_You.png",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "enableDownload": false,
+  "enableRotation": false,
+  "flexVerticalAlignment": "start",
+  "image": "",
+  "imageShape": "RECTANGLE",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ns4uxqzr85",
+  "leftColumn": 0,
+  "maxZoomLevel": 1,
+  "mobileBottomRow": 12,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 12,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "objectFit": "contain",
+  "parentColumnSpace": 17.625,
+  "parentId": "us7mi726xi",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 8,
+  "topRow": 1,
+  "type": "IMAGE_WIDGET",
+  "version": 1,
+  "widgetId": "epo0353jdo",
+  "widgetName": "brandImage"
+}

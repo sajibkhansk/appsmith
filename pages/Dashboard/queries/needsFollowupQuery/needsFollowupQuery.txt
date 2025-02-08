@@ -1,0 +1,104 @@
+WITH orders AS ( 
+    SELECT 
+        merchant_id, 
+        MIN(sorted_at) AS first_order_date, 
+        COUNT(CASE WHEN sorted_at >= CURRENT_DATE - 1 THEN consignment_id END) AS last_day_order, 
+        COUNT(consignment_id) AS order_count
+    FROM remote_hermes.orders
+    WHERE created_at >= '2025-01-20'
+    GROUP BY merchant_id
+),
+
+merchants as ( 
+	select *
+	from remote_hermes.merchants
+),
+
+stores as ( 
+	select merchant_id,count(id) as store_count
+	from remote_hermes.stores
+	group by 1
+),
+
+defining_status as (SELECT 
+    no.id,
+		business_name,
+		business_owner_name,
+		ro.first_order_date,
+		ro.last_day_order,
+		order_count,
+		estimated_volume,
+		st.name as product_category_name,
+		no.phone,
+		website,
+		no.created_at,
+		no.updated_at,
+		stt.name as competitor_name,
+		btu.user_name as business_team_user_name,
+		status,
+    CASE 
+        WHEN rm.phone IS NOT NULL THEN TRUE 
+        ELSE FALSE 
+    END AS is_registered_merchant,
+		
+		CASE 
+        WHEN rs.store_count > 0 THEN TRUE 
+        ELSE FALSE 
+    END AS is_store_created,
+		CASE 
+        WHEN rm.active_payment_method IS NOT NULL THEN TRUE 
+        ELSE FALSE 
+    END AS is_payment_method_active,
+		CASE 
+        WHEN ro.order_count > 0 THEN TRUE 
+        ELSE FALSE 
+    END AS is_order_created
+FROM 
+    new_onboards no
+LEFT JOIN 
+    merchants rm
+ON 
+    no.phone = rm.phone
+LEFT JOIN 
+		 stores rs 
+ON  
+		 rs.merchant_id = rm.id
+LEFT JOIN 
+	  orders ro 
+ON  ro.merchant_id = rm.id 
+LEFT join static_values st 
+on st.id = CAST(no.product_category_id AS INT)
+LEFT join static_values stt 
+on stt.id = CAST(no.product_category_id AS INT)
+left join business_team_users btu 
+on btu.id = CAST(no.business_team_user_id AS INT)
+),
+
+
+current_status as (select *, 
+		CASE
+    WHEN is_registered_merchant = 'true' AND is_store_created = 'true' AND is_payment_method_active = 'true' AND is_order_created = 'true' THEN 'ongoing_merchant'
+		WHEN is_registered_merchant = 'false' AND is_store_created = 'false' AND is_payment_method_active = 'false' AND is_order_created = 'false' THEN 'registration_pending'
+    WHEN is_registered_merchant = 'true' AND is_store_created = 'false' AND is_payment_method_active = 'false' AND is_order_created = 'false' THEN 'registered'
+		WHEN is_registered_merchant = 'true' AND is_store_created <> is_payment_method_active AND is_order_created = 'false' THEN 'info_pending'
+		WHEN is_registered_merchant = 'true' AND is_store_created = is_payment_method_active AND is_order_created = 'false' AND is_order_created = 'false' THEN 'info_uploaded_order_pending'
+    ELSE 'none'
+END as current_status 
+from defining_status)
+
+select 
+id,
+Phone,
+business_name, 
+business_owner_name, 
+estimated_volume,
+last_day_order,
+product_category_name,
+date(first_order_date) as first_order_date,
+order_count,
+date(first_order_date + INTERVAL '30 days') AS followup_date,
+created_at,
+NULL as "Action"
+from current_status
+where current_status = 'registration_pending';
+

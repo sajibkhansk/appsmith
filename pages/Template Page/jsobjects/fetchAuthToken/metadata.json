@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_88098dd6-4120-4f09-ad58-1cc4ed0bc933",
+  "id": "Template Page_fetchAuthToken",
+  "unpublishedCollection": {
+    "name": "fetchAuthToken",
+    "pageId": "Template Page",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

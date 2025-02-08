@@ -1,0 +1,3 @@
+UPDATE new_onboards 
+SET status = 'Inactive'  -- Set the desired new status value
+WHERE id = {{registrationPending.triggeredRow.id}};

@@ -1,0 +1,66 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 50,
+  "boxShadow": "none",
+  "defaultText": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "MULTI_LINE_TEXT",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": "{{ \n  isInterestedInCreatingAccount.selectedOptionValue === \"No\" ? \n    true : \n    false \n}}",
+  "key": "pbi9j1weql",
+  "label": "Reason",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 2,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 47,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 22,
+  "mobileTopRow": 40,
+  "needsErrorInfo": false,
+  "originalBottomRow": 50,
+  "originalTopRow": 40,
+  "parentColumnSpace": 6.9375,
+  "parentId": "1arwfywsjt",
+  "parentRowSpace": 10,
+  "placeholderText": "Why is the business not interested in creating the account ? ",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 61,
+  "shouldAllowAutofill": false,
+  "showStepArrows": false,
+  "topRow": 40,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "i9lvltxzck",
+  "widgetName": "businessAccountReason"
+}

@@ -40,23 +40,23 @@
       "isDefault": false
     },
     {
-      "id": "Test Page",
-      "isDefault": false
-    },
-    {
-      "id": "User Setting",
-      "isDefault": false
-    },
-    {
-      "id": "Page Template",
-      "isDefault": false
-    },
-    {
       "id": "Tracker",
       "isDefault": false
     },
     {
       "id": "Landing Page",
+      "isDefault": false
+    },
+    {
+      "id": "Template Page",
+      "isDefault": false
+    },
+    {
+      "id": "User Settings",
+      "isDefault": false
+    },
+    {
+      "id": "Dashboard",
       "isDefault": false
     }
   ],

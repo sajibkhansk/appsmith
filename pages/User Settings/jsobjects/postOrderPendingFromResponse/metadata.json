@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_5c52b993-eb88-4f5c-b009-c24beb045d5a",
+  "id": "User Settings_postOrderPendingFromResponse",
+  "unpublishedCollection": {
+    "name": "postOrderPendingFromResponse",
+    "pageId": "User Settings",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_53bfd169-f708-4786-aff6-e26518b7bc31",
+  "id": "User Settings_TabWatcher",
+  "unpublishedCollection": {
+    "name": "TabWatcher",
+    "pageId": "User Settings",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "tabStatuses",
+        "value": "{\n  \"Need Followup\": \"need_followup\",\n  \"Registration Pending\": \"registration_pending\",\n  \"Information Pending\": \"info_pending\",\n  \"Orders Pending\": \"info_uploaded_order_pending\",\n  \"Orders Ongoing\": \"ongoing_merchant\"\n}"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_26d91800-f2f9-40f8-9da0-3350224f548c",
+  "id": "Dashboard_TabWatcher",
+  "unpublishedCollection": {
+    "name": "TabWatcher",
+    "pageId": "Dashboard",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "tabStatuses",
+        "value": "{\n  \"Need Followup\": \"need_followup\",\n  \"Registration Pending\": \"registration_pending\",\n  \"Information Pending\": \"info_pending\",\n  \"Orders Pending\": \"info_uploaded_order_pending\",\n  \"Orders Ongoing\": \"ongoing_merchant\"\n}"
+      }
+    ]
+  }
+}
