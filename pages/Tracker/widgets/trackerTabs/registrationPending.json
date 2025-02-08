@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 72,
+  "bottomRow": 63,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": false,
   "childStylesheet": {
@@ -313,7 +313,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "Follow Up",
-          "onClick": "{{\n  (async () => {\n    const selectedRow = registrationPending.triggeredRow; \n    const newOnboardsId = selectedRow ? selectedRow.id : null; \n    if (!newOnboardsId) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    } newOnboardsTextBox.setValue(newOnboardsId); newOnboardsTextBox.setDisabled(true);   showModal(\"regPendingfollowupModal\"); \n  })()\n}}",
+          "onClick": "{{\n  (async () => {\n    const tableMapping = {\n      \"Needs Followup\": needsFollowup,\n      \"Registration Pending\": registrationPending,\n      \"Information Pending\": informationPending,\n      \"Orders Pending\": ordersPending,\n      \"Orders Ongoing\": ordersOngoing\n    };\n\n    const activeTab = trackerTabs.selectedTab || appsmith.store.currentTab; \n    await storeValue(\"currentTab\", activeTab); \n\n    const selectedTable = tableMapping[activeTab];\n\n    if (!selectedTable) {\n      showAlert(\"Table not found for the selected tab\", \"error\");\n      return;\n    }\n\n    // Get selected row dynamically from the correct table\n    const selectedRow = selectedTable.selectedRow;  \n    const newOnboardsID = selectedRow ? selectedRow.id : null;\n\n    if (!newOnboardsID) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    }\n\n    // Ensure Business Team User ID is set\n    let businessTeamUserId = appsmith.store.businessTeamUserId;\n    if (!businessTeamUserId) {\n      const userResult = await getUserDetailsByEmail.run({ email: appsmith.user.email });\n      if (userResult?.length > 0) {\n        businessTeamUserId = userResult[0].id;\n        await storeValue(\"businessTeamUserId\", businessTeamUserId);\n      } else {\n        showAlert(\"Failed to fetch business user ID\", \"error\");\n        return;\n      }\n    }\n\n    // Store updated values before running the query\n    await storeValue(\"newOnboardsId\", newOnboardsID);\n    await storeValue(\"trackerScope\", activeTab);\n\n    await followupResponse.run();  \n    showModal(\"viewResponse\");  \n\n  })()\n}}",
           "widgetId": "1v4zfxaxdk"
         },
         "menuItemxn2f52xl6g": {
@@ -322,7 +322,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "View Responses",
-          "onClick": "{{\n  (async () => {\n    const selectedRow = registrationPending.triggeredRow; \n    const newOnboardsID = selectedRow ? selectedRow.id : null; \n    const activeTab = appsmith.store.currentTab || trackerTabs.selectedTab; // Use stored tab or fallback\n\n    if (!newOnboardsID) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    }\n\n    await storeValue(\"newOnboardsId\", newOnboardsID); \n    await storeValue(\"currentTab\", activeTab); // Ensure correct tab name is stored\n\n    await followupResponse.run();  \n    showModal(\"viewResponse\");  \n  })()\n}}",
+          "onClick": "{{\n  (async () => {\n    // Get the current active tab dynamically\n    const activeTab = trackerTabs.selectedTab || appsmith.store.currentTab;\n\n    // Store the active tab to ensure it's always updated\n    await storeValue(\"currentTab\", activeTab);\n\n    const selectedRow = registrationPending.triggeredRow;\n    const newOnboardsID = selectedRow ? selectedRow.id : null;\n\n    if (!newOnboardsID) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    }\n\n    await storeValue(\"newOnboardsId\", newOnboardsID); \n    await storeValue(\"currentTab\", activeTab);  // Ensure the correct tab is stored\n\n    await followupResponse.run();  \n    showModal(\"viewResponse\");  \n  })()\n}}",
           "widgetId": "v973zx2tdy"
         }
       },

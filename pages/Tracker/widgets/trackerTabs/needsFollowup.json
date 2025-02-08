@@ -308,7 +308,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "View Response",
-          "onClick": "{{\n  (async () => {\n    const selectedRow = registrationPending.triggeredRow; \n    const newOnboardsID = selectedRow ? selectedRow.id : null; \n    const activeTab = appsmith.store.currentTab || trackerTabs.selectedTab; // Use stored tab or fallback\n\n    if (!newOnboardsID) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    }\n\n    await storeValue(\"newOnboardsId\", newOnboardsID); \n    await storeValue(\"currentTab\", activeTab); // Ensure correct tab name is stored\n\n    await followupResponse.run();  \n    showModal(\"viewResponse\");  \n  })()\n}}",
+          "onClick": "{{\n  (async () => {\n    // Get the current active tab dynamically\n    const activeTab = trackerTabs.selectedTab || appsmith.store.currentTab;\n\n    // Store the active tab to ensure it's always updated\n    await storeValue(\"currentTab\", activeTab);\n\n    const selectedRow = needsFollowup.triggeredRow;\n    const newOnboardsID = selectedRow ? selectedRow.id : null;\n\n    if (!newOnboardsID) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    }\n\n    await storeValue(\"newOnboardsId\", newOnboardsID); \n    await storeValue(\"currentTab\", activeTab);  // Ensure the correct tab is stored\n\n    await followupResponse.run();  \n    showModal(\"viewResponse\");  \n  })()\n}}",
           "widgetId": "t13k9j1s3x"
         }
       },
