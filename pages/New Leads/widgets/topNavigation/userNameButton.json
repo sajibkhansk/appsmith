@@ -22,6 +22,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "menuItems.menuItem2.onClick"
+    },
+    {
+      "key": "menuItems.menuItem1.onClick"
     }
   ],
   "iconAlign": "left",
@@ -41,6 +44,7 @@
       "isDisabled": false,
       "isVisible": true,
       "label": "User Settings",
+      "onClick": "{{navigateTo('User Settings', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
     "menuItem2": {
