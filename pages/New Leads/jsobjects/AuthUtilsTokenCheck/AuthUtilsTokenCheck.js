@@ -3,7 +3,7 @@ export default {
     const token = appsmith.store.authToken;
 
     if (token) {
-      console.log("Token Found:", token);
+      console.log("Token Found:");
 
     } else {
       console.error("No token found in store.");

@@ -48,6 +48,7 @@
     "created_at": 219,
     "customColumn1": 125,
     "estimated_volume": 190,
+    "merchant_id": 150,
     "phone": 174,
     "product_category_id": 194,
     "product_category_name": 203
@@ -113,6 +114,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.menuItems.menuItem36lg4fhy9s.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItem27g23vv9vn.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -299,7 +303,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "Follow Up",
-          "onClick": "{{showModal(needFollowupModal.name);}}",
+          "onClick": "{{(async () => {\n    const selectedRow = needsFollowup.triggeredRow; \n    const newOnboardsId = selectedRow ? selectedRow.id : null; \n    if (!newOnboardsId) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    } \n\t NeedFollowupTextBox.setValue(newOnboardsId); newOnboardsTextBoxInfoPending.setDisabled(true);   \n\t\n\tshowModal(needFollowupModal.name)\n\t\n  })()\n}}",
           "widgetId": "jp2404hbmx"
         },
         "menuItem36lg4fhy9s": {

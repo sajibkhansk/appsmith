@@ -1,10 +1,11 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
+  "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 66,
+  "bottomRow": 38,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "defaultText": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -13,52 +14,52 @@
       "key": "borderRadius"
     },
     {
-      "key": "sourceData"
+      "key": "isVisible"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
-      "key": "sourceData"
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "MULTI_LINE_TEXT",
   "isDisabled": false,
-  "isFilterable": false,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": true,
-  "key": "12tqaasup5",
+  "isVisible": "{{ \n  isBusinessActive.selectedOptionValue === \"No\" ? \n    true : \n    false \n}}",
+  "key": "lqbal1482u",
+  "label": "Reason",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "Poor Delivery Performance",
+  "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 13,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 21,
-  "mobileTopRow": 6,
+  "mobileBottomRow": 51,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 22,
+  "mobileTopRow": 44,
   "needsErrorInfo": false,
-  "optionLabel": "label",
-  "optionValue": "value",
-  "originalBottomRow": 66,
-  "originalTopRow": 59,
+  "originalBottomRow": 38,
+  "originalTopRow": 28,
   "parentColumnSpace": 6.9375,
   "parentId": "fcalgs2jsv",
   "parentRowSpace": 10,
-  "placeholderText": "Select option",
   "renderMode": "CANVAS",
+  "resetOnSubmit": true,
   "responsiveBehavior": "fill",
   "rightColumn": 62,
-  "serverSideFiltering": false,
-  "sourceData": "{{responseBooleyan.data.map( (obj) =>{ return  {'label': obj.name, 'value': obj.name } })}}",
-  "topRow": 59,
-  "type": "SELECT_WIDGET",
-  "version": 1,
-  "widgetId": "6fi6a2cixr",
-  "widgetName": "poorPerformanceDropdown"
+  "shouldAllowAutofill": false,
+  "showStepArrows": false,
+  "topRow": 28,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "w0vgr0ar05",
+  "widgetName": "reasonForBusinessInactive"
 }

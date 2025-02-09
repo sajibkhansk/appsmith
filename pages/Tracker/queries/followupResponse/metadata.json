@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n\tbusiness_team_user_id,\n\tnew_onboards_id,\n\ttracker_scope,\n\tstatic_values.name as \"competitor\",\n\tresponse\nFROM acquisition_followups\nleft JOIN static_values \n    ON static_values.id = CAST(acquisition_followups.response->>'competitor' AS INTEGER)\n    AND KEY_TYPE = 'competition'\nWHERE tracker_scope = CAST ({{ appsmith.store.currentTab }} as TEXT)\nAND business_team_user_id = {{ appsmith.store.businessTeamUserId }}\nAND new_onboards_id = CAST({{ appsmith.store.newOnboardsId }} AS TEXT)",
+      "body": "SELECT \n    TO_CHAR((acquisition_followups.created_at + INTERVAL '6 hours'), 'FMDDth Mon YYYY HH24:MI') AS created_at,\n\tbusiness_team_user_id,\n\tnew_onboards_id,\n\ttracker_scope,\n\tresponse\nFROM acquisition_followups\nleft JOIN static_values \n    ON static_values.id = CAST(acquisition_followups.response->>'loyal_to_other_courier_name' AS INTEGER)\n    AND KEY_TYPE = 'competition'\nWHERE tracker_scope = CAST ({{ appsmith.store.currentTab }} as TEXT)\nAND business_team_user_id = {{ appsmith.store.businessTeamUserId }}\nAND new_onboards_id = CAST({{ appsmith.store.newOnboardsId }} AS TEXT)",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

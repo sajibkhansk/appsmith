@@ -8,7 +8,7 @@
   "closeOnSelection": true,
   "dateFormat": "LL",
   "datePickerType": "DATE_PICKER",
-  "defaultDate": "2025-01-30T10:55:35.354Z",
+  "defaultDate": "{{ new Date().toISOString() }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -18,12 +18,18 @@
     },
     {
       "key": "isVisible"
+    },
+    {
+      "key": "defaultDate"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "isVisible"
+    },
+    {
+      "key": "defaultDate"
     }
   ],
   "dynamicTriggerPathList": [],

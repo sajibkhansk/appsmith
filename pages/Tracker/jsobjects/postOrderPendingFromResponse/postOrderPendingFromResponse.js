@@ -40,11 +40,11 @@ export default {
          const formData = {
           call_status: callStatusDropdown.value,
           is_business_active: businessActiveDropdown.value,
-          business_active_reason:business_active_reason_test ,
-          commited_date_dropdown: commitedDateDropdown.value,
-          discount_need: discountNegoDropdown.value,
-          discount_reason: discountNegoDropdown.value === "Yes" ? discountNegoReason.value : null,
-          api_integration: apiDropdown.value
+          reason_for_business_being_inactive:business_active_reason_test ,
+          commited_date_for_order_creation: commitedDateDropdown.value,
+          is_discount_needed: discountNegoDropdown.value,
+          reason_for_further_discount: discountNegoDropdown.value === "Yes" ? discountNegoReason.value : null,
+          is_api_integration: apiDropdown.value
         };
         // Get business user details
         const userResult = await getUserDetailsByEmail.run({ email: appsmith.user.email });
@@ -61,7 +61,7 @@ export default {
         const insertResult = await saveFollowupResponseQuery.run({
           business_team_user_id: userResult[0].id,
           new_onboards_id: newOnboardsId,
-          tracker_scope: "Info Pending",
+          tracker_scope: "Orders Pending",
           response: formData
         });
   
@@ -71,16 +71,10 @@ export default {
   
         showAlert("Form submitted successfully!", "success");
               
-              resetWidget("callStatusDropdown", true);
+        resetWidget("callStatusDropdown", true);
         resetWidget("businessActiveDropdown", true);
         resetWidget("followupInfoPendingReason", true);
                    closeModal(ordersPendingModal.name);
-        // resetWidget("businessActiveReasonText", true);
-  
-        // Reset the form widget or close modal if required
-        // resetWidget("regPendingfollowupModal", true);
-  
-        // Returning success status or value
   return {
     success: true,
     message: "Form submitted successfully!",
@@ -98,4 +92,3 @@ export default {
       }
     }
   };
-  

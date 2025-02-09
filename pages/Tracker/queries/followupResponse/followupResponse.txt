@@ -1,12 +1,12 @@
 SELECT 
+    TO_CHAR((acquisition_followups.created_at + INTERVAL '6 hours'), 'FMDDth Mon YYYY HH24:MI') AS created_at,
 	business_team_user_id,
 	new_onboards_id,
 	tracker_scope,
-	static_values.name as "competitor",
 	response
 FROM acquisition_followups
 left JOIN static_values 
-    ON static_values.id = CAST(acquisition_followups.response->>'competitor' AS INTEGER)
+    ON static_values.id = CAST(acquisition_followups.response->>'loyal_to_other_courier_name' AS INTEGER)
     AND KEY_TYPE = 'competition'
 WHERE tracker_scope = CAST ({{ appsmith.store.currentTab }} as TEXT)
 AND business_team_user_id = {{ appsmith.store.businessTeamUserId }}
