@@ -75,8 +75,7 @@ current_status AS (
 
 	-- Other conditions for the status
 	WHEN is_registered_merchant = FALSE AND is_store_created = FALSE AND is_payment_method_active = FALSE AND is_order_created = FALSE THEN 'registration_pending'
-	WHEN is_registered_merchant = TRUE AND is_store_created = FALSE AND is_payment_method_active = FALSE AND is_order_created = FALSE THEN 'registered'
-	WHEN is_registered_merchant = TRUE AND (is_store_created = FALSE OR is_payment_method_active=FALSE) AND is_order_created = FALSE THEN 'info_pending'
+	WHEN is_registered_merchant = TRUE AND (is_store_created = FALSE OR is_payment_method_active=FALSE) THEN 'info_pending'
 	WHEN is_registered_merchant = TRUE AND is_store_created = TRUE AND is_payment_method_active=TRUE AND is_order_created = FALSE THEN 'info_uploaded_order_pending'
 	ELSE 'none'
 	END AS current_status
