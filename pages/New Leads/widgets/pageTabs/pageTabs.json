@@ -99,51 +99,6 @@
       "version": 1,
       "widgetId": "5k38w5mhig",
       "widgetName": "Canvas4"
-    },
-    {
-      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 760,
-      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-      "canExtend": false,
-      "containerStyle": "none",
-      "detachFromLayout": true,
-      "dynamicBindingPathList": [
-        {
-          "key": "borderRadius"
-        },
-        {
-          "key": "boxShadow"
-        }
-      ],
-      "dynamicHeight": "AUTO_HEIGHT",
-      "dynamicTriggerPathList": [],
-      "flexLayers": [],
-      "isLoading": false,
-      "isVisible": true,
-      "key": "cbar6dk9fo",
-      "leftColumn": 0,
-      "maxDynamicHeight": 9000,
-      "minDynamicHeight": 4,
-      "minHeight": 800,
-      "minWidth": 450,
-      "mobileBottomRow": 801,
-      "mobileLeftColumn": 0,
-      "mobileRightColumn": 1128,
-      "mobileTopRow": 1,
-      "needsErrorInfo": false,
-      "parentColumnSpace": 1,
-      "parentId": "j6h3qamcfn",
-      "parentRowSpace": 1,
-      "renderMode": "CANVAS",
-      "responsiveBehavior": "fill",
-      "rightColumn": 1128,
-      "tabId": "tabi9ey8lej07",
-      "tabName": "Funnel Graduation",
-      "topRow": 1,
-      "type": "CANVAS_WIDGET",
-      "version": 1,
-      "widgetId": "dehr87mvwb",
-      "widgetName": "Canvas16"
     }
   ],
   "defaultTab": "",
@@ -195,13 +150,6 @@
       "label": "Hunted Leads",
       "positioning": "vertical",
       "widgetId": "5k38w5mhig"
-    },
-    "tabi9ey8lej07": {
-      "id": "tabi9ey8lej07",
-      "index": 2,
-      "isVisible": true,
-      "label": "Funnel Graduation",
-      "widgetId": "dehr87mvwb"
     }
   },
   "topRow": 8,
