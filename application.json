@@ -58,6 +58,10 @@
     {
       "id": "Dashboard",
       "isDefault": false
+    },
+    {
+      "id": "Admin User Management",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

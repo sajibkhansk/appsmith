@@ -117,6 +117,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.menuItems.menuItem27g23vv9vn.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItemq1g2l1shd7.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -125,6 +128,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.menuItems.menuItem36lg4fhy9s.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItemq1g2l1shd7.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -314,6 +320,15 @@
           "label": "View Response",
           "onClick": "{{\n  (async () => {\n    // Get the current active tab dynamically\n    const activeTab = trackerTabs.selectedTab || appsmith.store.currentTab;\n\n    // Store the active tab to ensure it's always updated\n    await storeValue(\"currentTab\", activeTab);\n\n    const selectedRow = needsFollowup.triggeredRow;\n    const newOnboardsID = selectedRow ? selectedRow.id : null;\n\n    if (!newOnboardsID) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    }\n\n    await storeValue(\"newOnboardsId\", newOnboardsID); \n    await storeValue(\"currentTab\", activeTab);  // Ensure the correct tab is stored\n\n    await followupResponse.run();  \n    showModal(\"viewResponse\");  \n  })()\n}}",
           "widgetId": "t13k9j1s3x"
+        },
+        "menuItemq1g2l1shd7": {
+          "id": "menuItemq1g2l1shd7",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "View Order Details",
+          "onClick": "{{\n    (async () => {\n        const merchantId = currentRow.merchant_id; // Fetch Merchant ID from clicked row\n        \n        if (!merchantId) {\n            showAlert(\"Merchant ID not found. Please try again.\", \"error\");\n            return;\n        }\n\n        await storeValue(\"selectedMerchantID\", merchantId); // Store Merchant ID\n        await getMerchantDetails.run(); // Fetch merchant details\n        showModal(\"viewOrderDetails\"); // Open modal\n    })()\n}}",
+          "widgetId": "tpsm5bxyzc"
         }
       },
       "menuItemsSource": "STATIC",

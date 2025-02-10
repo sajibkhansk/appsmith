@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "67854afe8f01ef5977743d0e_aca03e1f-51ac-4e7f-9e6f-264f9a22fab6",
-  "id": "Tracker_Query4",
+  "gitSyncId": "67a78c88af45f24f85e95b40_47865b6a-70b7-44a4-b40c-e2e9b8310ca9",
+  "id": "Admin User Management_lowOrderReason",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM new_onboards WHERE status not in ('Active')",
+      "body": "SELECT id,name FROM static_values where key_type = 'low_order_reason'",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": false,
-    "name": "Query4",
-    "pageId": "Tracker",
+    "executeOnLoad": true,
+    "name": "lowOrderReason",
+    "pageId": "Admin User Management",
     "userSetOnLoad": false
   }
 }

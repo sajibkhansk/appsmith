@@ -1,0 +1,56 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "",
+  "bottomRow": 9,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "pxwuws2ptc",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 10,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 18,
+  "mobileTopRow": 6,
+  "needsErrorInfo": false,
+  "originalBottomRow": 149,
+  "originalTopRow": 5,
+  "overflow": "NONE",
+  "parentColumnSpace": 6.9375,
+  "parentId": "p1wnv10fh7",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "shouldTruncate": false,
+  "text": "{{\n  followupResponse.data.length > 0\n    ? followupResponse.data\n        .map((response, index) => \n\n\t\t\t\t\t\t `<divstyle=\"background-color: #fff; margin: 0px; padding: 0px; \nborder-radius: 0px; box-shadow: 0px 0px 0px;\"> <h2 style=\"margin: 0; padding: 0 8px; font-weight: bold; text-align: left; \n                       background-color: #e0e0e0; font-size: 15px;\">\nResponse ${index + 1}\n\n</h2>\n<table style=\"width: 100%; border-collapse: collapse; font-size: 14px; \n                          margin: 1; padding: 2px;\">\n              <tr style=\"background-color: #f4f4f4;\">\n                <th style=\"border: 1px solid #ddd; padding: 5px; text-align: left;\">Field</th>\n<th style=\"border: 1px solid #ddd; padding: 5px; text-align: left;\">Value</th>\n              </tr>\n              ${Object.entries({\n\t\t\t\t\t\n\"New Onboarded Merchant ID\": response?.new_onboards_id,\n\t\t\t\t\t\n\"Created At\": new Date(response?.created_at).toLocaleString(\"en-GB\", {\n                      day: \"numeric\",\n                      month: \"short\",\n                      year: \"numeric\",\n                      hour: \"2-digit\",\n                      minute: \"2-digit\",\n                      hour12: true\n                  }),\n\n\t\t\n\t\t\t\t\t\n\"Call Status\": response?.call_status,\n\t\t\t\t\t\n\"Business Active\": response?.is_business_active,\n                  \"Business Active Reason\": response?.business_active_reason,\n                  \"Account Interest\": response?.account_interest,\n                  \"Account Reason\": response?.account_reason,\n                  \"Discount Need\": response?.discount_need,\n                  \"Discount Reason\": response?.discount_reason,\n                  \"Courier Loyalty\": response?.courier_loyalty,\n                  \"Competitor\": response?.competitor,\n                  \"Delivery Fleet\": response?.delivery_fleet\n                })\n                .map(([key, value]) => \n                  value && value !== \"N/A\" \n                    ? `<tr>\n                         <td style=\"border: 1px solid #ddd; padding: 6px; font-weight: bold;\">${key}</td>\n                         <td style=\"border: 1px solid #ddd; padding: 6px;\">${value}</td>\n                       </tr>`\n                    : \"\"\n                ).join(\"\")}\n            </table>\n          </div>`\n        )\n        .join(\"\")\n        .trim()\n    : \"<p style='text-align: center; color: #333;'>No records found.</p>\"\n}}",
+  "textAlign": "LEFT",
+  "textColor": "#231F20",
+  "topRow": 5,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "lmi5vu3zu3",
+  "widgetName": "Text9"
+}

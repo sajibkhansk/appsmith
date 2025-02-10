@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_26370eba-59e6-40e7-8127-1488eb92399f",
+  "id": "Admin User Management_refreshFetchNewOnboardsData",
+  "unpublishedCollection": {
+    "name": "refreshFetchNewOnboardsData",
+    "pageId": "Admin User Management",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

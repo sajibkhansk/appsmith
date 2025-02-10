@@ -1,0 +1,4 @@
+select id,name
+from static_values
+where key_type = 'boolean_response'
+and is_visible = TRUE

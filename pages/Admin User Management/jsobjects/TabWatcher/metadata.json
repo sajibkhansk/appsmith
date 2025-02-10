@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_dc0cd62a-4280-400f-a94a-5d4e88cf3016",
+  "id": "Admin User Management_TabWatcher",
+  "unpublishedCollection": {
+    "name": "TabWatcher",
+    "pageId": "Admin User Management",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "tabStatuses",
+        "value": "{\n  \"Need Followup\": \"need_followup\",\n  \"Registration Pending\": \"registration_pending\",\n  \"Information Pending\": \"info_pending\",\n  \"Orders Pending\": \"info_uploaded_order_pending\",\n  \"Orders Ongoing\": \"ongoing_merchant\"\n}"
+      }
+    ]
+  }
+}

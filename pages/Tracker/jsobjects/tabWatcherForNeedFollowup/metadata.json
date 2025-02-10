@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_f9a90741-7755-4f6b-a1f8-915facb0096f",
+  "id": "Tracker_tabWatcherForNeedFollowup",
+  "unpublishedCollection": {
+    "name": "tabWatcherForNeedFollowup",
+    "pageId": "Tracker",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "tabStatuses",
+        "value": "{\n  \"Need Followup\": \"need_followup\"\n}"
+      }
+    ]
+  }
+}
