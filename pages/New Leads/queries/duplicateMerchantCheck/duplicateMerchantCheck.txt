@@ -1,20 +1,30 @@
-select 
-    merchants.created_at as "Created At",
-    merchants.id as "Merchant ID",
-    merchants.name as "Business name",
-    merchants.phone as "Business phone number",
-    merchants.address as "Business address",
-    merchant_users.name as "Owner name",
-    merchant_users.phone as "Owner phone number",
-    merchant_users.email as "Owner email address",
-    (case when merchants.product_category is null then 'No Record' else merchants.product_category end) as "Product category",
-    merchants.first_order_date as "Date of first order",
-    merchants.last_traversal_date as "Last traveral date",
-    (case when merchants.reject_reason is null then 'No Record' else merchants.reject_reason end) as "Reason for rejection",
-    (case when merchants.rejected_by is null then 'No Record' else merchants.rejected_by end) as "Rejected by",
-		'button' as "Action"
-from merchants 
-inner join merchant_users on merchants.owner_id = merchant_users.id 
-where merchants.phone = {{filterPhoneNumber.value }}
-order by merchants.id desc
-limit 01
+SELECT 
+    merchants.created_at AS "Created At",
+    merchants.id AS "Merchant ID",
+    merchants.name AS "Business name",
+    merchants.phone AS "Business phone number",
+    merchants.address AS "Business address",
+    merchant_users.name AS "Owner name",
+    merchant_users.phone AS "Owner phone number",
+    merchant_users.email AS "Owner email address",
+    (CASE WHEN merchants.product_category IS NULL THEN 'No Record' ELSE merchants.product_category END) AS "Product category",
+    x.first_order_date AS "Date of first order",
+    x.last_order_date AS "Last Order Date",
+    merchants.last_traversal_date AS "Last traversal date",
+    (CASE WHEN merchants.reject_reason IS NULL THEN 'No Record' ELSE merchants.reject_reason END) AS "Reason for rejection",
+    (CASE WHEN merchants.rejected_by IS NULL THEN 'No Record' ELSE merchants.rejected_by END) AS "Rejected by",
+		x.order_count As "Order Count",
+    'button' AS "Action"
+FROM merchants 
+INNER JOIN merchant_users ON merchants.owner_id = merchant_users.id 
+LEFT JOIN (
+	SELECT merchant_id, 
+	MIN(date(created_at)) AS first_order_date, 
+			MAX(date(created_at)) AS last_order_date, 
+			COUNT(*) AS order_count
+			FROM orders 
+			GROUP BY merchant_id
+		 ) x ON x.merchant_id = merchants.id
+	WHERE merchants.phone = {{filterPhoneNumber.value }}
+	ORDER BY merchants.id DESC
+	LIMIT 1;

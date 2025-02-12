@@ -1,0 +1,1 @@
+SELECT * FROM public."acquisition_followups" LIMIT 10;
