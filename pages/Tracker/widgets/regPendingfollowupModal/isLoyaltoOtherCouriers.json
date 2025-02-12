@@ -44,7 +44,7 @@
   "mobileTopRow": 6,
   "needsErrorInfo": false,
   "optionLabel": "label",
-  "optionValue": "value",
+  "optionValue": "label",
   "originalBottomRow": 76,
   "originalTopRow": 69,
   "parentColumnSpace": 6.9375,

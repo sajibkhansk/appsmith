@@ -24,7 +24,7 @@
   ],
   "dynamicTriggerPathList": [],
   "isDisabled": false,
-  "isFilterable": false,
+  "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,

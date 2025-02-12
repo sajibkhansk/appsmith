@@ -3,7 +3,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 5,
   "boxShadow": "none",
-  "buttonColor": "#ffffff",
+  "buttonColor": "#b91c1c",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
@@ -29,7 +29,7 @@
   "mobileRightColumn": 28,
   "mobileTopRow": 14,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Tracker', {}, 'SAME_WINDOW');}}",
+  "onClick": "",
   "parentColumnSpace": 17.9375,
   "parentId": "us7mi726xi",
   "parentRowSpace": 10,
