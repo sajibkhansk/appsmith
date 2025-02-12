@@ -15,11 +15,7 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [
-    {
-      "key": "onClick"
-    }
-  ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -37,7 +33,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{buttonValidation.buttonSubmitonClick();}}",
+  "onClick": "{{buttonValidation.buttonSubmitonClick()}}",
   "parentId": "gq8rw9rzgj",
   "placement": "CENTER",
   "recaptchaType": "V3",

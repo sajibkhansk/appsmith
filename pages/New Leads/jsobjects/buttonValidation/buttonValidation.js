@@ -39,8 +39,7 @@ export default {
         insertNewOnboards.run()
           .then(() => {
             showAlert("Merchant Created Successfully", "success");
-            closeModal('modalAddNewLead');
-            this.clearFormInputs();
+            
           })
           .catch((error) => {
             showAlert("Failed to create Merchant. Please try again.", "error");
@@ -49,15 +48,8 @@ export default {
       .catch((error) => {
         showAlert("Error checking for duplicate phone number. Please try again.", "error");
       });
+		resetWidget("modalAddNewLead", true);
+		closeModal(modalAddNewLead.name)
   },
 
-  clearFormInputs() {
-    inputBusinessName.setValue('');
-    inputBusinessOwnerName.setValue('');
-    inputBusinessPhone.setValue('');
-    inputBusinessWebsite.setValue('');
-    inputEstimatedValue.setValue(0);  
-    selectOtherCourier.setOptions([]);
-    selectProductCategory.setOptions([]); 
-  }
 };
