@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 104,
+  "bottomRow": 96,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -37,7 +37,7 @@
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 1,
+  "leftColumn": 2,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -46,8 +46,8 @@
   "mobileRightColumn": 22,
   "mobileTopRow": 44,
   "needsErrorInfo": false,
-  "originalBottomRow": 104,
-  "originalTopRow": 94,
+  "originalBottomRow": 96,
+  "originalTopRow": 86,
   "parentColumnSpace": 6.9375,
   "parentId": "fcalgs2jsv",
   "parentRowSpace": 10,
@@ -57,9 +57,9 @@
   "rightColumn": 62,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 94,
+  "topRow": 86,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "v5j7pxg5pb",
-  "widgetName": "discountNegotiationReason"
+  "widgetName": "Reason"
 }
