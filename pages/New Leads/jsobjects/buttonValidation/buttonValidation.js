@@ -48,8 +48,9 @@ export default {
             insertNewOnboards.run()
               .then(() => {
                 showAlert("Merchant Created Successfully", "success");
-                // resetWidget("modalAddNewLead", true);
-                // closeModal(modalAddNewLead.name);
+                resetWidget("modalAddNewLead", true);
+                closeModal(modalAddNewLead.name);
+								refreshFetchNewOnboardsData.buttonRefreshClick();
               })
               .catch((error) => {
                 showAlert("Failed to create Merchant. Please try again.", "error");
