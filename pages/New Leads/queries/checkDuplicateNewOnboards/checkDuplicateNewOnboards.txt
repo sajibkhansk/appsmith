@@ -1,0 +1,7 @@
+SELECT COUNT(*) 
+FROM new_onboards
+WHERE phone = CASE 
+                 WHEN {{ inputBusinessPhone.text }} LIKE '+88%' 
+                 THEN SUBSTRING({{ inputBusinessPhone.text }}, 4) -- Remove +88
+                 ELSE {{ inputBusinessPhone.text }}
+               END;

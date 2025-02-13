@@ -26,34 +26,42 @@ export default {
       return;
     }
 
-    // Run the checkDuplicatePhone query to see if the phone number exists
+    // Run the checkDuplicatePhone query to see if the same phone number exists
     checkDuplicatePhone.run()
       .then(data => {
         // If the phone number already exists, show an error
         if (data[0].count > 0) {
-          showAlert("A merchant with this phone number already exists.", "error");
+          showAlert("A merchant with this phone number already exists in Hermes", "error");
           return;
         }
 
-        // Proceed with insertion if no duplicates
-        insertNewOnboards.run()
-          .then(() => {
-            showAlert("Merchant Created Successfully", "success");
-          resetWidget("modalAddNewLead", true);
-					closeModal(modalAddNewLead.name);
-					
+        // Run the checkDuplicateNewOnboards query to see if the same business already exists
+        checkDuplicateNewOnboards.run()
+          .then(data => {
+            // If the business already exists, show an error
+            if (data[0].count > 0) {
+              showAlert("A merchant with this phone number is already onboarded as a lead", "error");
+              return;
+            }
+
+            // Proceed with insertion if no duplicates
+            insertNewOnboards.run()
+              .then(() => {
+                showAlert("Merchant Created Successfully", "success");
+                // resetWidget("modalAddNewLead", true);
+                // closeModal(modalAddNewLead.name);
+              })
+              .catch((error) => {
+                showAlert("Failed to create Merchant. Please try again.", "error");
+              });
           })
           .catch((error) => {
-            showAlert("Failed to create Merchant. Please try again.", "error");
+            showAlert("Error checking for duplicate business. Please try again.", "error");
           });
+
       })
       .catch((error) => {
         showAlert("Error checking for duplicate phone number. Please try again.", "error");
       });
-
-		
-		
-  },
-
-	
+  }
 };
