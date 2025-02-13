@@ -29,7 +29,7 @@
   "mobileRightColumn": 37,
   "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "onClick": "{{duplicateMerchantCheck.run().then(() => {\n  showAlert('Data loaded successfully !', 'success');\n});}}",
+  "onClick": "{{duplicateMerchantCheck.run().then(() => {\n  duplicateSearchAlert.buttonPhoneNumberSearchonClick();\n});}}",
   "parentColumnSpace": 17.3125,
   "parentId": "c5uhkl272d",
   "parentRowSpace": 10,

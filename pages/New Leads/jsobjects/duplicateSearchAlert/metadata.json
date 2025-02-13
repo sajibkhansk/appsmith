@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_266622e4-ffc5-4314-82c1-28909c419f5e",
+  "id": "New Leads_duplicateSearchAlert",
+  "unpublishedCollection": {
+    "name": "duplicateSearchAlert",
+    "pageId": "New Leads",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}
