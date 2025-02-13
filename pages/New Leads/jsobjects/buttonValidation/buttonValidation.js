@@ -39,7 +39,9 @@ export default {
         insertNewOnboards.run()
           .then(() => {
             showAlert("Merchant Created Successfully", "success");
-            
+          resetWidget("modalAddNewLead", true);
+					closeModal(modalAddNewLead.name);
+					
           })
           .catch((error) => {
             showAlert("Failed to create Merchant. Please try again.", "error");
@@ -48,8 +50,10 @@ export default {
       .catch((error) => {
         showAlert("Error checking for duplicate phone number. Please try again.", "error");
       });
-		resetWidget("modalAddNewLead", true);
-		closeModal(modalAddNewLead.name)
+
+		
+		
   },
 
+	
 };
