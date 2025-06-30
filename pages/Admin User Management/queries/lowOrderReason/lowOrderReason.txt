@@ -1,1 +1,0 @@
-SELECT id,name FROM static_values where key_type = 'low_order_reason'

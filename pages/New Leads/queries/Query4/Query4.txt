@@ -1,0 +1,10 @@
+SELECT 
+        merchants.phone, 
+        MAX(date(created_at)) AS last_order_date, 
+        COUNT(*) AS order_count
+    FROM orders 
+		left join merchants 
+		on orders.merchant_id = merchants.id
+		WHERE transfer_status_id IN (8,9,10,11,12,13,14,22,23,24,25,26,28,30,31,32,33,37,38,39,40,41,42)	
+    GROUP BY merchant_id
+		having MAX(date(created_at)) < CURRENT_DATE - 90

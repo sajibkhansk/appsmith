@@ -2,10 +2,10 @@ export default {
 	// Function to map new statuses with the query
   tabStatuses: {
     "Need Followup": "need_followup",
-    "Registration Pending": "registration_pending",
-    "Information Pending": "info_pending",
-    "Orders Pending": "info_uploaded_order_pending",
-    "Orders Ongoing": "ongoing_merchant",
+    "Registration Pending": "Registration Pending",
+    "Information Pending": "Info Pending",
+    "Orders Pending": "First Order Pending",
+    "Orders Ongoing": "Incubation",
   },
 
   // Function to clear table data
@@ -49,13 +49,14 @@ export default {
       }
 
       const userId = userDetails[0].id;
+						console.log(typeof userId);;
 
       // Execute the query
       const result = await dynamicQuery.run({
         user_id: userId,
         status: status,
       });
-
+			console.log(status);
       // Populate the table data
       if (result && result.length > 0) {
         await storeValue(storeKey, result);

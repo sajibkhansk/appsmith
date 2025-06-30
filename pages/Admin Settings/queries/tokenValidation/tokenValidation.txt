@@ -1,0 +1,5 @@
+SELECT user_id 
+FROM user_sessions 
+WHERE token = {{appsmith.store.auth_token}} 
+AND is_active = TRUE
+AND expires_at > NOW();

@@ -27,7 +27,7 @@ export default {
     }
 
     // Run the checkDuplicatePhone query to see if the same phone number exists
-    checkDuplicatePhone.run()
+    CheckPhoneInMerchants.run()
       .then(data => {
         // If the phone number already exists, show an error
         if (data[0].count > 0) {
@@ -65,4 +65,4 @@ export default {
         showAlert("Error checking for duplicate phone number. Please try again.", "error");
       });
   }
-};
+};  

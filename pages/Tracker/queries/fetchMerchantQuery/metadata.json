@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    merchant_id AS \"Merchant ID\", \n    MIN(sorted_at) AS \"First Order Date\", \n    MAX(sorted_at) AS \"Last Order Date\",\n    COUNT(*) FILTER (WHERE sorted_at >= CURRENT_DATE - INTERVAL '1 day') AS \"Last Day Order\", \n    COUNT(consignment_id) AS \"Total Distinct Count\",\n    COUNT(Distinct date(sorted_at)) as \"active_days\",\n    COUNT(consignment_id)/COUNT(DISTINCT date(sorted_at)) AS \"Average Order Count\"\nFROM remote_hermes.orders\nWHERE merchant_id = {{ordersPending.selectedRow.merchant_id}};\nand transfer_status_id IN (8, 9, 10, 11, 12, 13, 22, 23, 24, 26, 28, 25, 14, 30, 31, 32, 33, 36, 37, 38, 39, 40, 41, 42)\nGROUP BY merchant_id;",
+      "body": "SELECT \n    merchant_id AS \"Merchant ID\", \n    MIN(sorted_at) AS \"First Order Date\", \n    MAX(sorted_at) AS \"Last Order Date\",\n    COUNT(*) FILTER (WHERE sorted_at >= CURRENT_DATE - INTERVAL '1 day') AS \"Last Day Order\", \n    COUNT(consignment_id) AS \"Total Distinct Count\",\n    COUNT(Distinct date(sorted_at)) as \"active_days\",\n    COUNT(consignment_id)/COUNT(DISTINCT date(sorted_at)) AS \"Average Order Count\"\nFROM orders\nWHERE merchant_id = {{ordersPending.selectedRow.merchant_id}};\nand transfer_status_id IN (8, 9, 10, 11, 12, 13, 22, 23, 24, 26, 28, 25, 14, 30, 31, 32, 33, 36, 37, 38, 39, 40, 41, 42)\nGROUP BY merchant_id;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

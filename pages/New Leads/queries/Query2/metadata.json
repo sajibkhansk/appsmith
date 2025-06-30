@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM merchantsCurrentStatus",
+      "body": "SELECT DISTINCT source\nFROM (\n  SELECT 'Merchant' AS source, phone::TEXT\n  FROM remote_hermes.merchants\n\n  UNION\n\n  SELECT 'new_onboards' AS source, phone::TEXT\n  FROM new_onboards\n) x\nWHERE phone = CASE\n  WHEN {{ filterPhoneNumber.text }} LIKE '+88%' THEN SUBSTRING({{ filterPhoneNumber.text }}, 4)\n  ELSE {{ filterPhoneNumber.text }}\nEND;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -13,7 +13,7 @@
           "value": true
         }
       ],
-      "timeoutInMillisecond": 10000
+      "timeoutInMillisecond": 1000000
     },
     "confirmBeforeExecute": false,
     "datasource": {
@@ -22,7 +22,11 @@
       "name": "hermes-write-db-prod",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": false,
     "name": "Query2",
     "pageId": "New Leads",

@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_a8fc937f-9bac-4eed-863d-96fe67426836",
+  "id": "New Leads_uploadCsv",
+  "unpublishedCollection": {
+    "name": "uploadCsv",
+    "pageId": "New Leads",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

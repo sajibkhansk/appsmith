@@ -1,1 +1,14 @@
-SELECT * FROM merchantsCurrentStatus
+SELECT DISTINCT source
+FROM (
+  SELECT 'Merchant' AS source, phone::TEXT
+  FROM remote_hermes.merchants
+
+  UNION
+
+  SELECT 'new_onboards' AS source, phone::TEXT
+  FROM new_onboards
+) x
+WHERE phone = CASE
+  WHEN {{ filterPhoneNumber.text }} LIKE '+88%' THEN SUBSTRING({{ filterPhoneNumber.text }}, 4)
+  ELSE {{ filterPhoneNumber.text }}
+END;

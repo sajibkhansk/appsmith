@@ -1,0 +1,4 @@
+SELECT id 
+FROM remote_hermes.merchants 
+WHERE phone = {{ inputBusinessPhone.text }} 
+AND last_order_date < CURRENT_DATE - INTERVAL '60 days'

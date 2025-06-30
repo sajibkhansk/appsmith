@@ -18,7 +18,11 @@
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
   "errorMessage": "Phone number must be 11 digits",
   "iconAlign": "left",
   "inputType": "TEXT",
@@ -43,6 +47,7 @@
   "mobileRightColumn": 21,
   "mobileTopRow": 9,
   "needsErrorInfo": false,
+  "onTextChanged": "{{CheckChurn.run()}}",
   "parentColumnSpace": 6.9375,
   "parentId": "gq8rw9rzgj",
   "parentRowSpace": 10,

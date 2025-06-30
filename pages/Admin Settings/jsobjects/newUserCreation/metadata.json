@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_8dd5cea2-0edb-4b86-b5df-a4995d95be37",
+  "id": "Admin Settings_newUserCreation",
+  "unpublishedCollection": {
+    "name": "newUserCreation",
+    "pageId": "Admin Settings",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

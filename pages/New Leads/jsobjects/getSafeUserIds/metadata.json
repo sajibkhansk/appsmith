@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_0c336d11-dda9-4c9d-b85c-d5847d53e10c",
+  "id": "New Leads_getSafeUserIds",
+  "unpublishedCollection": {
+    "name": "getSafeUserIds",
+    "pageId": "New Leads",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

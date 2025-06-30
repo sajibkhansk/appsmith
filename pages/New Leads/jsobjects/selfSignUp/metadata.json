@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_7df3ee93-f4f7-4bd6-b9fc-093fde38c89f",
+  "id": "New Leads_selfSignUp",
+  "unpublishedCollection": {
+    "name": "selfSignUp",
+    "pageId": "New Leads",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

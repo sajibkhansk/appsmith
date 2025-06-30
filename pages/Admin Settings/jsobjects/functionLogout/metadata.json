@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_b027344a-b0bd-4b07-968e-48ff1886412b",
+  "id": "Admin Settings_functionLogout",
+  "unpublishedCollection": {
+    "name": "functionLogout",
+    "pageId": "Admin Settings",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

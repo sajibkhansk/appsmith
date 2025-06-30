@@ -1,0 +1,17 @@
+WITH new_user AS (
+    INSERT INTO business_team_users (user_name, user_email, user_phone, team_id, supervisor_id, is_active)
+    VALUES (
+        {{inputUserName.text}}, 
+        {{inputUserEmail.text}}, 
+        {{inputUserPhone.text}}, 
+        {{inputTeamId.value}}, 
+        {{inputSupervisorId.value}}, 
+        TRUE
+    )
+    RETURNING id
+)
+INSERT INTO user_auth (user_id, password_hash)
+VALUES (
+    (SELECT id FROM new_user),
+    encode(digest({{inputPassword.text}}, 'sha256'), 'hex')  -- Hash password using sha256
+);

@@ -1,7 +1,20 @@
 SELECT COUNT(*) 
 FROM merchants
+LEFT JOIN (
+    SELECT 
+        merchant_id, 
+        MIN(DATE(created_at)) AS first_order_date, 
+        MAX(DATE(created_at)) AS last_order_date, 
+        COUNT(*) AS order_count
+    FROM orders 
+    WHERE transfer_status_id IN (
+        8,9,10,11,12,13,14,22,23,24,25,26,28,30,31,32,33,37,38,39,40,41,42
+    )	
+    GROUP BY merchant_id
+) x ON x.merchant_id = merchants.id
 WHERE phone = CASE 
                  WHEN {{ inputBusinessPhone.text }} LIKE '+88%' 
-                 THEN SUBSTRING({{ inputBusinessPhone.text }}, 4) -- Remove +88
+                 THEN SUBSTRING({{ inputBusinessPhone.text }}, 4)
                  ELSE {{ inputBusinessPhone.text }}
-               END;
+              END
+  AND x.last_order_date > CURRENT_DATE - 60;

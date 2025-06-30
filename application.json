@@ -60,7 +60,11 @@
       "isDefault": false
     },
     {
-      "id": "Admin User Management",
+      "id": "Log In DB",
+      "isDefault": false
+    },
+    {
+      "id": "Admin Settings",
       "isDefault": false
     }
   ],

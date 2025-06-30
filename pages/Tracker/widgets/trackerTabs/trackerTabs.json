@@ -234,6 +234,51 @@
       "version": 1,
       "widgetId": "a4gt1mqrv6",
       "widgetName": "Canvas6"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 720,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "3744lo8mmc",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 760,
+      "minWidth": 450,
+      "mobileBottomRow": 761,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 1148,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "j5s31hgocu",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 1148,
+      "tabId": "tab01hzlgho92",
+      "tabName": "Move To KAM",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "16xi6bjz0n",
+      "widgetName": "Canvas20"
     }
   ],
   "defaultTab": "",
@@ -279,6 +324,13 @@
   "shouldScrollContents": true,
   "shouldShowTabs": true,
   "tabsObj": {
+    "tab01hzlgho92": {
+      "id": "tab01hzlgho92",
+      "index": 5,
+      "isVisible": false,
+      "label": "Move To KAM",
+      "widgetId": "16xi6bjz0n"
+    },
     "tab1": {
       "id": "tab1",
       "index": 0,

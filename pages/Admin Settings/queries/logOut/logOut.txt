@@ -1,0 +1,3 @@
+UPDATE user_sessions
+SET is_active = FALSE
+WHERE token = {{appsmith.store.auth_token}};

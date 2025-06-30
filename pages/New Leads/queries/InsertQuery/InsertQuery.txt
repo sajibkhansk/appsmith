@@ -1,0 +1,22 @@
+INSERT INTO new_onboards (
+  business_name,
+  business_owner_name,
+  phone,
+  website,
+  estimated_volume,
+  product_category_id,
+  business_team_user_id,
+  competitor_id,
+  status
+)
+VALUES (
+  '{{ appsmith.store.business_name }}',
+  '{{ appsmith.store.business_owner_name }}',
+  '{{ appsmith.store.phone }}',
+  '{{ appsmith.store.website }}',
+  {{ appsmith.store.estimated_volume }},
+  '{{ appsmith.store.product_category_id }}',
+  '{{ appsmith.store.business_team_user_id }}',
+  '{{ appsmith.store.competitor_id }}',
+  '{{ appsmith.store.status }}'
+);

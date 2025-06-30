@@ -1,1 +1,7 @@
-SELECT * FROM public."acquisition_followups" LIMIT 10;
+SELECT COUNT(*) 
+FROM new_onboards
+WHERE phone = CASE 
+                 WHEN {{ filterPhoneNumber.text }} LIKE '+88%' 
+                 THEN SUBSTRING({{ filterPhoneNumber.text }}, 4) -- Remove +88
+                 ELSE {{ filterPhoneNumber.text }}
+               END;

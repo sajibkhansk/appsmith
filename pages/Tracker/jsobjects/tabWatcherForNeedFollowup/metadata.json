@@ -9,7 +9,7 @@
     "variables": [
       {
         "name": "tabStatuses",
-        "value": "{\n  \"Need Followup\": \"need_followup\"\n}"
+        "value": "{\n  \"Need Followup\": \"Need Followup\"\n}"
       }
     ]
   }

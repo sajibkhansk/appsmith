@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"acquisition_followups\" LIMIT 10;",
+      "body": "SELECT COUNT(*) \nFROM new_onboards\nWHERE phone = CASE \n                 WHEN {{ filterPhoneNumber.text }} LIKE '+88%' \n                 THEN SUBSTRING({{ filterPhoneNumber.text }}, 4) -- Remove +88\n                 ELSE {{ filterPhoneNumber.text }}\n               END;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,6 +22,11 @@
       "name": "hermes-write-db-prod",
       "pluginId": "postgres-plugin"
     },
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": false,
     "name": "Query3",
     "pageId": "New Leads",

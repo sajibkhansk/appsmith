@@ -5,12 +5,12 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": 1,
-  "bottomRow": 88,
+  "bottomRow": 115,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 760,
+      "bottomRow": 1030,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -56,7 +56,7 @@
     },
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 760,
+      "bottomRow": 1030,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -99,6 +99,186 @@
       "version": 1,
       "widgetId": "5k38w5mhig",
       "widgetName": "Canvas4"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 1030,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "2cbdxszqyr",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 800,
+      "minWidth": 450,
+      "mobileBottomRow": 801,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 1128,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "j6h3qamcfn",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 1128,
+      "tabId": "tabz5cnascin5",
+      "tabName": "Upload CSV",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "y27n7ue3de",
+      "widgetName": "Canvas16"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 1030,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "3744lo8mmc",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 800,
+      "minWidth": 450,
+      "mobileBottomRow": 801,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 1128,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "j6h3qamcfn",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 1128,
+      "tabId": "tabrzege2pr08",
+      "tabName": "MKT",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "kgbkcpgj08",
+      "widgetName": "Canvas17"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 1030,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "3744lo8mmc",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 800,
+      "minWidth": 450,
+      "mobileBottomRow": 801,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 1128,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "j6h3qamcfn",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 1128,
+      "tabId": "tabfzil3pp1nq",
+      "tabName": "Move To CX",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "nogppn4l5m",
+      "widgetName": "Canvas18"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 1030,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "fracyykho8",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 800,
+      "minWidth": 450,
+      "mobileBottomRow": 801,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 1128,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "j6h3qamcfn",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 1128,
+      "tabId": "tabfa98squosu",
+      "tabName": "Self Signup",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "f67lljp5c1",
+      "widgetName": "Canvas19"
     }
   ],
   "defaultTab": "",
@@ -108,9 +288,20 @@
     },
     {
       "key": "boxShadow"
+    },
+    {
+      "key": "tabsObj.tabfa98squosu.isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "tabsObj.tabfa98squosu.isVisible"
+    },
+    {
+      "key": "onTabSelected"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
@@ -126,6 +317,7 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
+  "onTabSelected": "",
   "parentColumnSpace": 17.625,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -138,6 +330,7 @@
     "tab1": {
       "id": "tab1",
       "index": 0,
+      "isDuplicateLabel": false,
       "isVisible": true,
       "label": "Check Duplicate",
       "positioning": "vertical",
@@ -146,10 +339,43 @@
     "tab2": {
       "id": "tab2",
       "index": 1,
+      "isDuplicateLabel": false,
       "isVisible": true,
       "label": "Hunted Leads",
       "positioning": "vertical",
       "widgetId": "5k38w5mhig"
+    },
+    "tabfa98squosu": {
+      "id": "tabfa98squosu",
+      "index": 2,
+      "isDuplicateLabel": false,
+      "isVisible": " {{getUserDetailsByEmail.data[0]?.is_admin == true}}",
+      "label": "Self Signup",
+      "widgetId": "f67lljp5c1"
+    },
+    "tabfzil3pp1nq": {
+      "id": "tabfzil3pp1nq",
+      "index": 5,
+      "isDuplicateLabel": false,
+      "isVisible": false,
+      "label": "Move To CX",
+      "widgetId": "nogppn4l5m"
+    },
+    "tabrzege2pr08": {
+      "id": "tabrzege2pr08",
+      "index": 4,
+      "isDuplicateLabel": false,
+      "isVisible": false,
+      "label": "MKT",
+      "widgetId": "kgbkcpgj08"
+    },
+    "tabz5cnascin5": {
+      "id": "tabz5cnascin5",
+      "index": 3,
+      "isDuplicateLabel": false,
+      "isVisible": false,
+      "label": "Upload CSV",
+      "widgetId": "y27n7ue3de"
     }
   },
   "topRow": 8,

@@ -1,0 +1,9 @@
+SELECT DISTINCT phone
+FROM (
+    SELECT phone::TEXT
+    FROM remote_hermes.merchants
+    UNION
+    SELECT phone::TEXT
+    FROM new_onboards
+) AS x
+WHERE phone = '{{ appsmith.store.phone }}';

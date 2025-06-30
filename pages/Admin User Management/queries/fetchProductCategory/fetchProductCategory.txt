@@ -1,3 +1,0 @@
-select 
-	name as "Product Name"
-from category

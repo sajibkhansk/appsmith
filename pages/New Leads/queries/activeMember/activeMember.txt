@@ -1,0 +1,3 @@
+SELECT id
+FROM business_team_users
+WHERE id = ANY(ARRAY[{{ activeUsers.selectedOptionValues.join(',') }}]::int[])

@@ -1,0 +1,3 @@
+SELECT COUNT(*) AS email_count 
+FROM business_team_users 
+WHERE user_email = {{inputUserEmail.text.trim()}};

@@ -1,0 +1,41 @@
+WITH summarizer AS (
+    SELECT 
+        m.id,
+        m.name,
+        m.phone,
+        DATE(m.created_at) AS merchant_created_at,
+        m.first_order_date,
+        m.last_order_date,
+        m.active_payment_method,
+        COUNT(s.id) AS store_count
+    FROM remote_hermes.merchants m
+    LEFT JOIN remote_hermes.stores s ON s.merchant_id = m.id
+		left join remote_hermes.merchant_users mu on mu.merchant_id = m.id
+    WHERE m.created_at >= CURRENT_DATE - INTERVAL '1 day'
+      AND m.created_at < CURRENT_DATE
+      AND NOT EXISTS (
+          SELECT 1
+          FROM new_onboards nm
+          WHERE nm.merchant_id is null and  nm.phone = m.phone
+      )
+    GROUP BY m.id, m.name, m.phone, m.created_at, m.first_order_date, m.last_order_date, m.active_payment_method
+    ORDER BY store_count DESC
+)
+SELECT 
+    *,
+    CASE 
+        -- Info Pending: active_payment_method IS NULL or store_count = 0, and first_order_date is NULL
+        WHEN (active_payment_method IS NULL OR store_count = 0) 
+             AND first_order_date IS NULL
+        THEN 'Info Pending'
+        
+        -- First Order Pending: active_payment_method IS NOT NULL, store_count <> 0, and first_order_date IS NOT NULL
+        WHEN active_payment_method IS NOT NULL 
+             AND store_count <> 0 
+             AND first_order_date IS NULL
+        THEN 'First Order Pending'
+        
+        -- Incubation: All other conditions
+        ELSE 'Incubation'
+    END AS account_status
+FROM summarizer;

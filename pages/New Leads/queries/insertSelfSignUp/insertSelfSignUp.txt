@@ -1,0 +1,20 @@
+INSERT INTO new_onboards (
+  merchant_id,
+	business_name,
+  merchant_created_at,
+  phone,
+  account_status,
+  business_team_user_id,
+  onboard_type,
+  assigner_user_id
+)
+VALUES (
+  {{this.params.merchant_id}},
+	{{this.params.business_name}},
+  {{this.params.merchant_created_at}},
+  {{this.params.phone}},
+  {{this.params.account_status}},
+  {{this.params.business_team_user_id}},
+  {{this.params.onboard_type}},
+  {{this.params.assigner_user_id}}
+);

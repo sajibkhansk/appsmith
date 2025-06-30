@@ -8,19 +8,19 @@ SELECT
     merchant_users.phone AS "Owner phone number",
     merchant_users.email AS "Owner email address",
     (CASE WHEN merchants.product_category IS NULL THEN 'No Record' ELSE merchants.product_category END) AS "Product category",
-    x.first_order_date AS "Date of first order",
-    x.last_order_date AS "Last Order Date",
+    first_order_date AS "Date of first order",
+    last_order_date AS "Last Order Date",
     merchants.last_traversal_date AS "Last traversal date",
     (CASE WHEN merchants.reject_reason IS NULL THEN 'No Record' ELSE merchants.reject_reason END) AS "Reason for rejection",
     (CASE WHEN merchants.rejected_by IS NULL THEN 'No Record' ELSE merchants.rejected_by END) AS "Rejected by",
 		x.order_count As "Order Count",
-    'button' AS "Action"
+    'button' AS "Action",
+		case when last_order_date < CURRENT_DATE - 45 then 'Churn' 
+		else 'Regular' end as Current_Status
 FROM merchants 
 INNER JOIN merchant_users ON merchants.owner_id = merchant_users.id 
 LEFT JOIN (
 	SELECT merchant_id, 
-	MIN(date(created_at)) AS first_order_date, 
-			MAX(date(created_at)) AS last_order_date, 
 			COUNT(*) AS order_count
 			FROM orders 
 			GROUP BY merchant_id

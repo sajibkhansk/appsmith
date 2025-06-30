@@ -7,7 +7,8 @@ INSERT INTO new_onboards (
 	product_category_id,
 	business_team_user_id,
 	competitor_id,
-	status
+	status,
+	onboard_type
 )
 VALUES (
 	'{{ inputBusinessName.text }}', 
@@ -18,5 +19,6 @@ VALUES (
 	'{{ selectProductCategory.value }}', 
 	(SELECT id FROM business_team_users WHERE user_email = '{{ appsmith.store.userEmail }}'), 
 	'{{ selectOtherCourier.value }}',
-	'Active'
+	'Active',
+	'{{ is_Churn.text }}'
 )

@@ -3,7 +3,7 @@
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 59,
-  "bottomRowBeforeCollapse": 42,
+  "bottomRowBeforeCollapse": 59,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -64,7 +64,7 @@
   "serverSideFiltering": false,
   "sourceData": "{{fetchCompetition.data.map( (obj) =>{ return  {'label': obj.name, 'value': obj.name } })}}",
   "topRow": 52,
-  "topRowBeforeCollapse": 35,
+  "topRowBeforeCollapse": 52,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "39skhpieya",
