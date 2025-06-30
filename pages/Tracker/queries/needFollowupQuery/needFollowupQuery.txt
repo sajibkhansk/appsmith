@@ -25,6 +25,8 @@ need_followup AS (
 
 final AS (
     SELECT 
+				nf.phone,
+				merchant_name,
         nf.new_onboards_id,
         nf.business_team_user_id,
         nf.final_merchant_id,
@@ -36,6 +38,8 @@ final AS (
 )
 
 SELECT 
+		phone,
+		merchant_name,
     new_onboards_id as id,
     business_team_user_id,
     final_merchant_id,
@@ -43,5 +47,5 @@ SELECT
     last_day_order,
     'Need Followup' AS followup_needed
 FROM final
-WHERE estimated_volume < last_day_order
+WHERE estimated_volume > last_day_order
   AND '{{this.params.status}}' = 'Need Followup';
