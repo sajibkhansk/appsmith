@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 100,
+  "bottomRow": 102,
   "bottomRowBeforeCollapse": 96,
   "boxShadow": "none",
   "defaultText": "",

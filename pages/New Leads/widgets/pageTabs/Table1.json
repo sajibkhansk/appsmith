@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 77,
+  "bottomRow": 79,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -46,7 +46,7 @@
     "active_payment_method": 145,
     "merchant_created_at": 209
   },
-  "customIsLoading": false,
+  "customIsLoading": true,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
@@ -430,7 +430,7 @@
   "searchKey": "",
   "tableData": "{{LastDaySignUpMerchants.data}}",
   "textSize": "0.875rem",
-  "topRow": 7,
+  "topRow": 9,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

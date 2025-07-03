@@ -3,7 +3,7 @@
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 84,
-  "bottomRowBeforeCollapse": 81,
+  "bottomRowBeforeCollapse": 84,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -64,7 +64,7 @@
   "serverSideFiltering": false,
   "sourceData": "{{fetchCompetition.data}}",
   "topRow": 77,
-  "topRowBeforeCollapse": 74,
+  "topRowBeforeCollapse": 77,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "jwlzzsedp5",

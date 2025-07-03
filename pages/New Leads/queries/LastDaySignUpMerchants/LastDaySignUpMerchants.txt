@@ -11,8 +11,7 @@ WITH summarizer AS (
     FROM remote_hermes.merchants m
     LEFT JOIN remote_hermes.stores s ON s.merchant_id = m.id
 		left join remote_hermes.merchant_users mu on mu.merchant_id = m.id
-    WHERE m.created_at >= CURRENT_DATE - INTERVAL '1 day'
-      AND m.created_at < CURRENT_DATE
+    WHERE  date(m.created_at) between {{startDate.formattedDate}} AND  {{endDate.formattedDate}}
       AND NOT EXISTS (
           SELECT 1
           FROM new_onboards nm

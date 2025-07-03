@@ -33,7 +33,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{postNeedFollowupResponse.onConfirmClick();}}",
+  "onClick": "{{postRegPendingFormResponse.onConfirmClick();}}",
   "originalBottomRow": 97,
   "originalTopRow": 93,
   "parentId": "1arwfywsjt",
