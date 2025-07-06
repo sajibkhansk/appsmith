@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "67a78c88af45f24f85e95b40_06d44ece-2517-4f19-b2b4-52bb167b4a5d",
-  "id": "Dashboard_Query4",
+  "gitSyncId": "67a78c88af45f24f85e95b40_dd238a75-3253-4aed-ad85-5db5f8792309",
+  "id": "New Leads_assignedMerchantsList",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM new_onboards WHERE status not in ('Active')",
+      "body": "SELECT  merchant_id, business_name, new_onboards.phone as phone, business_team_users.user_name\nFROM new_onboards\nleft join business_team_users on CAST(new_onboards.business_team_user_id AS INT) = business_team_users.id\nwhere merchant_id is not NULL \n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": false,
-    "name": "Query4",
-    "pageId": "Dashboard",
+    "executeOnLoad": true,
+    "name": "assignedMerchantsList",
+    "pageId": "New Leads",
     "userSetOnLoad": false
   }
 }

@@ -279,6 +279,51 @@
       "version": 1,
       "widgetId": "f67lljp5c1",
       "widgetName": "Canvas19"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 1030,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "2tcsxujlgi",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 1070,
+      "minWidth": 450,
+      "mobileBottomRow": 1071,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 1128,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "j6h3qamcfn",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 1128,
+      "tabId": "tabr1ffplmz7i",
+      "tabName": "Assigned Merchant List",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "q56ig4xald",
+      "widgetName": "Canvas21"
     }
   ],
   "defaultTab": "",
@@ -291,6 +336,9 @@
     },
     {
       "key": "tabsObj.tabfa98squosu.isVisible"
+    },
+    {
+      "key": "tabsObj.tabr1ffplmz7i.isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -300,9 +348,16 @@
     },
     {
       "key": "onTabSelected"
+    },
+    {
+      "key": "tabsObj.tabr1ffplmz7i.isVisible"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTabSelected"
+    }
+  ],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isLoading": false,
@@ -317,7 +372,7 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onTabSelected": "",
+  "onTabSelected": "{{assignedMerchantsList.run()}}",
   "parentColumnSpace": 17.625,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -360,6 +415,13 @@
       "isVisible": false,
       "label": "Move To CX",
       "widgetId": "nogppn4l5m"
+    },
+    "tabr1ffplmz7i": {
+      "id": "tabr1ffplmz7i",
+      "index": 6,
+      "isVisible": " {{getUserDetailsByEmail.data[0]?.is_admin == true}}\n ",
+      "label": "Assigned Merchant List",
+      "widgetId": "q56ig4xald"
     },
     "tabrzege2pr08": {
       "id": "tabrzege2pr08",

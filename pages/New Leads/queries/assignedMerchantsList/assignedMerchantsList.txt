@@ -1,0 +1,4 @@
+SELECT  merchant_id, business_name, new_onboards.phone as phone, business_team_users.user_name
+FROM new_onboards
+left join business_team_users on CAST(new_onboards.business_team_user_id AS INT) = business_team_users.id
+where merchant_id is not NULL 

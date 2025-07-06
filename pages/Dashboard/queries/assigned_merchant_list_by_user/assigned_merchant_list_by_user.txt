@@ -1,0 +1,12 @@
+
+    SELECT 
+        merchant_id, 
+        business_name, 
+        new_onboards.phone AS phone, 
+        business_team_users.user_name
+    FROM new_onboards
+    LEFT JOIN business_team_users 
+        ON CAST(new_onboards.business_team_user_id AS INT) = business_team_users.id
+    WHERE merchant_id IS NOT NULL
+    AND new_onboards.business_team_user_id = CAST({{getUserDetailsByEmail.data[0].id}} AS TEXT)
+
