@@ -292,7 +292,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"business_owner_name\"]))}}",
+      "computedValue": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow.business_owner_name))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
