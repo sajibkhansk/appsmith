@@ -1,52 +1,59 @@
 {
   "animateLoading": true,
+  "backgroundColor": "",
+  "borderColor": "{{appsmith.theme.colors.primaryColor}}",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 24,
+  "bottomRow": 5,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
     },
     {
-      "key": "fontFamily"
+      "key": "borderRadius"
     },
     {
-      "key": "borderRadius"
+      "key": "borderColor"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "backgroundColor"
+    }
+  ],
   "dynamicTriggerPathList": [],
-  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.875rem",
+  "fontFamily": "Nunito Sans",
+  "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "zpst9rza4c",
-  "leftColumn": 54,
+  "key": "0hajg3atf3",
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 56,
-  "mobileLeftColumn": 27,
-  "mobileRightColumn": 43,
-  "mobileTopRow": 52,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 55,
-  "originalTopRow": 51,
+  "originalBottomRow": 5,
+  "originalTopRow": 1,
   "overflow": "NONE",
-  "parentColumnSpace": 17.625,
-  "parentId": "sl8kto4u1w",
+  "parentColumnSpace": 6.4140625,
+  "parentId": "yd8evm5zk1",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "Powered by Pathao AI",
+  "text": "Sign Up to Pathao CRM",
   "textAlign": "LEFT",
   "textColor": "#ef4444",
-  "topRow": 20,
+  "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "oaqjocu2h0",
-  "widgetName": "Text1"
+  "widgetId": "cuisvyb9a1",
+  "widgetName": "signin_text"
 }

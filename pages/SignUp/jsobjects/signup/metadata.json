@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_a12bb9f8-ea80-4eda-a213-8be4eb85ef0b",
+  "id": "SignUp_signup",
+  "unpublishedCollection": {
+    "name": "signup",
+    "pageId": "SignUp",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

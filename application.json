@@ -66,6 +66,10 @@
     {
       "id": "Admin Settings",
       "isDefault": false
+    },
+    {
+      "id": "SignUp",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

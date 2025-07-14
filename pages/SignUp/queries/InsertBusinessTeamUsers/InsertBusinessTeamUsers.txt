@@ -1,0 +1,2 @@
+INSERT INTO public."business_team_users" ("user_name", "user_email", "user_phone", "team_id", "supervisor_id")
+  VALUES ('{{signUp_name.text}}', '{{signUp_email.text}}', '{{signUp_phone.text}}', {{signUp_team.selectedOptionValue}}, {{signUp_supervisor.selectedOptionValue}});
