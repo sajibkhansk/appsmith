@@ -7,7 +7,7 @@ export default {
 
       console.log("Authentication data cleared successfully.");
 
-      navigateTo("dashboard");
+      navigateTo("Log In DB");
 
       showAlert("Logged out successfully");
     } catch (error) {
