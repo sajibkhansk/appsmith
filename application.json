@@ -33,7 +33,7 @@
   "pages": [
     {
       "id": "Log In",
-      "isDefault": true
+      "isDefault": false
     },
     {
       "id": "New Leads",
@@ -61,7 +61,7 @@
     },
     {
       "id": "Log In DB",
-      "isDefault": false
+      "isDefault": true
     },
     {
       "id": "Admin Settings",

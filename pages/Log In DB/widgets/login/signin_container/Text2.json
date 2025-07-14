@@ -41,7 +41,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 25,
   "shouldTruncate": false,
-  "text": "Don't have an account? <a href=\"https://appsmith-courier.pathao.com/app/pathao-crm/signup-68738310af45f24f85e9bff0/edit?branch=devBranch\" style=\"color: #d62828;\">Sign up</a>",
+  "text": "Don't have an account? <a href=\"https://appsmith-courier.pathao.com/app/pathao-crm/signup-68738310af45f24f85e9bff0\" style=\"color: #d62828;\">Sign up</a>",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 21,
