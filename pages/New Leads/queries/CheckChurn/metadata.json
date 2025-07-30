@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id \nFROM remote_hermes.merchants \nWHERE phone = {{ inputBusinessPhone.text }} \nAND last_order_date < CURRENT_DATE - INTERVAL '60 days'\n",
+      "body": "SELECT id \nFROM remote_hermes.merchants \nWHERE phone = {{ inputBusinessPhone.text }} \nAND last_order_date < CURRENT_DATE - INTERVAL '45 days'\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
