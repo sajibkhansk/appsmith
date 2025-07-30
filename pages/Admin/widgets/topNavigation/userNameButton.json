@@ -25,6 +25,9 @@
     },
     {
       "key": "menuItems.menuItem1.onClick"
+    },
+    {
+      "key": "menuItems.menuItempjpggkb1na.onClick"
     }
   ],
   "iconAlign": "left",
@@ -49,12 +52,21 @@
     },
     "menuItem2": {
       "id": "menuItem2",
-      "index": 1,
+      "index": 2,
       "isDisabled": false,
       "isVisible": true,
       "label": "Logout",
       "onClick": "{{functionLogout.logout();\nnavigateTo('Log In', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
+    },
+    "menuItempjpggkb1na": {
+      "id": "menuItempjpggkb1na",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Home",
+      "onClick": "{{navigateTo('New Leads', {}, 'SAME_WINDOW');}}",
+      "widgetId": "i6lno7bmv6"
     }
   },
   "menuItemsSource": "STATIC",
