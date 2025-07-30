@@ -1,0 +1,2 @@
+DELETE FROM public."new_onboards"
+  WHERE "id" = {{data_table.triggeredRow.id}};

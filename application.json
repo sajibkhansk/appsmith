@@ -64,11 +64,11 @@
       "isDefault": true
     },
     {
-      "id": "Admin Settings",
+      "id": "SignUp",
       "isDefault": false
     },
     {
-      "id": "SignUp",
+      "id": "Admin",
       "isDefault": false
     }
   ],

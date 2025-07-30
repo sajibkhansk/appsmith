@@ -1,5 +1,0 @@
-SELECT u.id, u.user_name, u.user_email 
-FROM business_team_users u
-JOIN user_auth a ON u.id = a.user_id
-WHERE u.user_email = {{inputUserEmail.text}} 
-AND a.password_hash = SHA2({{inputPassword.text}}, 256);

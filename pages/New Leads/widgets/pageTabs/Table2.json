@@ -36,7 +36,7 @@
     "phone",
     "user_name"
   ],
-  "columnUpdatedAt": 1751794241012,
+  "columnUpdatedAt": 1753857847406,
   "columnWidthMap": {
     "business_name": 184
   },
@@ -79,7 +79,11 @@
       "key": "tableData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onRowSelected"
+    }
+  ],
   "enableClientSideSearch": true,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
@@ -88,7 +92,7 @@
   "isSortable": true,
   "isVisible": true,
   "isVisibleDownload": true,
-  "isVisibleFilters": false,
+  "isVisibleFilters": true,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
   "key": "wqtmz6k3kn",
@@ -99,10 +103,13 @@
   "mobileLeftColumn": 0,
   "mobileRightColumn": 18,
   "mobileTopRow": 8,
+  "multiRowSelection": false,
   "needsErrorInfo": false,
+  "onRowSelected": "{{storeValue('merchant_id', '');}}",
   "parentColumnSpace": 17.625,
   "parentId": "q56ig4xald",
   "parentRowSpace": 10,
+  "primaryColumnId": "merchant_id",
   "primaryColumns": {
     "business_name": {
       "alias": "business_name",

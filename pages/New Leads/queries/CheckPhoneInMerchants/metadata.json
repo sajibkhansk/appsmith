@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(*) \nFROM remote_hermes.merchants\nWHERE phone = CASE \n                 WHEN {{ inputBusinessPhone.text }} LIKE '+88%' \n                 THEN SUBSTRING({{ inputBusinessPhone.text }}, 4) -- Remove +88\n                 ELSE {{ inputBusinessPhone.text }}\n               END\nand first_order_date > CURRENT_DATE - 30",
+      "body": "SELECT COUNT(*) \nFROM remote_hermes.merchants\nWHERE phone = CASE \n                 WHEN {{ inputBusinessPhone.text }} LIKE '+88%' \n                 THEN SUBSTRING({{ inputBusinessPhone.text }}, 4) -- Remove +88\n                 ELSE {{ inputBusinessPhone.text }}\n               END \nand first_order_date is not null",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

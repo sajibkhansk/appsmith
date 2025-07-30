@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_c489da8a-48bf-433b-a603-c388bf7b8ea8",
+  "id": "Admin_fetchAuthToken",
+  "unpublishedCollection": {
+    "name": "fetchAuthToken",
+    "pageId": "Admin",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

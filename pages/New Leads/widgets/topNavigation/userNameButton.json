@@ -12,11 +12,17 @@
     },
     {
       "key": "menuColor"
+    },
+    {
+      "key": "menuItems.menuIteml1vi85d0s7.isVisible"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "menuItems.menuItem2.onClick"
+    },
+    {
+      "key": "menuItems.menuIteml1vi85d0s7.isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -25,6 +31,9 @@
     },
     {
       "key": "menuItems.menuItem1.onClick"
+    },
+    {
+      "key": "menuItems.menuIteml1vi85d0s7.onClick"
     }
   ],
   "iconAlign": "left",
@@ -49,12 +58,21 @@
     },
     "menuItem2": {
       "id": "menuItem2",
-      "index": 1,
+      "index": 2,
       "isDisabled": false,
       "isVisible": true,
       "label": "Logout",
       "onClick": "{{functionLogout.logout();\nnavigateTo('Log In', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
+    },
+    "menuIteml1vi85d0s7": {
+      "id": "menuIteml1vi85d0s7",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": "{{getUserDetailsByEmail.data[0]?.is_admin == true}}",
+      "label": "Admin",
+      "onClick": "{{navigateTo('Admin', {}, 'SAME_WINDOW');}}",
+      "widgetId": "6qcckpcuos"
     }
   },
   "menuItemsSource": "STATIC",

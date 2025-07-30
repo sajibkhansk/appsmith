@@ -1,0 +1,78 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "boxShadow": "none",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "label"
+    },
+    {
+      "key": "menuColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "menuItems.menuItem2.onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "menuItems.menuItem2.onClick"
+    },
+    {
+      "key": "menuItems.menuItem1.onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "user",
+  "isCompact": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "uiyq2tubhn",
+  "label": "{{  getUserDetailsByEmail.data[0]?.user_name && getUserDetailsByEmail.data[0]?.team_name \n  ? `${getUserDetailsByEmail.data[0].user_name} | ${getUserDetailsByEmail.data[0].team_name}` \n  :`No user found`\n}}",
+  "leftColumn": 49,
+  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+  "menuItems": {
+    "menuItem1": {
+      "id": "menuItem1",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "User Settings",
+      "onClick": "{{navigateTo('User Settings', {}, 'SAME_WINDOW');}}",
+      "widgetId": ""
+    },
+    "menuItem2": {
+      "id": "menuItem2",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Logout",
+      "onClick": "{{functionLogout.logout();\nnavigateTo('Log In', {}, 'SAME_WINDOW');}}",
+      "widgetId": ""
+    }
+  },
+  "menuItemsSource": "STATIC",
+  "menuVariant": "TERTIARY",
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 12,
+  "mobileRightColumn": 28,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 17.625,
+  "parentId": "i06cskvh1s",
+  "parentRowSpace": 10,
+  "placement": "START",
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "topRow": 1,
+  "type": "MENU_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "ffeg4bkm49",
+  "widgetName": "userNameButton"
+}

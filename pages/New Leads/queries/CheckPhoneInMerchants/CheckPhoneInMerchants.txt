@@ -4,5 +4,5 @@ WHERE phone = CASE
                  WHEN {{ inputBusinessPhone.text }} LIKE '+88%' 
                  THEN SUBSTRING({{ inputBusinessPhone.text }}, 4) -- Remove +88
                  ELSE {{ inputBusinessPhone.text }}
-               END
-and first_order_date > CURRENT_DATE - 30
+               END 
+and first_order_date is not null

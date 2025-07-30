@@ -1,8 +1,0 @@
-SELECT 
-	user_name ,
-	business_team_users.id, 
-	business_team.
-	team_name
-FROM public.business_team_users 
-inner join business_team on business_team.id = business_team_users.team_id
-WHERE user_email = '{{ appsmith.store.userEmail }}';
