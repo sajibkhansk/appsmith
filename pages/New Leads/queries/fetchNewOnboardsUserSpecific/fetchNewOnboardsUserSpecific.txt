@@ -13,5 +13,5 @@ INNER JOIN business_team_users
     ON business_team_users.id = CAST(NULLIF(new_onboards.business_team_user_id, '') AS INT)
 INNER JOIN static_values 
   ON static_values.id = CAST(NULLIF(new_onboards.product_category_id, '') AS INT)
-WHERE business_team_users.id = {{ getUserDetailsByEmail.data[0]?.id }} 
+WHERE business_team_user_id = CAST({{ getUserDetailsByEmail.data[0]?.id }} AS TEXT)
 ORDER BY new_onboards.id DESC;
