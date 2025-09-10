@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "name": "assigned_merchant_list_by_user",
     "pageId": "Dashboard",
     "userSetOnLoad": false

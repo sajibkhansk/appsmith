@@ -10,20 +10,6 @@ export default {
 
     const normalize = (p) => String(p || '').trim().replace(/^0+/, '');
 
-    // Fetch phone numbers from Google Sheet
-    let sheetPhones = [];
-    try {
-      sheetPhones = Total_record_Data1.data
-        .map(row => normalize(row.phone))
-        .filter(p => p.length > 0);
-
-      console.log('✅ Normalized Sheet Phones:', sheetPhones);
-    } catch (err) {
-      showAlert('Failed to fetch phone numbers from Google Sheet.', 'error');
-      console.error('❌ Error fetching sheet data:', err);
-      return;
-    }
-
     // Group merchants by account_status
     const statusGroups = {
       Incubation: [],
@@ -33,36 +19,74 @@ export default {
 
     selectedRows.forEach(row => {
       const status = row.account_status;
-      if (statusGroups[status]) {
-        statusGroups[status].push(row);
-      }
+      if (statusGroups[status]) statusGroups[status].push(row);
     });
+
+    // Helpers
+    const shuffle = (arr) => {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    };
+    const sampleWithoutReplacement = (arr, k) => {
+      if (k <= 0) return [];
+      const copy = [...arr];
+      const picks = [];
+      for (let i = 0; i < k && copy.length; i++) {
+        const j = Math.floor(Math.random() * copy.length);
+        picks.push(copy[j]);
+        copy.splice(j, 1);
+      }
+      return picks;
+    };
 
     const assignedRows = [];
     const numUsers = activeUsers.length;
 
+    // ▶ Equal distribution per status; randomize merchants; randomize remainder recipients
     Object.entries(statusGroups).forEach(([status, group]) => {
-      group.sort((a, b) => a.id - b.id);
+      if (!group || group.length === 0) return;
 
-      for (let i = 0; i < group.length; i++) {
-        const userIndex = i % numUsers;
-        const assignedUser = activeUsers[userIndex];
+      const shuffledGroup = shuffle(group);
 
-        const merchantPhone = normalize(group[i].phone);
-        const isInSheet = sheetPhones.includes(merchantPhone);
-        const onboardType = isInSheet ? 'MKT' : 'Organic';
+      const base = Math.floor(shuffledGroup.length / numUsers);
+      const remainder = shuffledGroup.length % numUsers;
 
-        console.log(`Merchant: ${group[i].phone} (normalized: ${merchantPhone}) | onboard_type: ${onboardType}`);
+      const extraUsers = new Set(sampleWithoutReplacement(activeUsers, remainder));
 
-        assignedRows.push({
-          ...group[i],
-          business_team_user_id: assignedUser,
-          onboard_type: onboardType
-        });
+      const quotas = activeUsers.map(u => ({
+        user: u,
+        take: base + (extraUsers.has(u) ? 1 : 0)
+      }));
+
+      let cursor = 0;
+      for (const { user, take } of quotas) {
+        const chunk = shuffledGroup.slice(cursor, cursor + take);
+        cursor += take;
+
+        for (const row of chunk) {
+          const merchantPhone = normalize(row.phone);
+
+          // No Google Sheet check; onboard_type from row or default to 'Organic'
+          const onboardType = row.onboard_type || 'Organic';
+
+          console.log(
+            `Status: ${status} | Merchant: ${row.phone} (normalized: ${merchantPhone}) | onboard_type: ${onboardType} | -> user: ${user}`
+          );
+
+          assignedRows.push({
+            ...row,
+            business_team_user_id: user,
+            onboard_type: onboardType
+          });
+        }
       }
     });
 
-    // ✅ NEW: Insert assigned rows one-by-one with retry
+    // ✅ Insert assigned rows one-by-one with retry
     let succeeded = 0;
     let failed = 0;
     const failedRows = [];
@@ -70,7 +94,6 @@ export default {
     const insertWithRetry = async (row, retries = 3) => {
       for (let attempt = 1; attempt <= retries; attempt++) {
         try {
-          // Validate required fields
           if (!row.id || !row.phone || !row.business_team_user_id || !row.onboard_type) {
             throw new Error('Missing required fields');
           }
@@ -86,20 +109,19 @@ export default {
             assigner_user_id: getUserDetailsByEmail.data[0]?.id
           });
 
-          return true; // success
+          return true;
         } catch (error) {
           console.warn(`⚠️ Attempt ${attempt} failed for merchant_id: ${row.id}`, error);
           if (attempt === retries) return false;
-          await new Promise(res => setTimeout(res, 300)); // brief delay before retry
+          await new Promise(res => setTimeout(res, 300));
         }
       }
     };
 
     for (const row of assignedRows) {
       const success = await insertWithRetry(row);
-      if (success) {
-        succeeded++;
-      } else {
+      if (success) succeeded++;
+      else {
         failed++;
         failedRows.push(row);
         console.error('❌ Final failure for:', JSON.stringify(row, null, 2));

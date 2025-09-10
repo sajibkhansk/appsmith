@@ -1,0 +1,33 @@
+WITH merchants AS (
+	SELECT merchant_id
+	FROM new_onboards
+	WHERE business_team_user_id = '26'  -- push this filter early
+)
+SELECT
+  o.merchant_id,
+
+  COUNT(*) FILTER (
+		WHERE o.transfer_status_id IN
+		(8,9,10,11,12,13,14,22,23,24,25,26,28,30,31,32,33,36,37,38,39,40,41,42)
+	) AS processed,
+
+  (
+		SUM(
+			COALESCE(o.delivery_fee,0)
+			+ COALESCE(o.additional_charge,0)
+			- COALESCE(o.discount,0)
+			- COALESCE(o.promo_discount,0)
+			+ COALESCE(o.cash_on_delivery_fee,0)
+		) FILTER (WHERE o.transfer_status_id IN (13,26,25,21,14,41,42))
+	) / 100.0 AS rvn_all
+
+FROM remote_hermes.orders o
+JOIN merchants m ON m.merchant_id = o.merchant_id
+WHERE o.transfer_status_id IN
+      (8,9,10,11,12,13,14,21,22,23,24,25,26,28,30,31,32,33,36,37,38,39,40,41,42)
+GROUP BY o.merchant_id
+order by 1 desc;
+
+
+
+
