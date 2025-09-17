@@ -29,7 +29,7 @@
   "mobileRightColumn": 39,
   "mobileTopRow": 21,
   "needsErrorInfo": false,
-  "onClick": "{{signup.signUpUser();\nInsertBusinessTeamUsers.run()}}",
+  "onClick": "{{signup.signUpUser();\nInsertBusinessTeamUsers.run();}}",
   "originalBottomRow": 35,
   "originalTopRow": 31,
   "parentColumnSpace": 9.4970703125,

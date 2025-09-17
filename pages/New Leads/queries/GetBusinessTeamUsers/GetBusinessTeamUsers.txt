@@ -1,4 +1,4 @@
 select  id, user_name from business_team_users
-where id in (24,25,26,27,28,29)
+where id in (24,25,26,27,28,29,137,138)
 
 
