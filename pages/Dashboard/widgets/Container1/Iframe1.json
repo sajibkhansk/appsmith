@@ -1,0 +1,42 @@
+{
+  "animateLoading": true,
+  "borderOpacity": 100,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": 1,
+  "bottomRow": 92,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "source"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "r5quzgtujj",
+  "leftColumn": 0,
+  "mobileBottomRow": 37,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 10,
+  "mobileTopRow": 5,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 23.640625,
+  "parentId": "xbksbr0uch",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "source": "https://courierbi.pathaointernal.com/public/dashboard/ffd75f53-d614-4acb-b235-f2a81884daab?id={{getUserDetailsByEmail.data[0].id}}",
+  "topRow": 5,
+  "type": "IFRAME_WIDGET",
+  "version": 1,
+  "widgetId": "lbzzld41gw",
+  "widgetName": "Iframe1"
+}
