@@ -15,6 +15,9 @@
     },
     {
       "key": "menuItems.menuItem8fp0xs30c9.isVisible"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicPropertyPathList": [
@@ -23,6 +26,9 @@
     },
     {
       "key": "menuItems.menuItem8fp0xs30c9.isVisible"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -41,7 +47,7 @@
   "isCompact": false,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ getUserDetailsByEmail.data && getUserDetailsByEmail.data.length > 0 }}",
   "key": "uiyq2tubhn",
   "label": "{{  getUserDetailsByEmail.data[0]?.user_name && getUserDetailsByEmail.data[0]?.team_name \n  ? `${getUserDetailsByEmail.data[0].user_name} | ${getUserDetailsByEmail.data[0].team_name}` \n  : `<span style=\"color: red;\">No user found</span>`\n}}",
   "leftColumn": 49,

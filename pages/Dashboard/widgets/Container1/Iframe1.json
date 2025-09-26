@@ -1,9 +1,9 @@
 {
-  "animateLoading": true,
+  "animateLoading": "{{ getUserDetailsByEmail.data && getUserDetailsByEmail.data.length > 0 }}",
   "borderOpacity": 100,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": 1,
-  "bottomRow": 111,
+  "bottomRow": 97,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "dynamicBindingPathList": [
     {
@@ -14,29 +14,43 @@
     },
     {
       "key": "source"
+    },
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "animateLoading"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "animateLoading"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "start",
   "isLoading": false,
-  "isVisible": true,
-  "key": "r5quzgtujj",
+  "isVisible": "{{ getUserDetailsByEmail.data && getUserDetailsByEmail.data.length > 0 }}\n",
+  "key": "ky46zb70n8",
   "leftColumn": 0,
   "mobileBottomRow": 37,
   "mobileLeftColumn": 0,
-  "mobileRightColumn": 10,
+  "mobileRightColumn": 15,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
-  "parentColumnSpace": 23.640625,
+  "parentColumnSpace": 16.96875,
   "parentId": "xbksbr0uch",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 64,
-  "source": "https://courierbi.pathaointernal.com/public/dashboard/ffd75f53-d614-4acb-b235-f2a81884daab?id={{getUserDetailsByEmail.data[0].id}}",
-  "topRow": 0,
+  "source": "{{\n  (() => {\n    const USER_DASH = \"https://courierbi.pathaointernal.com/public/dashboard/ffd75f53-d614-4acb-b235-f2a81884daab\";\n    const ADMIN_DASH = \"https://courierbi.pathaointernal.com/public/dashboard/52779b3a-262e-4120-bcb8-5a748ddb6f5f\";\n\n    const data = getUserDetailsByEmail?.data;\n\n    // DEFAULT while loading or if query failed => user dashboard (no id needed)\n    if (!Array.isArray(data) || data.length === 0) return USER_DASH;\n\n    const user = data[0];\n\n    // Admin override\n    if (user?.is_admin === true) return ADMIN_DASH;\n\n    // Non-admin with id (falls back to empty if missing)\n    const id = user?.id ?? \"\";\n    return `${USER_DASH}?id=${id}`;\n  })()\n}}\n",
+  "topRow": 1,
   "type": "IFRAME_WIDGET",
   "version": 1,
-  "widgetId": "lbzzld41gw",
+  "widgetId": "48gvwoxkpq",
   "widgetName": "Iframe1"
 }

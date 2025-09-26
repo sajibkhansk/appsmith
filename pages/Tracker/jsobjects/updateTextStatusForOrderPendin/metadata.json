@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_6ffd3dad-f710-452e-9655-bb40e414ed01",
+  "id": "Tracker_updateTextStatusForOrderPendin",
+  "unpublishedCollection": {
+    "name": "updateTextStatusForOrderPendin",
+    "pageId": "Tracker",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

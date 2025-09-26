@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 24,
+  "bottomRow": 46,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -21,7 +21,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "zpst9rza4c",
-  "leftColumn": 54,
+  "leftColumn": 56,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -30,8 +30,8 @@
   "mobileRightColumn": 43,
   "mobileTopRow": 52,
   "needsErrorInfo": false,
-  "originalBottomRow": 55,
-  "originalTopRow": 51,
+  "originalBottomRow": 46,
+  "originalTopRow": 42,
   "overflow": "NONE",
   "parentColumnSpace": 17.625,
   "parentId": "sl8kto4u1w",
@@ -43,7 +43,7 @@
   "text": "Powered by Pathao AI",
   "textAlign": "LEFT",
   "textColor": "#ef4444",
-  "topRow": 20,
+  "topRow": 42,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

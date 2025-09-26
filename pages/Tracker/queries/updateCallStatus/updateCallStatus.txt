@@ -1,0 +1,3 @@
+UPDATE new_onboards
+SET call_status = '{{appsmith.store.isTexted}}'
+WHERE id = {{appsmith.store.id }}

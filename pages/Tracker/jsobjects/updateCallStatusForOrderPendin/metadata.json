@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_4854b4fb-37a4-411c-807a-da6f415d475e",
+  "id": "Tracker_updateCallStatusForOrderPendin",
+  "unpublishedCollection": {
+    "name": "updateCallStatusForOrderPendin",
+    "pageId": "Tracker",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

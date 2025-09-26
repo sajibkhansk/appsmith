@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 116,
+  "bottomRow": 118,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -43,7 +43,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 63,
   "text": "Submit Bug or New Requirement",
-  "topRow": 112,
+  "topRow": 114,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "t7gfuc3ilo",

@@ -267,6 +267,24 @@
     },
     {
       "key": "schema.__root_schema__.children.account_status.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.text_status.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.text_status.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.text_status.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.call_status.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.call_status.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.call_status.accentColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -430,6 +448,28 @@
           "originalIdentifier": "business_team_user_id",
           "position": 8,
           "sourceData": "27"
+        },
+        "call_status": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "accessor": "call_status",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.call_status))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "call_status",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Call Status",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "call_status",
+          "position": 17,
+          "sourceData": ""
         },
         "competitor_id": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
@@ -626,6 +666,28 @@
           "originalIdentifier": "status",
           "position": 10,
           "sourceData": "Active"
+        },
+        "text_status": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "accessor": "text_status",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.text_status))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "text_status",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Text Status",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "text_status",
+          "position": 16,
+          "sourceData": ""
         },
         "updated_at": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",

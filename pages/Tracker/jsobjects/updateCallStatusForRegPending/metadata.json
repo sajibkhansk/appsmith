@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_f7d5f415-4894-40e6-9387-a88172afb29b",
+  "id": "Tracker_updateCallStatusForRegPending",
+  "unpublishedCollection": {
+    "name": "updateCallStatusForRegPending",
+    "pageId": "Tracker",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

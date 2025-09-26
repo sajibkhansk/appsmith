@@ -1,57 +1,47 @@
 WITH hunts AS (
-    SELECT 
-        no.id,
-        no.phone, 
-		m.name as merchant_name,
-        m.id AS merchant_id,
-		no.business_name,
-		no.business_owner_name,
-        mu.name AS merchant_user_name, 
-        no.onboard_type, 
-        no.business_team_user_id, 
-        m.first_order_date, 
-        m.active_payment_method,
-        account_status,
-        COUNT(s.id) AS store_count
-    FROM new_onboards no
-    LEFT JOIN remote_hermes.merchants m ON m.phone = no.phone
-    LEFT JOIN remote_hermes.stores s ON s.merchant_id = m.id
-    LEFT JOIN remote_hermes.merchant_users mu ON mu.merchant_id = m.id
-    GROUP BY 
-        1,2,3,4,5,6,7,8,9,10,11,12
+	SELECT 
+	no.id,
+	no.phone, 
+	m.name AS merchant_name,
+	m.id AS merchant_id,
+	no.business_name,
+	no.business_owner_name,
+	mu.name AS merchant_user_name, 
+	no.onboard_type, 
+	no.business_team_user_id, 
+	m.first_order_date, 
+	m.active_payment_method,
+	account_status,
+	COUNT(s.id) AS store_count,
+	text_status,
+	call_status
+
+	FROM new_onboards no
+	LEFT JOIN remote_hermes.merchants m ON m.phone = no.phone
+	LEFT JOIN remote_hermes.stores s ON s.merchant_id = m.id
+	LEFT JOIN remote_hermes.merchant_users mu ON mu.merchant_id = m.id
+	GROUP BY 
+	no.id, no.phone, m.name, m.id, no.business_name, no.business_owner_name,
+	mu.name, no.onboard_type, no.business_team_user_id, m.first_order_date, 
+	m.active_payment_method, account_status, text_status
 ),
+tracker AS (
+	SELECT 
+	h.*, 
+	m.id AS final_merchant_id,
+	CASE 
+	WHEN h.merchant_id IS NOT NULL THEN h.account_status
+	WHEN m.id IS NULL THEN 'Registration Pending'
+	WHEN m.id IS NOT NULL AND (h.active_payment_method IS NULL OR h.store_count = 0) AND h.first_order_date IS NULL THEN 'Info Pending'
+	WHEN m.id IS NOT NULL AND h.active_payment_method IS NOT NULL AND h.store_count <> 0 AND h.first_order_date IS NULL THEN 'First Order Pending'
+	ELSE 'Incubation'
+	END AS final_status
+	FROM hunts h
+	LEFT JOIN remote_hermes.merchants m ON h.phone = m.phone
+)
 
-tracker as (SELECT 
-    h.*, 
-    m.id AS final_merchant_id,
-    CASE 
-        -- If merchant_id exists from the CTE, it's already known
-        WHEN h.merchant_id IS NOT NULL THEN h.account_status
-
-		when m.id is null then 'Registration Pending'
-
-        -- Specific case: Info Pending
-        WHEN m.id IS not NULL 
-             AND (h.active_payment_method IS NULL OR h.store_count = 0)
-             AND h.first_order_date IS NULL 
-        THEN 'Info Pending'
-
-        -- Specific case: First Order Pending
-        WHEN m.id IS not NULL 
-             AND h.active_payment_method IS NOT NULL 
-             AND h.store_count <> 0 
-             AND h.first_order_date IS NULL 
-        THEN 'First Order Pending'
-
-        -- General: Registration Pending
-        -- Catch-all
-        ELSE 'Incubation'
-    END AS final_status
-FROM hunts h
-LEFT JOIN remote_hermes.merchants m ON h.phone = m.phone)
-
-
-select * from tracker
-where final_status = '{{this.params.status}}'
+SELECT 
+    * 
+FROM tracker
+WHERE final_status = '{{this.params.status}}'
 AND business_team_user_id = '{{this.params.user_id.toString()}}';
-

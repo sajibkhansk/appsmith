@@ -1,50 +1,53 @@
 WITH last_day_orders AS (
-    SELECT 
-        merchant_id, 
-        COUNT(*) AS last_day_order
-    FROM remote_hermes.orders
-    WHERE sorted_at >= CURRENT_DATE - INTERVAL '1 day'
-      AND sorted_at < CURRENT_DATE
-    GROUP BY merchant_id
+	SELECT 
+	merchant_id, 
+	COUNT(*) AS last_day_order
+	FROM remote_hermes.orders
+	WHERE sorted_at >= CURRENT_DATE - INTERVAL '1 day'
+	AND sorted_at < CURRENT_DATE
+	GROUP BY merchant_id
 ),
-
 need_followup AS (
-    SELECT 
-				no.phone as phone,
-        no.id AS new_onboards_id, 
-        no.business_team_user_id,
-				m.name as merchant_name,
-        m.id AS final_merchant_id,
-        no.estimated_volume
-    FROM new_onboards no
-    JOIN remote_hermes.merchants m 
-        ON m.phone = no.phone
-    WHERE no.merchant_id IS NULL
-      AND no.business_team_user_id = '{{this.params.user_id.toString()}}'
+	SELECT 
+	no.phone AS phone,
+	no.id AS new_onboards_id, 
+	no.business_team_user_id,
+	m.name AS merchant_name,
+	m.id AS final_merchant_id,
+	no.estimated_volume,
+	no.text_status,
+	no.call_status
+	FROM new_onboards no
+	JOIN remote_hermes.merchants m 
+	ON m.phone = no.phone
+	WHERE no.merchant_id IS NULL
+	AND no.business_team_user_id = '{{this.params.user_id.toString()}}'
 ),
-
 final AS (
-    SELECT 
-				nf.phone,
-				merchant_name,
-        nf.new_onboards_id,
-        nf.business_team_user_id,
-        nf.final_merchant_id,
-        nf.estimated_volume,
-        COALESCE(ldo.last_day_order, 0) AS last_day_order
-    FROM need_followup nf
-    LEFT JOIN last_day_orders ldo
-        ON nf.final_merchant_id = ldo.merchant_id
+	SELECT 
+	nf.phone,
+	nf.merchant_name,
+	nf.new_onboards_id,
+	nf.business_team_user_id,
+	nf.final_merchant_id,
+	nf.estimated_volume,
+	COALESCE(ldo.last_day_order, 0) AS last_day_order,
+	nf.text_status AS text_status,
+	nf.call_status As call_status
+	FROM need_followup nf
+	LEFT JOIN last_day_orders ldo
+	ON nf.final_merchant_id = ldo.merchant_id
 )
-
 SELECT 
-		phone,
-		merchant_name,
-    new_onboards_id as id,
+    phone,
+    merchant_name,
+    new_onboards_id AS id,
     business_team_user_id,
     final_merchant_id,
     estimated_volume,
     last_day_order,
+    text_status,
+		call_status,
     'Need Followup' AS followup_needed
 FROM final
 WHERE estimated_volume > last_day_order
