@@ -48,11 +48,9 @@
     "store_count",
     "final_merchant_id",
     "final_status",
-    "text_status",
-    "call_status",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1758882610234,
+  "columnUpdatedAt": 1758917364436,
   "columnWidthMap": {
     "business_owner_name": 258,
     "created_at": 218,
@@ -153,36 +151,6 @@
     },
     {
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
-    },
-    {
-      "key": "primaryColumns.text_status.computedValue"
-    },
-    {
-      "key": "primaryColumns.text_status.buttonLabel"
-    },
-    {
-      "key": "primaryColumns.text_status.boxShadow"
-    },
-    {
-      "key": "primaryColumns.text_status.borderRadius"
-    },
-    {
-      "key": "primaryColumns.text_status.buttonColor"
-    },
-    {
-      "key": "primaryColumns.call_status.computedValue"
-    },
-    {
-      "key": "primaryColumns.call_status.boxShadow"
-    },
-    {
-      "key": "primaryColumns.call_status.borderRadius"
-    },
-    {
-      "key": "primaryColumns.call_status.buttonColor"
-    },
-    {
-      "key": "primaryColumns.call_status.buttonLabel"
     }
   ],
   "dynamicPropertyPathList": [
@@ -205,22 +173,7 @@
       "key": "primaryColumns.EditActions1.onSave"
     },
     {
-      "key": "primaryColumns.text_status.onCheckChange"
-    },
-    {
-      "key": "primaryColumns.text_status.isCellEditable"
-    },
-    {
-      "key": "primaryColumns.text_status.isDisabled"
-    },
-    {
       "key": "cellBackground"
-    },
-    {
-      "key": "primaryColumns.text_status.buttonColor"
-    },
-    {
-      "key": "primaryColumns.call_status.buttonColor"
     }
   ],
   "dynamicTriggerPathList": [
@@ -232,15 +185,6 @@
     },
     {
       "key": "primaryColumns.EditActions1.onSave"
-    },
-    {
-      "key": "primaryColumns.text_status.onCheckChange"
-    },
-    {
-      "key": "primaryColumns.text_status.onClick"
-    },
-    {
-      "key": "primaryColumns.call_status.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -475,46 +419,6 @@
       "label": "business_team_user_id",
       "notation": "standard",
       "originalId": "business_team_user_id",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "call_status": {
-      "alias": "call_status",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "borderRadius": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "boxShadow": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => (  currentRow.call_status === \"YES\" ? appsmith.theme.colors.primaryColor : \"red\" ))}}",
-      "buttonLabel": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( currentRow.call_status))}}",
-      "cellBackground": "",
-      "columnType": "button",
-      "computedValue": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"call_status\"]))}}",
-      "currencyCode": "USD",
-      "customAlias": "",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "call_status",
-      "index": 14,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "call_status",
-      "notation": "standard",
-      "onClick": "{{updateCallStatusForOrderPendin.ordersPendingCallStatusToggle();}}",
-      "originalId": "call_status",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -928,47 +832,6 @@
       "label": "store_count",
       "notation": "standard",
       "originalId": "store_count",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "text_status": {
-      "alias": "text_status",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "borderRadius": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "boxShadow": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => (  currentRow.text_status === \"YES\" ? appsmith.theme.colors.primaryColor : \"red\" ))}}",
-      "buttonLabel": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( currentRow.text_status))}}",
-      "cellBackground": "",
-      "columnType": "button",
-      "computedValue": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"text_status\"]))}}",
-      "currencyCode": "USD",
-      "customAlias": "",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "text_status",
-      "index": 14,
-      "isCellEditable": "true",
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": "false",
-      "isDiscardVisible": true,
-      "isEditable": true,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "text_status",
-      "notation": "standard",
-      "onCheckChange": "",
-      "onClick": "{{updateTextStatusForOrderPendin.ordersPendingTextStatusToggle();}}",
-      "originalId": "text_status",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
