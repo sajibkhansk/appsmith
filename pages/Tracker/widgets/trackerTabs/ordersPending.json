@@ -55,6 +55,7 @@
   "columnUpdatedAt": 1758920323783,
   "columnWidthMap": {
     "business_owner_name": 258,
+    "business_team_user_id": 220,
     "created_at": 218,
     "merchant_id": 162,
     "merchant_name": 252,
