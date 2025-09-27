@@ -156,6 +156,15 @@
     },
     {
       "key": "primaryColumns.call_status.computedValue"
+    },
+    {
+      "key": "primaryColumns.call_status.boxShadow"
+    },
+    {
+      "key": "primaryColumns.call_status.borderRadius"
+    },
+    {
+      "key": "primaryColumns.call_status.buttonColor"
     }
   ],
   "dynamicPropertyPathList": [
@@ -176,6 +185,9 @@
     },
     {
       "key": "primaryColumns.EditActions1.onSave"
+    },
+    {
+      "key": "primaryColumns.call_status.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -425,10 +437,14 @@
       "alias": "call_status",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{informationPending.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{informationPending.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{informationPending.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
       "cellBackground": "",
-      "columnType": "text",
+      "columnType": "button",
       "computedValue": "{{informationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"call_status\"]))}}",
       "currencyCode": "USD",
+      "customAlias": "",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
@@ -446,6 +462,7 @@
       "isVisible": true,
       "label": "call_status",
       "notation": "standard",
+      "onClick": "",
       "originalId": "call_status",
       "sticky": "",
       "textColor": "",
