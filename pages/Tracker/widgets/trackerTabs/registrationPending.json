@@ -82,9 +82,6 @@
       "key": "boxShadow"
     },
     {
-      "key": "tableData"
-    },
-    {
       "key": "primaryColumns.phone.computedValue"
     },
     {
@@ -952,7 +949,7 @@
   "rightColumn": 64,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{ appsmith.store.registrationpendingData }}",
+  "tableData": "{{ appsmith.store.registrationpendingData}}",
   "textSize": "0.875rem",
   "topRow": 7,
   "totalRecordsCount": 0,

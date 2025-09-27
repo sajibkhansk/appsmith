@@ -4,6 +4,7 @@ SELECT
 	id, 
 	business_team.
 	team_name,
+	user_email,
 	is_admin
 FROM public.business_team_users 
 inner join business_team on business_team.id = business_team_users.team_id
