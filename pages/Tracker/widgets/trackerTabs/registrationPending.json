@@ -82,9 +82,6 @@
       "key": "boxShadow"
     },
     {
-      "key": "tableData"
-    },
-    {
       "key": "primaryColumns.phone.computedValue"
     },
     {
@@ -179,6 +176,9 @@
     },
     {
       "key": "primaryColumns.call_status.buttonColor"
+    },
+    {
+      "key": "tableData"
     }
   ],
   "dynamicPropertyPathList": [
@@ -1000,7 +1000,7 @@
   "rightColumn": 64,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{ appsmith.store.registrationpendingData }}",
+  "tableData": "{{ appsmith.store.registrationpendingData}}",
   "textSize": "0.875rem",
   "topRow": 6,
   "totalRecordsCount": 0,

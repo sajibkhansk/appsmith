@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n\tuser_name ,\n\tbusiness_team_users.\n\tid, \n\tbusiness_team.\n\tteam_name,\n\tis_admin\nFROM public.business_team_users \ninner join business_team on business_team.id = business_team_users.team_id\nWHERE user_email = '{{ appsmith.store.userEmail }}';",
+      "body": "SELECT \n\tuser_name ,\n\tbusiness_team_users.\n\tid, \n\tbusiness_team.\n\tteam_name,\n\tuser_email,\n\tis_admin\nFROM public.business_team_users \ninner join business_team on business_team.id = business_team_users.team_id\nWHERE user_email = '{{ appsmith.store.userEmail }}';",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

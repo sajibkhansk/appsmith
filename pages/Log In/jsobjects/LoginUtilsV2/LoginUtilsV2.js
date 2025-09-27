@@ -4,37 +4,54 @@ export default {
       // Run the auth API
       const response = await auth_api.run();
 
-      // Log the response for debugging
       console.log("API Response:", response);
 
-      // Check if the response contains the access token and user details
       if (response && response.access_token) {
-        // Store the access token in Appsmith's store
+        // Store token
         storeValue("authToken", response.access_token);
 
-        // If user data is inside the response, store the name and email
+        // Store user info if available
         if (response.user) {
-          storeValue("userName", response.user.name); // Corrected field name
-          storeValue("userEmail", response.user.email); // Corrected field name
+          storeValue("userName", response.user.name);
+          storeValue("userEmail", response.user.email);
         }
 
-        // Log to verify user details are stored
-        console.log("User stored:", response.user ? response.user.name : "No user name", response.user ? response.user.email : "No email");
+        console.log(
+          "User stored:",
+          response.user ? response.user.name : "No user name",
+          response.user ? response.user.email : "No email"
+        );
 
-        // Navigate to the Dashboard page
+        // Navigate
         navigateTo("New Leads");
 
-        // Optional: Show a success message
-        showAlert("Login successful. Redirecting to Dashboard.", "success");
+        // Show custom toast for 3 seconds
+        storeValue("toastMessage", "Login successful. Redirecting to Dashboard.");
+        storeValue("showToast", true);
+        setTimeout(() => {
+          storeValue("showToast", false);
+          storeValue("toastMessage", ""); // clear message
+        }, 3000);
+
       } else {
-        // If the access token is missing, show an error
         console.error("Access token missing in response:", response);
-        showAlert("Login failed. No access token received.", "error");
+
+        storeValue("toastMessage", "Login failed. No access token received.");
+        storeValue("showToast", true);
+        setTimeout(() => {
+          storeValue("showToast", false);
+          storeValue("toastMessage", "");
+        }, 3000);
       }
     } catch (error) {
-      // Handle API or any other errors
       console.error("Login Error:", error);
-      showAlert("Login failed. Please check your credentials.", "error");
+
+      storeValue("toastMessage", "Login failed. Please check your credentials.");
+      storeValue("showToast", true);
+      setTimeout(() => {
+        storeValue("showToast", false);
+        storeValue("toastMessage", "");
+      }, 3000);
     }
   }
 };
