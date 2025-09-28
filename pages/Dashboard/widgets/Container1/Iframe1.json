@@ -1,17 +1,11 @@
 {
   "animateLoading": "{{ getUserDetailsByEmail.data && getUserDetailsByEmail.data.length > 0 }}",
   "borderOpacity": 100,
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderRadius": "1.5rem",
   "borderWidth": 1,
   "bottomRow": 97,
-  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
   "dynamicBindingPathList": [
-    {
-      "key": "borderRadius"
-    },
-    {
-      "key": "boxShadow"
-    },
     {
       "key": "source"
     },
