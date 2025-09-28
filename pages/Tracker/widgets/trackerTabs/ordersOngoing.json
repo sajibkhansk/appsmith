@@ -228,7 +228,7 @@
       "key": "primaryColumns.call_status.onClick"
     }
   ],
-  "enableClientSideSearch": false,
+  "enableClientSideSearch": true,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
   "inlineEditingSaveOption": "ROW_LEVEL",
@@ -238,7 +238,7 @@
   "isVisibleDownload": false,
   "isVisibleFilters": true,
   "isVisiblePagination": false,
-  "isVisibleSearch": false,
+  "isVisibleSearch": true,
   "key": "9p0c61i5nl",
   "label": "Data",
   "leftColumn": 0,

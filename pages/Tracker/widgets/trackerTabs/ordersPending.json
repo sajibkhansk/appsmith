@@ -255,7 +255,7 @@
   "isVisibleDownload": false,
   "isVisibleFilters": true,
   "isVisiblePagination": false,
-  "isVisibleSearch": false,
+  "isVisibleSearch": true,
   "key": "b322gwanr1",
   "label": "Data",
   "leftColumn": 0,

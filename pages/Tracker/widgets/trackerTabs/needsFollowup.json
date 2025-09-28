@@ -156,7 +156,7 @@
   "isVisibleDownload": false,
   "isVisibleFilters": true,
   "isVisiblePagination": false,
-  "isVisibleSearch": false,
+  "isVisibleSearch": true,
   "key": "chqf59r976",
   "label": "Data",
   "leftColumn": 0,
