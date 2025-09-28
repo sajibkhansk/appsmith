@@ -237,7 +237,7 @@
   "isVisible": true,
   "isVisibleDownload": false,
   "isVisibleFilters": true,
-  "isVisiblePagination": true,
+  "isVisiblePagination": false,
   "isVisibleSearch": false,
   "key": "9p0c61i5nl",
   "label": "Data",
