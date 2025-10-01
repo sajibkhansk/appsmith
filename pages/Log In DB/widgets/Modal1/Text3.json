@@ -1,7 +1,7 @@
 {
-  "animateLoading": true,
+  "animateLoading": "true",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 47,
+  "bottomRow": 5,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -14,39 +14,45 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "animateLoading"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.875rem",
+  "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": true,
-  "key": "zpst9rza4c",
-  "leftColumn": 54,
+  "isVisible": "true",
+  "key": "m6z5k1hs0b",
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 56,
-  "mobileLeftColumn": 27,
-  "mobileRightColumn": 43,
-  "mobileTopRow": 52,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 47,
-  "originalTopRow": 42,
+  "originalBottomRow": 7,
+  "originalTopRow": 1,
   "overflow": "NONE",
-  "parentColumnSpace": 17.625,
-  "parentId": "sl8kto4u1w",
-  "parentRowSpace": 10,
+  "parentId": "wbv9dk1161",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 47,
   "shouldTruncate": false,
-  "text": "Powered by Pathao AI",
+  "text": "Welcome to Pathao CRM V3.0 🚀",
   "textAlign": "LEFT",
-  "textColor": "#ef4444",
-  "topRow": 43,
+  "textColor": "#231F20",
+  "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "oaqjocu2h0",
-  "widgetName": "Text1"
+  "widgetId": "lf6x8qnin6",
+  "widgetName": "Text3"
 }
