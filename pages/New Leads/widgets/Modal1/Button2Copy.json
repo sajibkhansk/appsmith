@@ -32,7 +32,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{closeModal(Modal1.name);}}",
+  "onClick": "{{closeModal(Modal1.name).then(() => {\n  JSObject4.Button2CopyonClick();\n});}}",
   "originalBottomRow": 62,
   "originalTopRow": 58,
   "parentId": "zbmyr2fdtz",

@@ -1,5 +1,7 @@
 export default {
   openModalOnLoad: () => {
-    showModal("Modal1");
+   if(!appsmith.store.modalShown){
+      showModal("Modal1");
   }
+}
 }
