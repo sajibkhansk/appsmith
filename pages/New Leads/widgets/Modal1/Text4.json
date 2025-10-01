@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 56,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "m6z5k1hs0b",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 10,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 6,
+  "needsErrorInfo": false,
+  "originalBottomRow": 56,
+  "originalTopRow": 6,
+  "overflow": "NONE",
+  "parentColumnSpace": 6.9375,
+  "parentId": "zbmyr2fdtz",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "shouldTruncate": false,
+  "text": "<p>As we start using this tool regularly from today, please follow these instructions:</p>\n<ul>\n<li><strong>Clear browser cache</strong> or use a new browser / <em>Incognito</em> mode before logging in.</li>\n<li><strong>Remember your password</strong> and keep it noted safely. Frequent password resets may cause performance issues.</li>\n<li><strong>Refresh your tracker data</strong> every day before starting work.</li>\n</ul>\nIf any inconsistency arises, please contact Muid Bhai.\n\n[We've worked hard to provide you with the best solution. That's why we have implemented client-side state management, so you can work smoothly without refreshing multiple times a day. Please follow the above process to ensure the best experience.]\n\nRegards,\nPathao AI",
+  "textAlign": "LEFT",
+  "textColor": "#231F20",
+  "topRow": 6,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "ho2jryf7qv",
+  "widgetName": "Text4"
+}
