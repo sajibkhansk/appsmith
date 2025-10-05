@@ -24,18 +24,22 @@ WITH summarizer AS (
 SELECT 
     *,
     CASE 
-        -- Info Pending: active_payment_method IS NULL or store_count = 0, and first_order_date is NULL
-        WHEN (active_payment_method IS NULL OR store_count = 0) 
-             AND first_order_date IS NULL
-        THEN 'Info Pending'
-        
-        -- First Order Pending: active_payment_method IS NOT NULL, store_count <> 0, and first_order_date IS NOT NULL
-        WHEN active_payment_method IS NOT NULL 
-             AND store_count <> 0 
-             AND first_order_date IS NULL
-        THEN 'First Order Pending'
-        
-        -- Incubation: All other conditions
-        ELSE 'Incubation'
-    END AS account_status
+    -- Info Pending: active_payment_method IS NULL or store_count = 0, and first_order_date IS NULL
+    WHEN (active_payment_method IS NULL OR store_count = 0) 
+         AND first_order_date IS NULL
+    THEN 'Info Pending'
+    
+    -- First Order Pending: active_payment_method IS NOT NULL, store_count <> 0, and first_order_date IS NULL
+    WHEN active_payment_method IS NOT NULL 
+         AND store_count <> 0 
+         AND first_order_date IS NULL
+    THEN 'First Order Pending'
+    
+    -- Incubation: when first_order_date HAS a value (not NULL)
+    WHEN first_order_date IS NOT NULL
+    THEN 'Incubation'
+
+    -- Default fallback (if needed)
+    ELSE 'Incubation'
+END AS account_status
 FROM summarizer;

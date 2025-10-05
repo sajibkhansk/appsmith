@@ -33,12 +33,17 @@ tracker AS (
 	SELECT 
 	h.*, 
 	m.id AS final_merchant_id,
-	CASE 
-	WHEN h.merchant_id IS NOT NULL THEN h.account_status
-	WHEN m.id IS NULL THEN 'Registration Pending'
-	WHEN m.id IS NOT NULL AND (h.active_payment_method IS NULL OR h.store_count = 0) AND h.first_order_date IS NULL THEN 'Info Pending'
-	WHEN m.id IS NOT NULL AND h.active_payment_method IS NOT NULL AND h.store_count <> 0 AND h.first_order_date IS NULL THEN 'First Order Pending'
-	ELSE 'Incubation'
+	CASE
+    WHEN h.merchant_id IS NOT NULL AND h.first_order_date IS NOT NULL THEN 'Incubation'
+    WHEN m.id IS NULL THEN 'Registration Pending'
+    WHEN m.id IS NOT NULL 
+         AND (h.active_payment_method IS NULL OR h.store_count = 0) 
+         AND h.first_order_date IS NULL THEN 'Info Pending'
+    WHEN m.id IS NOT NULL 
+         AND h.active_payment_method IS NOT NULL 
+         AND h.store_count <> 0 
+         AND h.first_order_date IS NULL THEN 'First Order Pending'
+    ELSE h.account_status
 	END AS final_status
 	FROM hunts h
 	LEFT JOIN remote_hermes.merchants m ON h.phone = m.phone
