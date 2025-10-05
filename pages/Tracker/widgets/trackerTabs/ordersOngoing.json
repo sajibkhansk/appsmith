@@ -45,14 +45,14 @@
     "first_order_date",
     "active_payment_method",
     "store_count",
+    "email",
     "final_merchant_id",
     "final_status",
     "text_status",
     "call_status",
-    "email",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1759643847895,
+  "columnUpdatedAt": 1759644527761,
   "columnWidthMap": {
     "business_owner_name": 204,
     "created_at": 244,
