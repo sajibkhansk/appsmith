@@ -49,9 +49,10 @@
     "final_status",
     "text_status",
     "call_status",
+    "email",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1758883480565,
+  "columnUpdatedAt": 1759643847895,
   "columnWidthMap": {
     "business_owner_name": 204,
     "created_at": 244,
@@ -174,6 +175,9 @@
     },
     {
       "key": "primaryColumns.call_status.buttonColor"
+    },
+    {
+      "key": "primaryColumns.email.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -556,6 +560,40 @@
       "notation": "standard",
       "originalId": "customColumn1",
       "sticky": "",
+      "textSize": "1rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "email": {
+      "alias": "email",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{ordersOngoing.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"email\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "email",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "email",
+      "notation": "standard",
+      "originalId": "email",
+      "sticky": "",
+      "textColor": "",
       "textSize": "1rem",
       "thousandSeparator": true,
       "validation": {},
