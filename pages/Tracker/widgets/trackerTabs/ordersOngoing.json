@@ -74,7 +74,7 @@
   "defaultSelectedRowIndices": [
     0
   ],
-  "delimiter": "",
+  "delimiter": ",",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
