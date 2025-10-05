@@ -44,4 +44,5 @@ SELECT
     * 
 FROM tracker
 WHERE final_status = '{{this.params.status}}'
-AND business_team_user_id = '{{this.params.user_id.toString()}}';
+AND business_team_user_id = '{{this.params.user_id.toString()}}'
+order by id desc;
