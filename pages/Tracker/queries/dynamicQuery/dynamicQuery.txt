@@ -15,7 +15,8 @@ WITH hunts AS (
 	account_status,
 	COUNT(s.id) AS store_count,
 	text_status,
-	call_status
+	call_status,
+	no.assigned_at
 
 	FROM new_onboards no
 	LEFT JOIN remote_hermes.merchants m ON m.phone = no.phone

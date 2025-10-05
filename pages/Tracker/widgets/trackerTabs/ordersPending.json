@@ -51,9 +51,10 @@
     "final_status",
     "text_status",
     "call_status",
+    "assigned_at",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1759643418760,
+  "columnUpdatedAt": 1759660673902,
   "columnWidthMap": {
     "business_owner_name": 258,
     "business_team_user_id": 220,
@@ -188,6 +189,9 @@
     },
     {
       "key": "primaryColumns.email.computedValue"
+    },
+    {
+      "key": "primaryColumns.assigned_at.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -381,6 +385,40 @@
       "label": "active_payment_method",
       "notation": "standard",
       "originalId": "active_payment_method",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "1rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "assigned_at": {
+      "alias": "assigned_at",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"assigned_at\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "assigned_at",
+      "index": 16,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "assigned_at",
+      "notation": "standard",
+      "originalId": "assigned_at",
       "sticky": "",
       "textColor": "",
       "textSize": "1rem",

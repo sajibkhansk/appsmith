@@ -11,9 +11,9 @@ export default {
   
           const mandatoryFields = [
           {field: callStatusDropdown.value, message: "Call Status is required"},
-          {field: businessActiveDropdown.value, message: "Business Active status is required"},
-          {field: commitedDateDropdown.value, message: "Commited Date is required"},
-          {field: discountNegoDropdown.value, message: "Loyalty status is required"}
+          // {field: businessActiveDropdown.value, message: "Business Active status is required"},
+          // {field: commitedDateDropdown.value, message: "Commited Date is required"},
+          // {field: discountNegoDropdown.value, message: "Loyalty status is required"}
         ];
   
         for (const {field, message} of mandatoryFields) {
