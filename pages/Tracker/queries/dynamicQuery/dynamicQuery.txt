@@ -12,6 +12,7 @@ WITH hunts AS (
 	no.business_team_user_id, 
 	m.first_order_date, 
 	m.active_payment_method,
+	no.status,
 	account_status,
 	COUNT(s.id) AS store_count,
 	text_status,
@@ -54,4 +55,5 @@ SELECT
 FROM tracker
 WHERE final_status = '{{this.params.status}}'
 AND business_team_user_id = '{{this.params.user_id.toString()}}'
+and (status <> 'Inactive' or status is null)
 order by id desc;
