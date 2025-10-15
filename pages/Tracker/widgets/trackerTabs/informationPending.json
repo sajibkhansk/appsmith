@@ -51,11 +51,12 @@
     "customColumn1",
     "text_status",
     "call_status",
+    "cnr_status",
     "assigned_at",
     "status",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1759907780238,
+  "columnUpdatedAt": 1760515887445,
   "columnWidthMap": {
     "business_name": 191,
     "business_owner_name": 156,
@@ -185,9 +186,6 @@
       "key": "primaryColumns.call_status.buttonLabel"
     },
     {
-      "key": "primaryColumns.call_status.buttonColor"
-    },
-    {
       "key": "primaryColumns.email.computedValue"
     },
     {
@@ -195,6 +193,24 @@
     },
     {
       "key": "primaryColumns.status.computedValue"
+    },
+    {
+      "key": "primaryColumns.cnr_status.computedValue"
+    },
+    {
+      "key": "primaryColumns.cnr_status.boxShadow"
+    },
+    {
+      "key": "primaryColumns.cnr_status.borderRadius"
+    },
+    {
+      "key": "primaryColumns.cnr_status.buttonLabel"
+    },
+    {
+      "key": "primaryColumns.call_status.buttonColor"
+    },
+    {
+      "key": "primaryColumns.cnr_status.buttonColor"
     }
   ],
   "dynamicPropertyPathList": [
@@ -224,6 +240,12 @@
     },
     {
       "key": "cellBackground"
+    },
+    {
+      "key": "primaryColumns.cnr_status.cellBackground"
+    },
+    {
+      "key": "primaryColumns.cnr_status.buttonColor"
     }
   ],
   "dynamicTriggerPathList": [
@@ -244,6 +266,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.menuItems.menuItemz1zkr7823r.onClick"
+    },
+    {
+      "key": "primaryColumns.cnr_status.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -548,6 +573,46 @@
       "notation": "standard",
       "onClick": "{{updateCallStatusForInfoPending.infoPendingCallStatusToggle()}}",
       "originalId": "call_status",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "1rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "cnr_status": {
+      "alias": "cnr_status",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{informationPending.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{informationPending.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{informationPending.processedTableData.map((currentRow, currentIndex) => (  currentRow.cnr_status === \"NO\" ? appsmith.theme.colors.primaryColor : \"red\" ))}}",
+      "buttonLabel": "{{informationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow.cnr_status))}}",
+      "cellBackground": "\n",
+      "columnType": "button",
+      "computedValue": "{{informationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"cnr_status\"]))}}",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "cnr_status",
+      "index": 17,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "cnr_status",
+      "notation": "standard",
+      "onClick": "{{updateCNRforInfoPending.infoPendingCNRstatusToggle();}}",
+      "originalId": "cnr_status",
       "sticky": "",
       "textColor": "",
       "textSize": "1rem",

@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "67854afe8f01ef5977743d0e_429dcd1c-21a3-44e9-9802-50437db55fe5",
-  "id": "Tracker_infoPendingResponse",
+  "gitSyncId": "67a78c88af45f24f85e95b40_d301b593-1343-49a8-a527-3a842b5a0d86",
+  "id": "Tracker_updateCNRstatus",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id,name \nFROM static_values \nwhere key_type = 'info_pending_response'\nand is_visible = TRUE\n",
+      "body": "UPDATE new_onboards\nSET cnr_status = '{{appsmith.store.isTexted}}'\nWHERE id = {{appsmith.store.id }}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,9 +22,13 @@
       "name": "hermes-write-db-prod",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "executeOnLoad": true,
-    "name": "infoPendingResponse",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "executeOnLoad": false,
+    "name": "updateCNRstatus",
     "pageId": "Tracker",
     "userSetOnLoad": false
   }

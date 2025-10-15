@@ -17,6 +17,7 @@ WITH hunts AS (
 	COUNT(s.id) AS store_count,
 	text_status,
 	call_status,
+	cnr_status,
 	date(no.assigned_at) as assigned_at
 
 	FROM new_onboards no
