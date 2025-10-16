@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "67a78c88af45f24f85e95b40_3f614d48-0d9f-4978-b79a-0ca8afd2f726",
+  "id": "Tracker_updateCNRforOrderPending",
+  "unpublishedCollection": {
+    "name": "updateCNRforOrderPending",
+    "pageId": "Tracker",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}
