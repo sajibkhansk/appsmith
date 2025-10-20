@@ -206,7 +206,7 @@
   "leftColumn": 0,
   "multiRowSelection": true,
   "onPageChange": "{{SelectQuery.run()}}",
-  "onSearchTextChanged": "{{SelectQuery.run()}}",
+  "onSearchTextChanged": "",
   "onSort": "{{SelectQuery.run()}}",
   "parentColumnSpace": 16.3125,
   "parentId": "59rw5mx0bq",
