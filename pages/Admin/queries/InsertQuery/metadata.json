@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.\"new_onboards\" (\n\t\"business_name\",\n\t\"business_owner_name\",\n\t\"estimated_volume\",\n\t\"product_category_id\",\n\t\"phone\",\n\t\"website\",\n\t\"created_at\",\n\t\"updated_at\",\n\t\"business_team_user_id\",\n\t\"competitor_id\",\n\t\"status\"\n)\nVALUES (\n\t'{{insert_form.formData.business_name}}',\n\t'{{insert_form.formData.business_owner_name}}',\n\t'{{insert_form.formData.estimated_volume}}',\n\t'{{insert_form.formData.product_category_id}}',\n\t'{{insert_form.formData.phone}}',\n\t'{{insert_form.formData.website}}',\n\t'{{insert_form.formData.created_at}}',\n\t'{{insert_form.formData.updated_at}}',\n\t'{{insert_form.formData.business_team_user_id}}',\n\t'{{insert_form.formData.competitor_id}}',\n\t'{{insert_form.formData.status}}'\n);",
+      "body": "INSERT INTO public.\"new_onboards\" (\n    \"business_name\",\n    \"business_owner_name\",\n    \"estimated_volume\",\n    \"phone\",\n    \"created_at\",\n    \"updated_at\",\n    \"business_team_user_id\",\n\t\t\"merchant_id\"\n)\nVALUES (\n    '{{insert_form.formData.business_name}}',\n    '{{insert_form.formData.business_owner_name}}',\n    '{{insert_form.formData.estimated_volume}}',\n    '{{insert_form.formData.phone}}',\n    NOW(),\n    NOW(),\n\t\t'{{insert_form.formData.business_team_user_id}}',\n    '{{insert_form.formData.merchant_id}}'\n);\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,6 +22,11 @@
       "name": "hermes-write-db-prod",
       "pluginId": "postgres-plugin"
     },
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": false,
     "name": "InsertQuery",
     "pageId": "Admin",

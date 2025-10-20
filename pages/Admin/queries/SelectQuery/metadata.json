@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"new_onboards\"\nwhere created_at >= '2025-10-01'",
+      "body": "SELECT * \nFROM public.\"new_onboards\"\nWHERE created_at >= '2025-10-01'\nORDER BY created_at DESC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

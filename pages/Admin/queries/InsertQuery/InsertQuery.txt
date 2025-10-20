@@ -1,26 +1,20 @@
 INSERT INTO public."new_onboards" (
-	"business_name",
-	"business_owner_name",
-	"estimated_volume",
-	"product_category_id",
-	"phone",
-	"website",
-	"created_at",
-	"updated_at",
-	"business_team_user_id",
-	"competitor_id",
-	"status"
+    "business_name",
+    "business_owner_name",
+    "estimated_volume",
+    "phone",
+    "created_at",
+    "updated_at",
+    "business_team_user_id",
+		"merchant_id"
 )
 VALUES (
-	'{{insert_form.formData.business_name}}',
-	'{{insert_form.formData.business_owner_name}}',
-	'{{insert_form.formData.estimated_volume}}',
-	'{{insert_form.formData.product_category_id}}',
-	'{{insert_form.formData.phone}}',
-	'{{insert_form.formData.website}}',
-	'{{insert_form.formData.created_at}}',
-	'{{insert_form.formData.updated_at}}',
-	'{{insert_form.formData.business_team_user_id}}',
-	'{{insert_form.formData.competitor_id}}',
-	'{{insert_form.formData.status}}'
+    '{{insert_form.formData.business_name}}',
+    '{{insert_form.formData.business_owner_name}}',
+    '{{insert_form.formData.estimated_volume}}',
+    '{{insert_form.formData.phone}}',
+    NOW(),
+    NOW(),
+		'{{insert_form.formData.business_team_user_id}}',
+    '{{insert_form.formData.merchant_id}}'
 );

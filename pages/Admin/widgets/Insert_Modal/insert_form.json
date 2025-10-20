@@ -3,7 +3,7 @@
   "autoGenerateForm": true,
   "backgroundColor": "#fff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 81,
+  "bottomRow": 64,
   "boxShadow": "none",
   "childStylesheet": {
     "ARRAY": {
@@ -113,16 +113,10 @@
       "key": "resetButtonStyles.buttonColor"
     },
     {
-      "key": "schema.__root_schema__.children.business_name.defaultValue"
-    },
-    {
       "key": "schema.__root_schema__.children.business_name.borderRadius"
     },
     {
       "key": "schema.__root_schema__.children.business_name.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.business_owner_name.defaultValue"
     },
     {
       "key": "schema.__root_schema__.children.business_owner_name.borderRadius"
@@ -147,9 +141,6 @@
     },
     {
       "key": "schema.__root_schema__.children.product_category_id.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.phone.defaultValue"
     },
     {
       "key": "schema.__root_schema__.children.phone.borderRadius"
@@ -183,9 +174,6 @@
     },
     {
       "key": "schema.__root_schema__.children.updated_at.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.business_team_user_id.defaultValue"
     },
     {
       "key": "schema.__root_schema__.children.business_team_user_id.borderRadius"
@@ -273,6 +261,24 @@
     },
     {
       "key": "schema.__root_schema__.children.call_status.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.assigned_at.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.assigned_at.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.assigned_at.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.cnr_status.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.cnr_status.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.cnr_status.accentColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -300,7 +306,7 @@
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
-  "onSubmit": "{{InsertQuery.run(\n\t() => SelectQuery.run()\n\t\t\t\t\t.then(() => closeModal('Insert_Modal')), \n\t(error) => showAlert(`Error while inserting resource!\\n ${error}`,'error'))\n}}",
+  "onSubmit": "{{InsertQuery.run(\n  () => {\n    showAlert('Resource inserted successfully!', 'success');\n    SelectQuery.run(() => closeModal('Insert_Modal'));\n  },\n  (error) => {\n    showAlert(`Error while inserting resource!\\n${error}`, 'error');\n  }\n)}}",
   "parentColumnSpace": 8.125,
   "parentId": "9rhv3ioohq",
   "parentRowSpace": 10,
@@ -312,7 +318,7 @@
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "buttonVariant": "SECONDARY"
   },
-  "rightColumn": 64,
+  "rightColumn": 63,
   "schema": {
     "__root_schema__": {
       "accessor": "__root_schema__",
@@ -336,11 +342,33 @@
           "isDisabled": false,
           "isRequired": false,
           "isSpellCheck": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Account Status",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "account_status",
           "position": 15
+        },
+        "assigned_at": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "accessor": "assigned_at",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "null",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.assigned_at))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "assigned_at",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Assigned At",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "assigned_at",
+          "position": 18,
+          "sourceData": null
         },
         "assigner_user_id": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
@@ -357,7 +385,7 @@
           "isDisabled": false,
           "isRequired": false,
           "isSpellCheck": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Assigner User Id",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "assigner_user_id",
@@ -370,7 +398,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.business_name))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "business_name",
@@ -392,7 +420,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.business_owner_name))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "business_owner_name",
@@ -414,7 +442,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.business_team_user_id))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "business_team_user_id",
@@ -444,11 +472,33 @@
           "isDisabled": false,
           "isRequired": false,
           "isSpellCheck": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Call Status",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "call_status",
           "position": 17,
+          "sourceData": "NO"
+        },
+        "cnr_status": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "accessor": "cnr_status",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.cnr_status))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "cnr_status",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Cnr Status",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "cnr_status",
+          "position": 19,
           "sourceData": "NO"
         },
         "competitor_id": {
@@ -466,7 +516,7 @@
           "isDisabled": false,
           "isRequired": false,
           "isSpellCheck": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Competitor Id",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "competitor_id",
@@ -488,7 +538,7 @@
           "isDisabled": false,
           "isRequired": false,
           "isSpellCheck": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Created At",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "created_at",
@@ -510,7 +560,7 @@
           "isDisabled": false,
           "isRequired": false,
           "isSpellCheck": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Estimated Volume",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "estimated_volume",
@@ -532,7 +582,7 @@
           "isDisabled": false,
           "isRequired": false,
           "isSpellCheck": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Merchant Created At",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "merchant_created_at",
@@ -588,7 +638,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.phone))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "phone",
@@ -618,7 +668,7 @@
           "isDisabled": false,
           "isRequired": false,
           "isSpellCheck": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Product Category Id",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "product_category_id",
@@ -640,7 +690,7 @@
           "isDisabled": false,
           "isRequired": false,
           "isSpellCheck": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Status",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "status",
@@ -662,7 +712,7 @@
           "isDisabled": false,
           "isRequired": false,
           "isSpellCheck": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Text Status",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "text_status",
@@ -684,7 +734,7 @@
           "isDisabled": false,
           "isRequired": false,
           "isSpellCheck": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Updated At",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "updated_at",
@@ -706,7 +756,7 @@
           "isDisabled": false,
           "isRequired": false,
           "isSpellCheck": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Website",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "website",
@@ -745,7 +795,7 @@
     "buttonVariant": "PRIMARY"
   },
   "title": "Insert Row",
-  "topRow": 0,
+  "topRow": 1,
   "type": "JSON_FORM_WIDGET",
   "version": 1,
   "widgetId": "o8oiq6vwkk",
