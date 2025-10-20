@@ -294,6 +294,15 @@
     },
     {
       "key": "schema.__root_schema__.children.assigned_at.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.cnr_status.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.cnr_status.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.cnr_status.accentColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -502,6 +511,28 @@
           "position": 17,
           "sourceData": ""
         },
+        "cnr_status": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "accessor": "cnr_status",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.cnr_status))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "cnr_status",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Cnr Status",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "cnr_status",
+          "position": 19,
+          "sourceData": ""
+        },
         "competitor_id": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
           "accessor": "competitor_id",
@@ -552,9 +583,9 @@
           "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
           "boxShadow": "none",
           "children": {},
-          "dataType": "number",
+          "dataType": "string",
           "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.estimated_volume))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "fieldType": "Number Input",
+          "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "estimated_volume",
           "isCustomField": false,
@@ -566,7 +597,7 @@
           "labelTextSize": "0.875rem",
           "originalIdentifier": "estimated_volume",
           "position": 2,
-          "sourceData": 500
+          "sourceData": ""
         },
         "merchant_created_at": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",

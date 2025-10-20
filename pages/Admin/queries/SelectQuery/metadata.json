@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"new_onboards\"",
+      "body": "SELECT * FROM public.\"new_onboards\"\nwhere created_at >= '2025-10-01'",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -13,7 +13,7 @@
           "value": false
         }
       ],
-      "timeoutInMillisecond": 10000
+      "timeoutInMillisecond": 60000
     },
     "confirmBeforeExecute": false,
     "datasource": {
