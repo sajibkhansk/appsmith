@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.\"new_onboards\" (\n    \"business_name\",\n    \"business_owner_name\",\n    \"estimated_volume\",\n    \"phone\",\n    \"created_at\",\n    \"updated_at\",\n    \"business_team_user_id\",\n\t\t\"merchant_id\"\n)\nVALUES (\n    '{{insert_form.formData.business_name}}',\n    '{{insert_form.formData.business_owner_name}}',\n    '{{insert_form.formData.estimated_volume}}',\n    '{{insert_form.formData.phone}}',\n    NOW(),\n    NOW(),\n\t\t'{{insert_form.formData.business_team_user_id}}',\n    '{{insert_form.formData.merchant_id}}'\n);\n",
+      "body": "INSERT INTO public.\"new_onboards\" (\n    \"business_name\",\n    \"business_owner_name\",\n    \"estimated_volume\",\n    \"phone\",\n    \"created_at\",\n    \"updated_at\",\n    \"onboard_type\",\n    \"business_team_user_id\",\n    \"merchant_id\",\n    \"assigner_user_id\"\n)\nVALUES (\n    '{{insert_form.formData.business_name}}',\n    '{{insert_form.formData.business_owner_name}}',\n    '{{insert_form.formData.estimated_volume}}',\n    '{{insert_form.formData.phone}}',\n    NOW(),\n    NOW(),\n    '{{insert_form.formData.onboard_type}}',\n    '{{insert_form.formData.business_team_user_id}}',\n    '{{insert_form.formData.merchant_id}}',\n    '{{insert_form.formData.assigner_user_id}}'\n);\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
