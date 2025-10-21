@@ -44,7 +44,9 @@
   "columnUpdatedAt": 1750771560797,
   "columnWidthMap": {
     "active_payment_method": 145,
-    "merchant_created_at": 209
+    "first_order_date": 126,
+    "merchant_created_at": 209,
+    "store_count": 118
   },
   "customIsLoading": true,
   "customIsLoadingValue": "",

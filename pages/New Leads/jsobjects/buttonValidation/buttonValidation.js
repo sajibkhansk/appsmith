@@ -14,10 +14,17 @@ export default {
 			!inputBusinessWebsite.text.trim() ||
 			!inputEstimatedValue.value || 
 			!selectOtherCourier.value ||
-			!selectProductCategory.value
+			!selectProductCategory.value ||
+			!is_Churn.text.trim()
 		) {
 			showAlert("Please fill all the fields before submitting.", "error");
 			return; 
+		}
+
+		// Validate that the phone number starts with "01"
+		if (!inputBusinessPhone.text.startsWith("01")) {
+			showAlert("Phone number must start with '01'.", "error");
+			return;
 		}
 
 		// Validate that the phone number is exactly 10 digits
@@ -27,42 +34,40 @@ export default {
 		}
 
 		// Run the checkDuplicatePhone query to see if the same phone number exists
-		CheckPhoneInMerchants.run()
-			.then(data => {
-			// If the phone number already exists, show an error
-			if (data[0].count > 0) {
-				showAlert("A merchant with this phone number already exists in Hermes", "error");
-				return;
-			}
+		// CheckPhoneInMerchants.run()
+			// .then(data => {
+			// if (data[0].count > 0) {
+			// 	showAlert("A merchant with this phone number is already exists as a Lead", "error");
+			// 	return;
+			// }
 
 			// Run the checkDuplicateNewOnboards query to see if the same business already exists
 			checkDuplicateNewOnboards.run()
 				.then(data => {
-				// If the business already exists, show an error
-				if (data[0].count > 0) {
-					showAlert("A merchant with this phone number is already onboarded as a lead", "error");
-					return;
-				}
+					if (data[0].count > 0) {
+						showAlert("A merchant with this phone number is already onboarded as a lead", "error");
+						return;
+					}
 
-				// Proceed with insertion if no duplicates
-				insertNewOnboards.run()
-					.then(() => {
-					showAlert("Merchant Created Successfully", "success");
-					resetWidget("modalAddNewLead", true);
-					closeModal(modalAddNewLead.name);
-					refreshFetchNewOnboardsData.buttonRefreshClick();
+					// Proceed with insertion if no duplicates
+					insertNewOnboards.run()
+						.then(() => {
+							showAlert("Merchant Created Successfully", "success");
+							resetWidget("modalAddNewLead", true);
+							closeModal(modalAddNewLead.name);
+							refreshFetchNewOnboardsData.buttonRefreshClick();
+						})
+						.catch((error) => {
+							showAlert("Failed to create Merchant. Please try again.", "error");
+						});
 				})
-					.catch((error) => {
-					showAlert("Failed to create Merchant. Please try again.", "error");
-				});
-			})
 				.catch((error) => {
-				showAlert("Error checking for duplicate business. Please try again.", "error");
-			});
+					showAlert("Error checking for duplicate business. Please try again.", "error");
+				});
 
-		})
-			.catch((error) => {
-			showAlert("Error checking for duplicate phone number. Please try again.", "error");
-		});
+		// })
+		// .catch((error) => {
+		// 	showAlert("Error checking for duplicate phone number. Please try again.", "error");
+		// });
 	}
-};  
+};
