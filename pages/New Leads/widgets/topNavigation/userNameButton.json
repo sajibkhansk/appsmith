@@ -3,6 +3,16 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 5,
   "boxShadow": "none",
+  "configureMenuItems": {
+    "config": {
+      "id": "config",
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Menu Item"
+    },
+    "id": "config",
+    "label": "Configure menu items"
+  },
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
@@ -15,6 +25,9 @@
     },
     {
       "key": "label"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicPropertyPathList": [
@@ -23,6 +36,9 @@
     },
     {
       "key": "menuItems.menuIteml1vi85d0s7.isVisible"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -41,9 +57,9 @@
   "isCompact": false,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ getUserDetailsByEmail.data && getUserDetailsByEmail.data.length > 0 }}",
   "key": "uiyq2tubhn",
-  "label": "{{  getUserDetailsByEmail.data[0]?.user_name && getUserDetailsByEmail.data[0]?.team_name \n  ? `${getUserDetailsByEmail.data[0].user_name} | ${getUserDetailsByEmail.data[0].team_name}` \n  :`No user found`\n}}",
+  "label": "{{  getUserDetailsByEmail.data[0]?.user_name && getUserDetailsByEmail.data[0]?.team_name \n  ? `${getUserDetailsByEmail.data[0].user_name} | ${getUserDetailsByEmail.data[0].team_name}` \n  : `<span style=\"color: red;\">No user found</span>`\n}}",
   "leftColumn": 49,
   "menuColor": "{{appsmith.theme.colors.primaryColor}}",
   "menuItems": {
@@ -88,6 +104,7 @@
   "placement": "START",
   "renderMode": "CANVAS",
   "rightColumn": 64,
+  "sourceData": [],
   "topRow": 1,
   "type": "MENU_BUTTON_WIDGET",
   "version": 1,
