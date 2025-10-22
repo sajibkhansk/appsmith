@@ -303,6 +303,12 @@
     },
     {
       "key": "schema.__root_schema__.children.cnr_status.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.is_deleted.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.is_deleted.accentColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -318,6 +324,9 @@
     },
     {
       "key": "onSubmit"
+    },
+    {
+      "key": "schema.__root_schema__.children.is_deleted.defaultValue"
     }
   ],
   "dynamicTriggerPathList": [
@@ -598,6 +607,26 @@
           "originalIdentifier": "estimated_volume",
           "position": 2,
           "sourceData": ""
+        },
+        "is_deleted": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "accessor": "is_deleted",
+          "alignWidget": "LEFT",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "boolean",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.is_deleted))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "fieldType": "Switch",
+          "identifier": "is_deleted",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isVisible": true,
+          "label": "Is Deleted",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "is_deleted",
+          "position": 20,
+          "sourceData": false
         },
         "merchant_created_at": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",

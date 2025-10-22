@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "DELETE FROM public.\"new_onboards\"\n  WHERE \"id\" = {{data_table.triggeredRow.id}};",
+      "body": "UPDATE public.\"new_onboards\"\nSET is_deleted = TRUE\nWHERE \"id\" = {{data_table.triggeredRow.id}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,6 +22,11 @@
       "name": "hermes-write-db-prod",
       "pluginId": "postgres-plugin"
     },
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": false,
     "name": "DeleteQuery",
     "pageId": "Admin",

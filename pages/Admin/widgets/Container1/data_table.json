@@ -43,6 +43,7 @@
     "call_status",
     "assigned_at",
     "cnr_status",
+    "is_deleted",
     "customColumn1"
   ],
   "columnSizeMap": {
@@ -50,7 +51,7 @@
     "step": 62,
     "task": 245
   },
-  "columnUpdatedAt": 1760850398840,
+  "columnUpdatedAt": 1761129268996,
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": "0",
   "delimiter": ",",
@@ -164,6 +165,9 @@
     },
     {
       "key": "primaryColumns.cnr_status.computedValue"
+    },
+    {
+      "key": "primaryColumns.is_deleted.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -573,7 +577,7 @@
       "label": "Delete",
       "labelColor": "#FFFFFF",
       "menuColor": "#03B365",
-      "onClick": "{{showModal('Delete_Modal')}}",
+      "onClick": "{{showModal('Delete_Modal').then(() => {});}}",
       "sticky": "right",
       "width": 150
     },
@@ -637,6 +641,40 @@
       "label": "id",
       "notation": "standard",
       "originalId": "id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "is_deleted": {
+      "alias": "is_deleted",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "checkbox",
+      "computedValue": "{{data_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"is_deleted\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "is_deleted",
+      "index": 21,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "is_deleted",
+      "notation": "standard",
+      "originalId": "is_deleted",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
