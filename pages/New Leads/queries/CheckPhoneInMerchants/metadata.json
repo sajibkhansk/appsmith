@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(*) AS merchant_count\nFROM remote_hermes.merchants\nWHERE phone = {{ inputBusinessPhone.text }}\n  AND last_order_date IS NOT NULL;",
+      "body": "SELECT COUNT(*) AS merchant_count\nFROM remote_hermes.merchants\nWHERE phone = {{ inputBusinessPhone.text }}\n  AND last_order_date is not null\n  AND last_order_date > CURRENT_DATE-45; ",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
