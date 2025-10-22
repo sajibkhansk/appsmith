@@ -1,3 +1,4 @@
-SELECT COUNT(*)
-FROM new_onboards
-WHERE phone = {{ inputBusinessPhone.text }};
+SELECT COUNT(*) AS merchant_count
+FROM remote_hermes.merchants
+WHERE phone = {{ inputBusinessPhone.text }}
+  AND last_order_date IS NOT NULL;

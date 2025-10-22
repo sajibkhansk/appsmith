@@ -34,12 +34,12 @@ export default {
 		}
 
 		// Run the checkDuplicatePhone query to see if the same phone number exists
-		// CheckPhoneInMerchants.run()
-			// .then(data => {
-			// if (data[0].count > 0) {
-			// 	showAlert("A merchant with this phone number is already exists as a Lead", "error");
-			// 	return;
-			// }
+		CheckPhoneInMerchants.run()
+			.then(data => {
+			if (data[0].count > 0) {
+				showAlert("A merchant with this phone number already exists.", "error");
+				return;
+			}
 
 			// Run the checkDuplicateNewOnboards query to see if the same business already exists
 			checkDuplicateNewOnboards.run()

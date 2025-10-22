@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(*)\nFROM new_onboards\nWHERE phone = {{ inputBusinessPhone.text }};",
+      "body": "SELECT COUNT(*) AS merchant_count\nFROM remote_hermes.merchants\nWHERE phone = {{ inputBusinessPhone.text }}\n  AND last_order_date IS NOT NULL;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
