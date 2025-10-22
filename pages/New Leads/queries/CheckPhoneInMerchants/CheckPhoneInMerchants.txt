@@ -1,5 +1,5 @@
-SELECT COUNT(*) AS merchant_count
+SELECT COUNT(*)
 FROM remote_hermes.merchants
-WHERE phone = {{ inputBusinessPhone.text }}
+WHERE phone = '{{ inputBusinessPhone.text }}'
   AND last_order_date is not null
   AND last_order_date > CURRENT_DATE-45; 
