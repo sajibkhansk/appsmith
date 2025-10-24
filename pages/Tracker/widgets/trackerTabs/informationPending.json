@@ -162,18 +162,6 @@
       "key": "primaryColumns.text_status.computedValue"
     },
     {
-      "key": "primaryColumns.text_status.boxShadow"
-    },
-    {
-      "key": "primaryColumns.text_status.borderRadius"
-    },
-    {
-      "key": "primaryColumns.text_status.buttonColor"
-    },
-    {
-      "key": "primaryColumns.text_status.buttonLabel"
-    },
-    {
       "key": "primaryColumns.call_status.computedValue"
     },
     {
@@ -571,7 +559,7 @@
       "isVisible": true,
       "label": "call_status",
       "notation": "standard",
-      "onClick": "{{updateCallStatusForInfoPending.infoPendingCallStatusToggle()}}",
+      "onClick": "",
       "originalId": "call_status",
       "sticky": "",
       "textColor": "",
@@ -1110,7 +1098,6 @@
       "columnType": "button",
       "computedValue": "{{informationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"text_status\"]))}}",
       "currencyCode": "USD",
-      "customAlias": "",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
@@ -1128,7 +1115,6 @@
       "isVisible": true,
       "label": "text_status",
       "notation": "standard",
-      "onClick": "{{updateTextStatusForInfoPending.infoPendingTextStatusToggle();}}",
       "originalId": "text_status",
       "sticky": "",
       "textColor": "",

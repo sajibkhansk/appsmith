@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 106,
+  "bottomRow": 107,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": false,
   "childStylesheet": {
@@ -52,7 +52,7 @@
     "call_status",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1758884712517,
+  "columnUpdatedAt": 1758919309973,
   "columnWidthMap": {
     "business_name": 186,
     "business_owner_name": 232,
@@ -133,9 +133,6 @@
       "key": "primaryColumns.merchant_user_name.computedValue"
     },
     {
-      "key": "primaryColumns.text_status.computedValue"
-    },
-    {
       "key": "primaryColumns.EditActions1.saveButtonColor"
     },
     {
@@ -151,34 +148,10 @@
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
     },
     {
-      "key": "primaryColumns.text_status.boxShadow"
-    },
-    {
-      "key": "primaryColumns.text_status.borderRadius"
-    },
-    {
-      "key": "primaryColumns.text_status.buttonColor"
-    },
-    {
-      "key": "primaryColumns.text_status.buttonLabel"
+      "key": "primaryColumns.text_status.computedValue"
     },
     {
       "key": "primaryColumns.call_status.computedValue"
-    },
-    {
-      "key": "primaryColumns.call_status.boxShadow"
-    },
-    {
-      "key": "primaryColumns.call_status.borderRadius"
-    },
-    {
-      "key": "primaryColumns.call_status.buttonLabel"
-    },
-    {
-      "key": "primaryColumns.call_status.buttonColor"
-    },
-    {
-      "key": "tableData"
     }
   ],
   "dynamicPropertyPathList": [
@@ -199,12 +172,6 @@
     },
     {
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
-    },
-    {
-      "key": "primaryColumns.text_status.buttonColor"
-    },
-    {
-      "key": "primaryColumns.call_status.buttonColor"
     }
   ],
   "dynamicTriggerPathList": [
@@ -216,12 +183,6 @@
     },
     {
       "key": "primaryColumns.customColumn1.menuItems.menuItemxn2f52xl6g.onClick"
-    },
-    {
-      "key": "primaryColumns.text_status.onClick"
-    },
-    {
-      "key": "primaryColumns.call_status.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -466,20 +427,15 @@
       "alias": "call_status",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "borderRadius": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "boxShadow": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => (  currentRow.call_status === \"YES\" ? appsmith.theme.colors.primaryColor : \"red\" ))}}",
-      "buttonLabel": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow.call_status))}}",
       "cellBackground": "",
-      "columnType": "button",
+      "columnType": "text",
       "computedValue": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"call_status\"]))}}",
       "currencyCode": "USD",
-      "customAlias": "",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "LEFT",
+      "horizontalAlignment": "CENTER",
       "id": "call_status",
       "index": 14,
       "isCellEditable": false,
@@ -492,7 +448,6 @@
       "isVisible": true,
       "label": "call_status",
       "notation": "standard",
-      "onClick": "{{updateCallStatusForRegPending.regPendingCallStatusToggle()}}",
       "originalId": "call_status",
       "sticky": "",
       "textColor": "",
@@ -959,20 +914,15 @@
       "alias": "text_status",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "borderRadius": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "boxShadow": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => (  currentRow.text_status === \"YES\" ? appsmith.theme.colors.primaryColor : \"red\" ))}}",
-      "buttonLabel": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow.text_status))}}",
       "cellBackground": "",
-      "columnType": "button",
+      "columnType": "text",
       "computedValue": "{{registrationPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"text_status\"]))}}",
       "currencyCode": "USD",
-      "customAlias": "",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
-      "horizontalAlignment": "LEFT",
+      "horizontalAlignment": "CENTER",
       "id": "text_status",
       "index": 13,
       "isCellEditable": false,
@@ -985,7 +935,6 @@
       "isVisible": true,
       "label": "text_status",
       "notation": "standard",
-      "onClick": "{{updateTextStatusForRegPendin.regPendingTextStatusToggle();}}",
       "originalId": "text_status",
       "sticky": "",
       "textColor": "",
