@@ -6,7 +6,7 @@
   "bottomRow": 78,
   "bottomRowBeforeCollapse": 78,
   "boxShadow": "none",
-  "defaultText": "{{  getUserDetailsByEmail.data[0].team_name === 'Pre Corporate' \n    ? 'Pre Corporate'\n    : getUserDetailsByEmail.data[0].team_name === 'Post Corporate'\n      ? 'Post Corporate'\n      : (CheckChurn.data.length > 0 ? 'Churn' : 'Hunt')\n}}",
+  "defaultText": "{{CheckChurn.data.length > 0 ? 'Churn' : 'Hunt'\n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
