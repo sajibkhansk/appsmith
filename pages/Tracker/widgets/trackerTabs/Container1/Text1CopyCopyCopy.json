@@ -1,5 +1,6 @@
 {
   "animateLoading": true,
+  "backgroundColor": "#7f1d1d",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 4,
   "dynamicBindingPathList": [
@@ -11,6 +12,9 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -20,8 +24,8 @@
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "w6kux5qrrx",
-  "leftColumn": 0,
+  "key": "9ho1f1asmc",
+  "leftColumn": 45,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -30,23 +34,23 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 5,
+  "originalBottomRow": 8,
   "originalTopRow": 0,
   "overflow": "NONE",
-  "parentColumnSpace": 17.3125,
-  "parentId": "en4oucp017",
+  "parentColumnSpace": 17.625,
+  "parentId": "6tpqpq34nj",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 18,
+  "rightColumn": 55,
   "shouldTruncate": false,
-  "text": "List of merchants needing followup",
-  "textAlign": "LEFT",
-  "textColor": "#231F20",
+  "text": "{{ appsmith.store.registrationpendingLoading ? \"Data Loading...\" : \"\" }}",
+  "textAlign": "CENTER",
+  "textColor": "#ffffff",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "gp1mgfjl5i",
-  "widgetName": "Text1Copy"
+  "widgetId": "013uaq1mvo",
+  "widgetName": "Text1CopyCopyCopy"
 }

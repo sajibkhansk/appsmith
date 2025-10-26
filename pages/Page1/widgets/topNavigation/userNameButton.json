@@ -1,55 +1,27 @@
 {
-  "animateLoading": false,
+  "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 5,
   "boxShadow": "none",
-  "configureMenuItems": {
-    "config": {
-      "id": "config",
-      "isDisabled": false,
-      "isVisible": true,
-      "label": "Menu Item"
-    },
-    "id": "config",
-    "label": "Configure menu items"
-  },
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
     },
     {
-      "key": "menuColor"
-    },
-    {
-      "key": "menuItems.menuIteml1vi85d0s7.isVisible"
-    },
-    {
       "key": "label"
     },
     {
-      "key": "isVisible"
+      "key": "menuColor"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "menuItems.menuItem2.onClick"
-    },
-    {
-      "key": "menuItems.menuIteml1vi85d0s7.isVisible"
-    },
-    {
-      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
     {
       "key": "menuItems.menuItem2.onClick"
-    },
-    {
-      "key": "menuItems.menuItem1.onClick"
-    },
-    {
-      "key": "menuItems.menuIteml1vi85d0s7.onClick"
     }
   ],
   "iconAlign": "left",
@@ -57,9 +29,9 @@
   "isCompact": false,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": "{{ getUserDetailsByEmail.data && getUserDetailsByEmail.data.length > 0 }}",
+  "isVisible": true,
   "key": "uiyq2tubhn",
-  "label": "{{  getUserDetailsByEmail.data[0]?.user_name && getUserDetailsByEmail.data[0]?.team_name \n? `${getUserDetailsByEmail.data[0].user_name} | ${getUserDetailsByEmail.data[0].team_name}` \n: `<span style=\"color: red;\">No user found</span>`\n}}",
+  "label": "{{  getUserDetailsByEmail.data[0]?.user_name && getUserDetailsByEmail.data[0]?.team_name \n  ? `${getUserDetailsByEmail.data[0].user_name} | ${getUserDetailsByEmail.data[0].team_name}` \n  : `<span style=\"color: red;\">No user found</span>`\n}}",
   "leftColumn": 49,
   "menuColor": "{{appsmith.theme.colors.primaryColor}}",
   "menuItems": {
@@ -69,26 +41,16 @@
       "isDisabled": false,
       "isVisible": true,
       "label": "User Settings",
-      "onClick": "{{navigateTo('User Settings', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
     "menuItem2": {
       "id": "menuItem2",
-      "index": 2,
+      "index": 1,
       "isDisabled": false,
       "isVisible": true,
       "label": "Logout",
       "onClick": "{{functionLogout.logout();\nnavigateTo('Log In', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
-    },
-    "menuIteml1vi85d0s7": {
-      "id": "menuIteml1vi85d0s7",
-      "index": 1,
-      "isDisabled": false,
-      "isVisible": "{{getUserDetailsByEmail.data[0]?.is_admin == true}}",
-      "label": "Admin",
-      "onClick": "{{navigateTo('Admin', {}, 'SAME_WINDOW');}}",
-      "widgetId": "6qcckpcuos"
     }
   },
   "menuItemsSource": "STATIC",
@@ -99,15 +61,14 @@
   "mobileTopRow": 1,
   "needsErrorInfo": false,
   "parentColumnSpace": 17.625,
-  "parentId": "4iliufnvs4",
+  "parentId": "3atn8b2br3",
   "parentRowSpace": 10,
   "placement": "START",
   "renderMode": "CANVAS",
-  "rightColumn": 64,
-  "sourceData": [],
+  "rightColumn": 63,
   "topRow": 1,
   "type": "MENU_BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "fxm20kot0b",
+  "widgetId": "suh0hrjzh9",
   "widgetName": "userNameButton"
 }

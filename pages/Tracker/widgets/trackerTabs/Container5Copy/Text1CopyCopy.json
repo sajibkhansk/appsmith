@@ -1,6 +1,5 @@
 {
   "animateLoading": true,
-  "backgroundColor": "#7f1d1d",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 4,
   "dynamicBindingPathList": [
@@ -12,9 +11,6 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -24,33 +20,33 @@
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "i5aa9597eh",
-  "leftColumn": 46,
+  "key": "w6kux5qrrx",
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
   "mobileBottomRow": 4,
-  "mobileLeftColumn": 38,
-  "mobileRightColumn": 54,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 16,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 8,
+  "originalBottomRow": 5,
   "originalTopRow": 0,
   "overflow": "NONE",
-  "parentColumnSpace": 17.625,
-  "parentId": "en4oucp017",
+  "parentColumnSpace": 17.3125,
+  "parentId": "7fpswvtczp",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 55,
+  "rightColumn": 18,
   "shouldTruncate": false,
-  "text": "{{ appsmith.store.needfollowupLoading ? \"Data Loading...\" : \"\" }}",
-  "textAlign": "CENTER",
-  "textColor": "#ffffff",
+  "text": "List of merchants needing followup",
+  "textAlign": "LEFT",
+  "textColor": "#231F20",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "r3rkr7wq6u",
-  "widgetName": "Text5"
+  "widgetId": "a7c2ure24e",
+  "widgetName": "Text1CopyCopy"
 }

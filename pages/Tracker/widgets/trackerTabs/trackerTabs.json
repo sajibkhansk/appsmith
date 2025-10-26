@@ -40,7 +40,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "j5s31hgocu",
+      "parentId": "fq4qe6bpp3",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -51,8 +51,8 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "3kqdrw788c",
-      "widgetName": "Canvas2"
+      "widgetId": "bgpxm2ixwx",
+      "widgetName": "Canvas23"
     },
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -86,7 +86,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "j5s31hgocu",
+      "parentId": "fq4qe6bpp3",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -97,7 +97,7 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "0pqumkxjtm",
+      "widgetId": "h967oe90zf",
       "widgetName": "Canvas3"
     },
     {
@@ -132,7 +132,7 @@
       "mobileTopRow": 1,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "j5s31hgocu",
+      "parentId": "fq4qe6bpp3",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -142,7 +142,7 @@
       "topRow": 1,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "afg215kppb",
+      "widgetId": "p0xflnvelj",
       "widgetName": "Canvas4"
     },
     {
@@ -177,7 +177,7 @@
       "mobileTopRow": 1,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "j5s31hgocu",
+      "parentId": "fq4qe6bpp3",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -187,7 +187,7 @@
       "topRow": 1,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "pdvtri64na",
+      "widgetId": "5cg9pvx55l",
       "widgetName": "Canvas5"
     },
     {
@@ -222,7 +222,7 @@
       "mobileTopRow": 1,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "j5s31hgocu",
+      "parentId": "fq4qe6bpp3",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -232,7 +232,7 @@
       "topRow": 1,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "a4gt1mqrv6",
+      "widgetId": "tef72wbqs8",
       "widgetName": "Canvas6"
     },
     {
@@ -267,7 +267,7 @@
       "mobileTopRow": 1,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "j5s31hgocu",
+      "parentId": "fq4qe6bpp3",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -277,7 +277,7 @@
       "topRow": 1,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "16xi6bjz0n",
+      "widgetId": "ga6agzkwug",
       "widgetName": "Canvas20"
     },
     {
@@ -312,7 +312,7 @@
       "mobileTopRow": 1,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "j5s31hgocu",
+      "parentId": "fq4qe6bpp3",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -322,7 +322,7 @@
       "topRow": 1,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "03vc417w4u",
+      "widgetId": "0pcuo8jelk",
       "widgetName": "Canvas21"
     }
   ],
@@ -378,7 +378,7 @@
       "index": 5,
       "isVisible": false,
       "label": "Move To KAM",
-      "widgetId": "16xi6bjz0n"
+      "widgetId": "ga6agzkwug"
     },
     "tab1": {
       "id": "tab1",
@@ -386,7 +386,7 @@
       "isVisible": true,
       "label": "Need Followup",
       "positioning": "vertical",
-      "widgetId": "3kqdrw788c"
+      "widgetId": "bgpxm2ixwx"
     },
     "tab2": {
       "id": "tab2",
@@ -394,40 +394,40 @@
       "isVisible": true,
       "label": "Registration Pending",
       "positioning": "vertical",
-      "widgetId": "0pqumkxjtm"
+      "widgetId": "h967oe90zf"
     },
     "tabbjl0dihn92": {
       "id": "tabbjl0dihn92",
       "index": 3,
       "isVisible": true,
       "label": "Orders Pending",
-      "widgetId": "pdvtri64na"
+      "widgetId": "5cg9pvx55l"
     },
     "tabks8y1h9n6h": {
       "id": "tabks8y1h9n6h",
       "index": 6,
       "isVisible": true,
       "label": "",
-      "widgetId": "03vc417w4u"
+      "widgetId": "0pcuo8jelk"
     },
     "tabl97wycnzd8": {
       "id": "tabl97wycnzd8",
       "index": 4,
       "isVisible": true,
       "label": "Orders Ongoing",
-      "widgetId": "a4gt1mqrv6"
+      "widgetId": "tef72wbqs8"
     },
     "tabxbww06f1ts": {
       "id": "tabxbww06f1ts",
       "index": 2,
       "isVisible": true,
       "label": "Information Pending",
-      "widgetId": "afg215kppb"
+      "widgetId": "p0xflnvelj"
     }
   },
   "topRow": 8,
   "type": "TABS_WIDGET",
   "version": 3,
-  "widgetId": "j5s31hgocu",
+  "widgetId": "fq4qe6bpp3",
   "widgetName": "trackerTabs"
 }

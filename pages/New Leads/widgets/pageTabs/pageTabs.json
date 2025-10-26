@@ -47,7 +47,7 @@
       "rightColumn": 423,
       "shouldScrollContents": false,
       "tabId": "tab1",
-      "tabName": "Check Duplicate",
+      "tabName": "Check Duplicates",
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
@@ -387,7 +387,7 @@
       "index": 0,
       "isDuplicateLabel": false,
       "isVisible": true,
-      "label": "Check Duplicate",
+      "label": "Check Duplicates",
       "positioning": "vertical",
       "widgetId": "c5uhkl272d"
     },

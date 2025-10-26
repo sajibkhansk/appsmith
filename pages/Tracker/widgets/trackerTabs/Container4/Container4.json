@@ -38,7 +38,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "qiaytyhprv",
+      "parentId": "66b838durm",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -46,7 +46,7 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "qqkt90u3el",
+      "widgetId": "8wfhusin6u",
       "widgetName": "Canvas10"
     }
   ],
@@ -76,7 +76,7 @@
   "mobileTopRow": 0,
   "needsErrorInfo": false,
   "parentColumnSpace": 17.625,
-  "parentId": "a4gt1mqrv6",
+  "parentId": "tef72wbqs8",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
@@ -85,6 +85,6 @@
   "topRow": 0,
   "type": "CONTAINER_WIDGET",
   "version": 1,
-  "widgetId": "qiaytyhprv",
+  "widgetId": "66b838durm",
   "widgetName": "Container4"
 }

@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 105,
+  "bottomRow": 227,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -170,7 +170,7 @@
   "originalBottomRow": 63,
   "originalTopRow": 10,
   "parentColumnSpace": 17.625,
-  "parentId": "3kqdrw788c",
+  "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
     "business_team_user_id": {
@@ -636,11 +636,11 @@
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{ appsmith.store.needfollowupData\n}}",
   "textSize": "0.875rem",
-  "topRow": 6,
+  "topRow": 128,
   "totalRecordsCount": "",
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
-  "widgetId": "otk4q3b6h0",
+  "widgetId": "bvij3nwoxz",
   "widgetName": "needsFollowup"
 }

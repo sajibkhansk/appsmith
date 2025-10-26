@@ -3,7 +3,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 5,
   "boxShadow": "none",
-  "buttonColor": "#b91c1c",
+  "buttonColor": "#ef4444",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
@@ -11,11 +11,7 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [
-    {
-      "key": "onClick"
-    }
-  ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -27,16 +23,16 @@
   "isLoading": false,
   "isVisible": true,
   "key": "e5loem3jb3",
-  "leftColumn": 42,
+  "leftColumn": 41,
   "minWidth": 120,
   "mobileBottomRow": 18,
   "mobileLeftColumn": 12,
   "mobileRightColumn": 28,
   "mobileTopRow": 14,
   "needsErrorInfo": false,
-  "onClick": "{{clearTableData}}",
+  "onClick": "{{navigateTo('Tracker', {}, 'SAME_WINDOW');}}",
   "parentColumnSpace": 17.9375,
-  "parentId": "us7mi726xi",
+  "parentId": "4iliufnvs4",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
@@ -48,6 +44,6 @@
   "topRow": 1,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "06gfu8tl2q",
+  "widgetId": "k7vzr5k3r3",
   "widgetName": "buttonTracker"
 }

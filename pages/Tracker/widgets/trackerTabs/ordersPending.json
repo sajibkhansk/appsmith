@@ -38,8 +38,10 @@
     "business_name",
     "business_owner_name",
     "phone",
-    "email",
     "customColumn1",
+    "text_status",
+    "call_status",
+    "cnr_status",
     "account_status",
     "onboard_type",
     "business_team_user_id",
@@ -49,14 +51,12 @@
     "store_count",
     "final_merchant_id",
     "final_status",
-    "text_status",
-    "call_status",
-    "cnr_status",
-    "assigned_at",
+    "email",
     "status",
+    "assigned_at",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1760592348882,
+  "columnUpdatedAt": 1761470163310,
   "columnWidthMap": {
     "business_owner_name": 258,
     "business_team_user_id": 220,
@@ -166,6 +166,27 @@
       "key": "primaryColumns.call_status.computedValue"
     },
     {
+      "key": "primaryColumns.email.computedValue"
+    },
+    {
+      "key": "primaryColumns.status.computedValue"
+    },
+    {
+      "key": "primaryColumns.cnr_status.computedValue"
+    },
+    {
+      "key": "primaryColumns.assigned_at.computedValue"
+    },
+    {
+      "key": "primaryColumns.text_status.boxShadow"
+    },
+    {
+      "key": "primaryColumns.text_status.borderRadius"
+    },
+    {
+      "key": "primaryColumns.text_status.buttonColor"
+    },
+    {
       "key": "primaryColumns.call_status.boxShadow"
     },
     {
@@ -178,18 +199,6 @@
       "key": "primaryColumns.call_status.buttonLabel"
     },
     {
-      "key": "primaryColumns.email.computedValue"
-    },
-    {
-      "key": "primaryColumns.assigned_at.computedValue"
-    },
-    {
-      "key": "primaryColumns.status.computedValue"
-    },
-    {
-      "key": "primaryColumns.cnr_status.computedValue"
-    },
-    {
       "key": "primaryColumns.cnr_status.boxShadow"
     },
     {
@@ -200,6 +209,9 @@
     },
     {
       "key": "primaryColumns.cnr_status.buttonLabel"
+    },
+    {
+      "key": "primaryColumns.text_status.buttonLabel"
     }
   ],
   "dynamicPropertyPathList": [
@@ -245,9 +257,6 @@
       "key": "primaryColumns.EditActions1.onSave"
     },
     {
-      "key": "primaryColumns.text_status.onCheckChange"
-    },
-    {
       "key": "primaryColumns.text_status.onClick"
     },
     {
@@ -265,10 +274,10 @@
   "isLoading": false,
   "isSortable": true,
   "isVisible": true,
-  "isVisibleDownload": true,
+  "isVisibleDownload": false,
   "isVisibleFilters": true,
   "isVisiblePagination": true,
-  "isVisibleSearch": true,
+  "isVisibleSearch": false,
   "key": "b322gwanr1",
   "label": "Data",
   "leftColumn": 0,
@@ -281,7 +290,7 @@
   "originalBottomRow": 38,
   "originalTopRow": 10,
   "parentColumnSpace": 17.625,
-  "parentId": "pdvtri64na",
+  "parentId": "5cg9pvx55l",
   "parentRowSpace": 10,
   "primaryColumnId": "id",
   "primaryColumns": {
@@ -325,7 +334,6 @@
       "saveButtonColor": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
       "saveIconAlign": "left",
       "sticky": "right",
-      "textSize": "1rem",
       "thousandSeparator": true,
       "validation": {},
       "width": 150
@@ -358,7 +366,7 @@
       "originalId": "account_status",
       "sticky": "",
       "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -392,7 +400,7 @@
       "originalId": "active_payment_method",
       "sticky": "",
       "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -403,7 +411,7 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "text",
+      "columnType": "date",
       "computedValue": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"assigned_at\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
@@ -412,7 +420,7 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "assigned_at",
-      "index": 16,
+      "index": 18,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -425,8 +433,7 @@
       "notation": "standard",
       "originalId": "assigned_at",
       "sticky": "",
-      "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -459,7 +466,7 @@
       "notation": "standard",
       "originalId": "business_name",
       "sticky": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -492,7 +499,7 @@
       "notation": "standard",
       "originalId": "business_owner_name",
       "sticky": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -526,7 +533,7 @@
       "originalId": "business_team_user_id",
       "sticky": "",
       "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -536,10 +543,15 @@
       "alias": "call_status",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => (  currentRow.call_status === \"YES\" ? appsmith.theme.colors.primaryColor : \"red\" ))}}",
+      "buttonLabel": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( currentRow.call_status))}}",
       "cellBackground": "",
-      "columnType": "text",
+      "columnType": "button",
       "computedValue": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"call_status\"]))}}",
       "currencyCode": "USD",
+      "customAlias": "",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
@@ -557,10 +569,11 @@
       "isVisible": true,
       "label": "call_status",
       "notation": "standard",
+      "onClick": "{{updateCallStatusForOrderPendin.ordersPendingCallStatusToggle()}}",
       "originalId": "call_status",
       "sticky": "",
       "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -599,8 +612,7 @@
       "onClick": "{{updateCNRforOrderPending.orderPendingCNRstatusToggle();}}",
       "originalId": "cnr_status",
       "sticky": "",
-      "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -674,7 +686,7 @@
       "originalId": "customColumn1",
       "sourceData": [],
       "sticky": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -707,8 +719,7 @@
       "notation": "standard",
       "originalId": "email",
       "sticky": "",
-      "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -742,7 +753,7 @@
       "originalId": "final_merchant_id",
       "sticky": "",
       "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -776,7 +787,7 @@
       "originalId": "final_status",
       "sticky": "",
       "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -810,7 +821,7 @@
       "originalId": "first_order_date",
       "sticky": "",
       "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -838,13 +849,13 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "id",
       "notation": "standard",
       "originalId": "id",
       "sticky": "",
       "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -878,7 +889,7 @@
       "originalId": "merchant_id",
       "sticky": "",
       "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -912,7 +923,7 @@
       "originalId": "merchant_name",
       "sticky": "",
       "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -946,7 +957,7 @@
       "originalId": "merchant_user_name",
       "sticky": "",
       "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -980,7 +991,7 @@
       "originalId": "onboard_type",
       "sticky": "",
       "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -1013,7 +1024,7 @@
       "notation": "standard",
       "originalId": "phone",
       "sticky": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -1041,13 +1052,12 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "status",
       "notation": "standard",
       "originalId": "status",
       "sticky": "",
-      "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -1081,7 +1091,7 @@
       "originalId": "store_count",
       "sticky": "",
       "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -1091,8 +1101,12 @@
       "alias": "text_status",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => (  currentRow.call_status === \"YES\" ? appsmith.theme.colors.primaryColor : \"red\" ))}}",
+      "buttonLabel": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( currentRow.text_status))}}",
       "cellBackground": "",
-      "columnType": "text",
+      "columnType": "button",
       "computedValue": "{{ordersPending.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"text_status\"]))}}",
       "currencyCode": "USD",
       "customAlias": "",
@@ -1113,10 +1127,11 @@
       "isVisible": true,
       "label": "text_status",
       "notation": "standard",
+      "onClick": "{{updateTextStatusForOrderPendin.ordersPendingTextStatusToggle()}}",
       "originalId": "text_status",
       "sticky": "",
       "textColor": "",
-      "textSize": "1rem",
+      "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
@@ -1129,13 +1144,13 @@
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{ appsmith.store.orderspendingData }}",
-  "textSize": "1rem",
+  "textSize": "0.875rem",
   "topRow": 6,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "variant": "DEFAULT",
   "version": 2,
   "verticalAlignment": "CENTER",
-  "widgetId": "t8zqyrr2p2",
+  "widgetId": "wyzpor0ie3",
   "widgetName": "ordersPending"
 }

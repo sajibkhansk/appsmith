@@ -82,7 +82,7 @@
   "mobileTopRow": 11,
   "needsErrorInfo": false,
   "parentColumnSpace": 19.5,
-  "parentId": "16xi6bjz0n",
+  "parentId": "ga6agzkwug",
   "parentRowSpace": 10,
   "primaryColumns": {},
   "renderMode": "CANVAS",
@@ -96,6 +96,6 @@
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
-  "widgetId": "h7u0wy55q4",
+  "widgetId": "91dmq38e48",
   "widgetName": "Table1"
 }
