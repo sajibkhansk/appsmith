@@ -29,7 +29,7 @@
   "mobileRightColumn": 28,
   "mobileTopRow": 14,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Tracker', {}, 'SAME_WINDOW').then(() => {\n  clearTableData.clearTableData();\n});}}",
+  "onClick": "{{navigateTo('Tracker', {}, 'SAME_WINDOW').then(() => {\n  clearTableData.clearTableData();\n  getUserDetailsByEmail.run().then(() => {\n    showAlert('success');\n  });\n});}}",
   "parentColumnSpace": 17.9375,
   "parentId": "us7mi726xi",
   "parentRowSpace": 10,

@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "68fdc8fe122c3e36327d4804_e0b38aa0-369c-40f4-9a8e-b3d1758b6d0f",
-  "id": "Tracker_getUserDetailsByEmail",
+  "gitSyncId": "68fdc8fe122c3e36327d4804_8a4fc3d8-d30d-474a-b069-22e15990b668",
+  "id": "Tracker_getUserInfo",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -28,7 +28,7 @@
       }
     ],
     "executeOnLoad": true,
-    "name": "getUserDetailsByEmail",
+    "name": "getUserInfo",
     "pageId": "Tracker",
     "userSetOnLoad": true
   }

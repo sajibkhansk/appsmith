@@ -59,7 +59,7 @@
   "isLoading": false,
   "isVisible": "{{ getUserDetailsByEmail.data && getUserDetailsByEmail.data.length > 0 }}",
   "key": "uiyq2tubhn",
-  "label": "{{  getUserDetailsByEmail.data[0]?.user_name && getUserDetailsByEmail.data[0]?.team_name \n  ? `${getUserDetailsByEmail.data[0].user_name} | ${getUserDetailsByEmail.data[0].team_name}` \n  : `<span style=\"color: red;\">No user found</span>`\n}}",
+  "label": "{{  getUserDetailsByEmail.data[0]?.user_name && getUserDetailsByEmail.data[0]?.team_name \n? `${getUserDetailsByEmail.data[0].user_name} | ${getUserDetailsByEmail.data[0].team_name}` \n: `<span style=\"color: red;\">No user found</span>`\n}}",
   "leftColumn": 49,
   "menuColor": "{{appsmith.theme.colors.primaryColor}}",
   "menuItems": {

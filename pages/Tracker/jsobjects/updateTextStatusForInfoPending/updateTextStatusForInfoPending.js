@@ -33,6 +33,8 @@ export default {
               }
               return row;
             });
+						
+						
 
             // Update the table widget with the new data
             informationPending.setData(updatedData);  // `table1` is the name of your table widget
