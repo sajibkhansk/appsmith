@@ -1072,7 +1072,7 @@
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{ordersOngoing.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{ordersOngoing.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{ordersOngoing.processedTableData.map((currentRow, currentIndex) => (  currentRow.call_status === \"YES\" ? appsmith.theme.colors.primaryColor : \"red\" ))}}",
+      "buttonColor": "{{ordersOngoing.processedTableData.map((currentRow, currentIndex) => (  currentRow.text_status === \"YES\" ? appsmith.theme.colors.primaryColor : \"red\" ))}}",
       "buttonLabel": "{{ordersOngoing.processedTableData.map((currentRow, currentIndex) => ( currentRow.text_status))}}",
       "cellBackground": "",
       "columnType": "button",
