@@ -2,7 +2,7 @@ SELECT
 	user_name ,
 	business_team_users.
 	id, 
-	business_team.
+	business_team,
 	team_name,
 	user_email,
 	is_admin
