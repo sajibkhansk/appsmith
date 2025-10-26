@@ -46,16 +46,16 @@
     "merchant_name",
     "merchant_user_name",
     "phone",
+    "email",
     "customColumn1",
     "text_status",
     "call_status",
     "cnr_status",
-    "email",
     "status",
     "assigned_at",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1761470060560,
+  "columnUpdatedAt": 1761472717456,
   "columnWidthMap": {
     "business_name": 191,
     "business_owner_name": 156,
@@ -257,6 +257,9 @@
     },
     {
       "key": "primaryColumns.cnr_status.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItemqxxljo7dgs.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -632,7 +635,7 @@
       "menuItems": {
         "menuItemh2sxcxn4bm": {
           "id": "menuItemh2sxcxn4bm",
-          "index": 1,
+          "index": 0,
           "isDisabled": false,
           "isVisible": true,
           "label": "Follow Up",
@@ -641,20 +644,21 @@
         },
         "menuItemp0k41a5uy9": {
           "id": "menuItemp0k41a5uy9",
-          "index": 2,
+          "index": 1,
           "isDisabled": false,
           "isVisible": true,
           "label": "View Response",
           "onClick": "{{\n  (async () => {\n    // Get the current active tab dynamically\n    const activeTab = trackerTabs.selectedTab || appsmith.store.currentTab;\n\n    // Store the active tab to ensure it's always updated\n    await storeValue(\"currentTab\", activeTab);\n\n    const selectedRow = informationPending.triggeredRow;\n    const newOnboardsID = selectedRow ? selectedRow.id : null;\n\n    if (!newOnboardsID) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    }\n\n    await storeValue(\"newOnboardsId\", newOnboardsID); \n    await storeValue(\"currentTab\", activeTab);  // Ensure the correct tab is stored\n\n    await followupResponse.run();  \n    showModal(\"viewResponse\");  \n  })()\n}}",
           "widgetId": "gjscyyyh0m"
         },
-        "menuItemzc9g256wcu": {
-          "id": "menuItemzc9g256wcu",
-          "index": 0,
+        "menuItemqxxljo7dgs": {
+          "id": "menuItemqxxljo7dgs",
+          "index": 2,
           "isDisabled": false,
           "isVisible": true,
-          "label": "Communicated With",
-          "widgetId": "fhahs2oib4"
+          "label": "Reject Lead",
+          "onClick": "{{showModal(rejectLeadModal.name);}}",
+          "widgetId": "qttk4iv2fe"
         }
       },
       "menuItemsSource": "STATIC",

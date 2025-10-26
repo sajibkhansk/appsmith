@@ -264,6 +264,9 @@
     },
     {
       "key": "primaryColumns.cnr_status.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuItems.menuItemscrf32dl87.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -669,6 +672,15 @@
           "label": "Follow Up",
           "onClick": "{{\n  (async () => {\n    const selectedRow = ordersPending.triggeredRow; \n    const newOnboardsId = selectedRow ? selectedRow.id : null; \n    if (!newOnboardsId) {\n      showAlert(\"New Onboard ID not found. Please try again.\", \"error\");\n      return;\n    } OrderPendingTextPassingID.setValue(newOnboardsId); OrderPendingTextPassingID.setDisabled(true);   showModal(ordersPendingModal.name);\n  })()\n}}",
           "widgetId": "mhxbt29avm"
+        },
+        "menuItemscrf32dl87": {
+          "id": "menuItemscrf32dl87",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Reject Lead",
+          "onClick": "{{showModal(rejectLeadModal.name);}}",
+          "widgetId": "umqk45sgnd"
         },
         "menuItemwcybuml0ni": {
           "id": "menuItemwcybuml0ni",
