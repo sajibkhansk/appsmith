@@ -106,7 +106,7 @@ export default {
             account_status: row.account_status,
             onboard_type: row.onboard_type,
             business_team_user_id: row.business_team_user_id,
-            assigner_user_id: getUserDetailsByEmail.data[0]?.id
+            assigner_user_id: getUserDetailsByEmail.data[0]?.id,
           });
 
           return true;

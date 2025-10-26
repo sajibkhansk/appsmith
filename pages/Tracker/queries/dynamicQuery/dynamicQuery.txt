@@ -6,35 +6,46 @@ WITH hunts AS (
 	m.id AS merchant_id,
 	no.business_name,
 	no.business_owner_name,
-	mu.name AS merchant_user_name, 
+	mu.name AS merchant_user_name,
+	mu.email as email,
 	no.onboard_type, 
 	no.business_team_user_id, 
 	m.first_order_date, 
 	m.active_payment_method,
+	no.status,
 	account_status,
 	COUNT(s.id) AS store_count,
 	text_status,
-	call_status
+	call_status,
+	cnr_status,
+	date(no.assigned_at) as assigned_at
 
 	FROM new_onboards no
 	LEFT JOIN remote_hermes.merchants m ON m.phone = no.phone
 	LEFT JOIN remote_hermes.stores s ON s.merchant_id = m.id
 	LEFT JOIN remote_hermes.merchant_users mu ON mu.merchant_id = m.id
+	where mu.type = 'owner'
+	and no.created_at >= '2025-10-01'
 	GROUP BY 
 	no.id, no.phone, m.name, m.id, no.business_name, no.business_owner_name,
-	mu.name, no.onboard_type, no.business_team_user_id, m.first_order_date, 
+	mu.name,mu.email, no.onboard_type, no.business_team_user_id, m.first_order_date, 
 	m.active_payment_method, account_status, text_status
 ),
 tracker AS (
 	SELECT 
 	h.*, 
 	m.id AS final_merchant_id,
-	CASE 
-	WHEN h.merchant_id IS NOT NULL THEN h.account_status
-	WHEN m.id IS NULL THEN 'Registration Pending'
-	WHEN m.id IS NOT NULL AND (h.active_payment_method IS NULL OR h.store_count = 0) AND h.first_order_date IS NULL THEN 'Info Pending'
-	WHEN m.id IS NOT NULL AND h.active_payment_method IS NOT NULL AND h.store_count <> 0 AND h.first_order_date IS NULL THEN 'First Order Pending'
-	ELSE 'Incubation'
+	CASE
+    WHEN h.merchant_id IS NOT NULL AND h.first_order_date IS NOT NULL THEN 'Incubation'
+    WHEN m.id IS NULL THEN 'Registration Pending'
+    WHEN m.id IS NOT NULL 
+         AND (h.active_payment_method IS NULL OR h.store_count = 0) 
+         AND h.first_order_date IS NULL THEN 'Info Pending'
+    WHEN m.id IS NOT NULL 
+         AND h.active_payment_method IS NOT NULL 
+         AND h.store_count <> 0 
+         AND h.first_order_date IS NULL THEN 'First Order Pending'
+    ELSE h.account_status
 	END AS final_status
 	FROM hunts h
 	LEFT JOIN remote_hermes.merchants m ON h.phone = m.phone
@@ -44,4 +55,6 @@ SELECT
     * 
 FROM tracker
 WHERE final_status = '{{this.params.status}}'
-AND business_team_user_id = '{{this.params.user_id.toString()}}';
+AND business_team_user_id = '{{this.params.user_id.toString()}}'
+and (status <> 'Inactive' or status is null)
+order by id desc;

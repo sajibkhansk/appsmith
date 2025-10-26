@@ -1,14 +1,5 @@
-SELECT count(*)
+SELECT COUNT(*)
 FROM remote_hermes.merchants
-WHERE (phone = CASE 
-                 WHEN {{ inputBusinessPhone.text }} LIKE '+88%' 
-                 THEN SUBSTRING({{ inputBusinessPhone.text }}, 4) -- Remove +88
-                 ELSE {{ inputBusinessPhone.text }}
-               END 
-AND last_order_date is null and created_at >= CURRENT_DATE - INTERVAL '45 days') or 
-(phone = CASE 
-                 WHEN {{ inputBusinessPhone.text }} LIKE '+88%' 
-                 THEN SUBSTRING({{ inputBusinessPhone.text }}, 4) -- Remove +88
-                 ELSE {{ inputBusinessPhone.text }}
-               END 
- AND last_order_date > CURRENT_DATE - INTERVAL '45 days' )
+WHERE phone = '{{ inputBusinessPhone.text }}'
+  AND last_order_date is not null
+  AND last_order_date > CURRENT_DATE-45; 

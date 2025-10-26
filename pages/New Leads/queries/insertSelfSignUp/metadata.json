@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO new_onboards (\n  merchant_id,\n\tbusiness_name,\n  merchant_created_at,\n  phone,\n  account_status,\n  business_team_user_id,\n  onboard_type,\n  assigner_user_id\n)\nVALUES (\n  {{this.params.merchant_id}},\n\t{{this.params.business_name}},\n  {{this.params.merchant_created_at}},\n  {{this.params.phone}},\n  {{this.params.account_status}},\n  {{this.params.business_team_user_id}},\n  {{this.params.onboard_type}},\n  {{this.params.assigner_user_id}}\n);",
+      "body": "INSERT INTO new_onboards (\n  merchant_id,\n\tbusiness_name,\n  merchant_created_at,\n  phone,\n  account_status,\n  business_team_user_id,\n  onboard_type,\n  assigner_user_id,\n\tassigned_at\n)\nVALUES (\n  {{this.params.merchant_id}},\n\t{{this.params.business_name}},\n  {{this.params.merchant_created_at}},\n  {{this.params.phone}},\n  {{this.params.account_status}},\n  {{this.params.business_team_user_id}},\n  {{this.params.onboard_type}},\n  {{this.params.assigner_user_id}},\n\tNOW()\n);",
       "encodeParamsToggle": true,
       "formData": {
         "entityType": {

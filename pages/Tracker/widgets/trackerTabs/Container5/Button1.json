@@ -19,12 +19,14 @@
       "key": "onClick"
     }
   ],
+  "iconAlign": "left",
+  "iconName": "refresh",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
   "key": "8zk45xad2l",
-  "leftColumn": 57,
+  "leftColumn": 55,
   "minWidth": 120,
   "mobileBottomRow": 4,
   "mobileLeftColumn": 48,

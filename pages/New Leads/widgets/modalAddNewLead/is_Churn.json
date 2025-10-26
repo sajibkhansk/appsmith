@@ -6,7 +6,7 @@
   "bottomRow": 78,
   "bottomRowBeforeCollapse": 78,
   "boxShadow": "none",
-  "defaultText": "{{ CheckChurn.data.length > 0 \n? \"Churn\" \n  : \"Hunt\" \n}}",
+  "defaultText": "{{CheckChurn.data.length > 0 ? 'Churn' : 'Hunt'\n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

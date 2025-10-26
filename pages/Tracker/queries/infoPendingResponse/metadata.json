@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id,name \nFROM static_values \nwhere key_type = 'info_pending_response'\nand is_visible = TRUE",
+      "body": "SELECT id,name \nFROM static_values \nwhere key_type = 'info_pending_response'\nand is_visible = TRUE\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

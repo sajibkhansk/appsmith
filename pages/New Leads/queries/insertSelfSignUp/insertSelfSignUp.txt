@@ -6,7 +6,8 @@ INSERT INTO new_onboards (
   account_status,
   business_team_user_id,
   onboard_type,
-  assigner_user_id
+  assigner_user_id,
+	assigned_at
 )
 VALUES (
   {{this.params.merchant_id}},
@@ -16,5 +17,6 @@ VALUES (
   {{this.params.account_status}},
   {{this.params.business_team_user_id}},
   {{this.params.onboard_type}},
-  {{this.params.assigner_user_id}}
+  {{this.params.assigner_user_id}},
+	NOW()
 );
