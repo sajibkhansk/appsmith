@@ -1,2 +1,4 @@
-SELECT * 
-FROM public."new_onboards";
+SELECT *
+FROM public."new_onboards"
+WHERE created_at >= date_trunc('month', CURRENT_DATE)
+  AND created_at < date_trunc('month', CURRENT_DATE) + interval '1 month';
