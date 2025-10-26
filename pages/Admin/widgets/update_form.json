@@ -312,6 +312,9 @@
     },
     {
       "key": "schema.__root_schema__.children.business_team_user_id.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.is_deleted.borderRadius"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -605,7 +608,7 @@
           "isDisabled": false,
           "isRequired": false,
           "isSpellCheck": false,
-          "isVisible": false,
+          "isVisible": true,
           "label": "Estimated Volume",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "estimated_volume",
@@ -615,22 +618,24 @@
         "is_deleted": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
           "accessor": "is_deleted",
-          "alignWidget": "LEFT",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
           "boxShadow": "none",
           "children": {},
-          "dataType": "boolean",
+          "dataType": "string",
           "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.is_deleted))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "fieldType": "Switch",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
           "identifier": "is_deleted",
           "isCustomField": false,
           "isDisabled": false,
           "isRequired": false,
-          "isVisible": false,
+          "isSpellCheck": false,
+          "isVisible": true,
           "label": "Is Deleted",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "is_deleted",
           "position": 20,
-          "sourceData": false
+          "sourceData": ""
         },
         "merchant_created_at": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
