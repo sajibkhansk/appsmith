@@ -32,7 +32,7 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(modalAddNewLead.name);}}",
+  "onClick": "{{showModal(modalAddNewLead.name).then(() => {\n  resetWidget(\"modalAddNewLead\", true);\n});}}",
   "parentColumnSpace": 17,
   "parentId": "id8vl8973h",
   "parentRowSpace": 10,
