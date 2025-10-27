@@ -15,7 +15,11 @@
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
   "iconAlign": "left",
   "inputType": "TEXT",
   "isDisabled": false,
@@ -38,6 +42,7 @@
   "mobileRightColumn": 28,
   "mobileTopRow": 42,
   "needsErrorInfo": false,
+  "onTextChanged": "",
   "parentColumnSpace": 17.9375,
   "parentId": "c5uhkl272d",
   "parentRowSpace": 10,

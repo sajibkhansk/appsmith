@@ -1,0 +1,5 @@
+SELECT btu.user_name
+FROM new_onboards AS no
+LEFT JOIN business_team_users AS btu
+  ON btu.id = CAST(no.business_team_user_id AS INT)
+WHERE no.phone = {{ filterPhoneNumber.text }};

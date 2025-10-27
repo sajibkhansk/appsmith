@@ -6,7 +6,7 @@
   "borderWidth": "1",
   "bottomRow": 107,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-  "canFreezeColumn": false,
+  "canFreezeColumn": true,
   "childStylesheet": {
     "button": {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -192,8 +192,8 @@
   "isLoading": false,
   "isSortable": true,
   "isVisible": true,
-  "isVisibleDownload": false,
-  "isVisibleFilters": true,
+  "isVisibleDownload": true,
+  "isVisibleFilters": false,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
   "key": "chqf59r976",
