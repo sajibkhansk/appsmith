@@ -51,7 +51,7 @@
     "step": 62,
     "task": 245
   },
-  "columnUpdatedAt": 1761129268996,
+  "columnUpdatedAt": 1761654794503,
   "columnWidthMap": {
     "created_at": 187
   },
@@ -657,7 +657,7 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "checkbox",
+      "columnType": "text",
       "computedValue": "{{data_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"is_deleted\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
