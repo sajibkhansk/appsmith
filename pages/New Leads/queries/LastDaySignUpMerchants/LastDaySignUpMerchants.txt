@@ -15,7 +15,7 @@ WITH summarizer AS (
       AND NOT EXISTS (
           SELECT 1
           FROM new_onboards nm
-          WHERE nm.merchant_id is null and  nm.phone = m.phone
+          WHERE 1=1 and  nm.phone = m.phone
       )
 	    AND m.country_id = 1
     GROUP BY m.id, m.name, m.phone, m.created_at, m.first_order_date, m.last_order_date, m.active_payment_method
