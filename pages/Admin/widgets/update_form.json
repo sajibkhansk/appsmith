@@ -312,9 +312,6 @@
     },
     {
       "key": "schema.__root_schema__.children.business_team_user_id.options"
-    },
-    {
-      "key": "schema.__root_schema__.children.is_deleted.borderRadius"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -599,9 +596,9 @@
           "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
           "boxShadow": "none",
           "children": {},
-          "dataType": "string",
+          "dataType": "number",
           "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.estimated_volume))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "fieldType": "Text Input",
+          "fieldType": "Number Input",
           "iconAlign": "left",
           "identifier": "estimated_volume",
           "isCustomField": false,
@@ -613,29 +610,27 @@
           "labelTextSize": "0.875rem",
           "originalIdentifier": "estimated_volume",
           "position": 3,
-          "sourceData": ""
+          "sourceData": 100
         },
         "is_deleted": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
           "accessor": "is_deleted",
-          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "alignWidget": "LEFT",
           "boxShadow": "none",
           "children": {},
-          "dataType": "string",
+          "dataType": "boolean",
           "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.is_deleted))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "fieldType": "Text Input",
-          "iconAlign": "left",
+          "fieldType": "Switch",
           "identifier": "is_deleted",
           "isCustomField": false,
           "isDisabled": false,
           "isRequired": false,
-          "isSpellCheck": false,
           "isVisible": true,
           "label": "Is Deleted",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "is_deleted",
           "position": 20,
-          "sourceData": ""
+          "sourceData": false
         },
         "merchant_created_at": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
