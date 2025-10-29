@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO new_onboards (\n\tbusiness_name, \n\tbusiness_owner_name, \n\tphone, \n\twebsite, \n\testimated_volume, \n\tproduct_category_id,\n\tbusiness_team_user_id,\n\tcompetitor_id,\n\tstatus,\n\tonboard_type\n)\nVALUES (\n\t'{{ inputBusinessName.text }}', \n\t'{{ inputBusinessOwnerName.text }}',\n\t'{{ inputBusinessPhone.text }}', \n\t'{{ inputBusinessWebsite.text }}', \n\t'{{ inputEstimatedValue.text }}', \n\t'{{ selectProductCategory.value }}', \n\t(SELECT id FROM business_team_users WHERE user_email = '{{ appsmith.store.userEmail }}'), \n\t'{{ selectOtherCourier.value }}',\n\t'Active',\n\t'{{ is_Churn.text }}'\n)",
+      "body": "INSERT INTO new_onboards (\n\tbusiness_name, \n\tbusiness_owner_name, \n\tphone, \n\twebsite, \n\testimated_volume, \n\tproduct_category_id,\n\tbusiness_team_user_id,\n\tcompetitor_id,\n\tonboard_type\n)\nVALUES (\n\t'{{ inputBusinessName.text }}', \n\t'{{ inputBusinessOwnerName.text }}',\n\t'{{ inputBusinessPhone.text }}', \n\t'{{ inputBusinessWebsite.text }}', \n\t'{{ inputEstimatedValue.text }}', \n\t'{{ selectProductCategory.value }}', \n\t(SELECT id FROM business_team_users WHERE user_email = '{{ appsmith.store.userEmail }}'), \n\t'{{ selectOtherCourier.value }}',\n\t'{{ is_Churn.text }}'\n)",
       "encodeParamsToggle": true,
       "formData": {
         "entityType": {
