@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n\t\tid,\n    name AS \"Competitor Name\",\n    is_visible,\n    key_type\nFROM static_values\nWHERE key_type = 'competition'\nAND is_visible = 'true'",
+      "body": "SELECT \n    id,\n    name AS \"Competitor Name\",\n    is_visible,\n    key_type\nFROM static_values\nWHERE key_type = 'competition'\n  AND is_visible = 'true'\nORDER BY \n    CASE \n        WHEN name = 'N/A' THEN 1 \n        ELSE 0 \n    END,\n    name;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
